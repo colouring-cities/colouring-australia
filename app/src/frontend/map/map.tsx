@@ -49,7 +49,7 @@ class ColouringMap extends Component<ColouringMapProps, ColouringMapState> {
             theme: 'night',
             lat: -33.95826,
             lng: 151.21899,
-            zoom: 16,
+            zoom: 12,
             boundary: undefined,
         };
         this.handleClick = this.handleClick.bind(this);
