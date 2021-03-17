@@ -5,7 +5,7 @@ import './welcome.css';
 
 const Welcome = () => (
     <div className="section-body welcome">
-        <h1 className="h2">Welcome to Colouring London!</h1>
+        <h1 className="h2">Welcome to Colouring Sydney!</h1>
         <p>
 
             Colouring London is a free knowledge exchange platform designed to provide over fifty types

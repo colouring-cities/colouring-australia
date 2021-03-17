@@ -30,3 +30,6 @@ TODO
 
 # VM
 .vagrant
+
+.idea
+package-lock.json

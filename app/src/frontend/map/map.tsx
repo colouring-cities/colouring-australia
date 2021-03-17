@@ -38,10 +38,17 @@ interface ColouringMapState {
 class ColouringMap extends Component<ColouringMapProps, ColouringMapState> {
     constructor(props) {
         super(props);
-        this.state = {
+        /*this.state = {
             theme: 'night',
             lat: 51.5245255,
             lng: -0.1338422,
+            zoom: 16,
+            boundary: undefined,
+        };*/
+        this.state = {
+            theme: 'night',
+            lat: -33.95826,
+            lng: 151.21899,
             zoom: 16,
             boundary: undefined,
         };
@@ -94,17 +101,26 @@ class ColouringMap extends Component<ColouringMapProps, ColouringMapState> {
         const key = OS_API_KEY;
         const tilematrixSet = 'EPSG:3857';
         const layer = (this.state.theme === 'light')? 'Light 3857' : 'Night 3857';
-        const baseUrl = `https://api2.ordnancesurvey.co.uk/mapping_api/v1/service/zxy/${tilematrixSet}/${layer}/{z}/{x}/{y}.png?key=${key}`;
-        const attribution = 'Building attribute data is © Colouring London contributors. Maps contain OS data © Crown copyright: OS Maps baselayers and building outlines. <a href=/ordnance-survey-licence.html>OS licence</a>';
-        const baseLayer = <TileLayer
+        //const baseUrl = `https://api2.ordnancesurvey.co.uk/mapping_api/v1/service/zxy/${tilematrixSet}/${layer}/{z}/{x}/{y}.png?key=${key}`;
+        const baseUrl = `http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png`;
+        const attribution = 'Building attribute data is © Colouring Sydney contributors. Maps contain OS data © Crown copyright: OS Maps baselayers and building outlines. <a href=/ordnance-survey-licence.html>OS licence</a>';
+       /* const baseLayer = <TileLayer
             url={baseUrl}
             attribution={attribution}
             maxNativeZoom={18}
             maxZoom={19}
+        />;*/
+
+        const baseLayer = <TileLayer
+            url={baseUrl}
+            attribution={attribution}
+
         />;
 
         const buildingsBaseUrl = `/tiles/base_${this.state.theme}/{z}/{x}/{y}{r}.png`;
-        const buildingBaseLayer = <TileLayer url={buildingsBaseUrl} minZoom={14} maxZoom={19}/>;
+        //const buildingBaseLayer = <TileLayer url={buildingsBaseUrl} minZoom={14} maxZoom={19}/>;
+        const buildingBaseLayer = <TileLayer url={buildingsBaseUrl} minZoom={1} maxZoom={19}/>;
+
 
         const boundaryLayer = this.state.boundary &&
                 <GeoJSON data={this.state.boundary} style={{color: '#bbb', fill: false}}/>;
@@ -144,7 +160,7 @@ class ColouringMap extends Component<ColouringMapProps, ColouringMapState> {
                 <Map
                     center={position}
                     zoom={this.state.zoom}
-                    minZoom={9}
+                    minZoom={1}
                     maxZoom={19}
                     doubleClickZoom={false}
                     zoomControl={false}
