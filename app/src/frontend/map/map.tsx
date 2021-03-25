@@ -186,7 +186,7 @@ class ColouringMap extends Component<ColouringMapProps, ColouringMapState> {
             format={'image/png'}
             // tiled= {true}
             // continuousWorld= {true}
-            crs= {L.CRS.EPSG3857}
+            // crs= {L.CRS.EPSG3857}
             zIndex = {10}
             // attribution= {'some text'}
         />
@@ -202,7 +202,7 @@ class ColouringMap extends Component<ColouringMapProps, ColouringMapState> {
             format={'image/png'}
             // tiled= {true}
             // continuousWorld= {true}
-            crs= {L.CRS.EPSG3857}
+            // crs= {L.CRS.EPSG3857}
             zIndex = {10}
             // attribution= {'some text'}
         />
@@ -222,7 +222,7 @@ class ColouringMap extends Component<ColouringMapProps, ColouringMapState> {
                     // onClick={this.handleClick}
                     // detectRetina={true}
                     // collapsed = {false}
-                    crs={L.CRS.EPSG3857}
+                    // crs={L.CRS.EPSG3857}
                 >
                     { wmsLayer1 }
                     { baseLayer }
