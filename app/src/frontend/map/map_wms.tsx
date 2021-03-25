@@ -14,6 +14,10 @@ import ThemeSwitcher from './theme-switcher';
 import { categoryMapsConfig } from '../config/category-maps-config';
 import { Category } from '../config/categories-config';
 import { Building } from '../models/building';
+import L, {CRS, tileLayer} from "leaflet";
+import wms = tileLayer.wms;
+import {WMSTileLayer} from "react-leaflet";
+
 
 const OS_API_KEY = 'NVUxtY5r8eA6eIfwrPTAGKrAAsoeI9E9';
 
@@ -170,6 +174,38 @@ class ColouringMap extends Component<ColouringMapProps, ColouringMapState> {
             maxZoom={19}
         />
 
+
+        const wmsLayerlocal = <WMSTileLayer
+            key={'wms'}
+            //url={'http://localhost:8080/geoserver/whatif/wms'}
+            url={'http://localhost:8080/geoserver/whatif/wms'}
+            layers={'whatif:color_sydney_suburb'}
+            version={'1.1.0'}
+            transparent={true}
+            tms={false}
+            format={'image/png'}
+            // tiled= {true}
+            // continuousWorld= {true}
+            // crs= {L.CRS.EPSG3857}
+            zIndex = {10}
+            // attribution= {'some text'}
+        />
+
+        const wmsLayer1 = <WMSTileLayer
+            key={'wms'}
+            //url={'http://localhost:8080/geoserver/whatif/wms'}
+            url={'https://www.ahdap.dev/geoserver/wms'}
+            layers={'colouringsydney:color_sydney_suburb'}
+            version={'1.1.0'}
+            transparent={true}
+            tms={false}
+            format={'image/png'}
+            // tiled= {true}
+            // continuousWorld= {true}
+            // crs= {L.CRS.EPSG3857}
+            zIndex = {10}
+            // attribution= {'some text'}
+        />
         const hasSelection = this.props.selectedBuildingId != undefined;
         const isEdit = ['edit', 'multi-edit'].includes(this.props.mode);
 
@@ -188,6 +224,7 @@ class ColouringMap extends Component<ColouringMapProps, ColouringMapState> {
                     // collapsed = {false}
                     // crs={L.CRS.EPSG3857}
                 >
+                    { wmsLayer1 }
                     { baseLayer }
 
                     {/*{ buildingBaseLayer }*/}
