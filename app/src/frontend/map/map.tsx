@@ -96,7 +96,7 @@ class ColouringMap extends Component<ColouringMapProps, ColouringMapState> {
 
     componentDidMount() {
         this.getBoundary();
-        console.log(window);
+        //console.log(window);
         //L = window.L;
     }
 
