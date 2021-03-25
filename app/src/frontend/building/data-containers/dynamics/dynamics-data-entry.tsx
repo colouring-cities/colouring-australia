@@ -6,10 +6,12 @@ import { FieldRow } from '../../data-components/field-row';
 import DataEntry, { BaseDataEntryProps } from '../../data-components/data-entry';
 import { dataFields } from '../../../config/data-fields-config';
 import SelectDataEntry from '../../data-components/select-data-entry';
-import MultiDataEntry from '../../data-components/multi-data-entry/multi-data-entry';
+import { MultiDataEntry } from '../../data-components/multi-data-entry/multi-data-entry';
 import { NumberRangeDataEntry } from './number-range-data-entry';
 
 import './dynamics-data-entry.css';
+import { CloseIcon } from '../../../components/icons';
+import DataTitle, { DataTitleCopyable } from '../../data-components/data-title';
 
 type DemolishedBuilding = (BuildingAttributes['demolished_buildings'][number]);
 
@@ -146,6 +148,7 @@ const DynamicsDataRow: React.FC<DynamicsDataRowProps> = ({
 };
 
 interface DynamicsDataEntryProps extends BaseDataEntryProps {
+    title: string;
     value: DemolishedBuilding[];
     editableEntries: boolean;
     maxYear: number;
@@ -205,13 +208,15 @@ export const DynamicsDataEntry: React.FC<DynamicsDataEntryProps> = (props) => {
         <>
             <div>
                 {
-                    isEditing &&
+                    isEditing ?
                         <>
                             <h6 className="h6">Existing records for demolished buildings</h6>
                             <label>Please supply sources for any edits of existing records</label>
-                        </>
+                        </> :
+
+                        <DataTitleCopyable slug={props.slug} title={props.title} tooltip={null}/>
                 }
-                <ul className="data-link-list">
+                <ul className="data-entry-list">
                     {
                         values.length === 0 &&
                         <div className="input-group">
@@ -229,7 +234,7 @@ export const DynamicsDataEntry: React.FC<DynamicsDataEntryProps> = (props) => {
                                                 title="Delete Record"
                                                 onClick={() => remove(id)}
                                                 data-index={id}
-                                            >x</button>
+                                            ><CloseIcon /></button>
                                     }
                                     <DynamicsDataRow
                                         value={pastBuilding}
