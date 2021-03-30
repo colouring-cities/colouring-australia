@@ -124,14 +124,14 @@ class ColouringMap extends Component<ColouringMapProps, ColouringMapState> {
 
         const buildingsBaseUrl = `/tiles/base_${this.state.theme}/{z}/{x}/{y}{r}.png`;
         //const buildingBaseLayer = <TileLayer url={buildingsBaseUrl} minZoom={14} maxZoom={19}/>;
-        const buildingBaseLayer = <TileLayer url={buildingsBaseUrl} minZoom={1} maxZoom={19}/>;
+        const buildingBaseLayer = <TileLayer url={buildingsBaseUrl} minZoom={16} maxZoom={19}/>;
 
 
         const boundaryLayer = this.state.boundary &&
                 <GeoJSON data={this.state.boundary} style={{color: '#bbb', fill: false}}/>;
 
         const tileset = categoryMapDefinition.mapStyle;
-       const dataLayer = tileset != undefined &&
+        const dataLayer = tileset != undefined &&
             <TileLayer
                 key={tileset}
                 url={`/tiles/${tileset}/{z}/{x}/{y}{r}.png?rev=${this.props.revisionId}`}
@@ -178,26 +178,22 @@ class ColouringMap extends Component<ColouringMapProps, ColouringMapState> {
                 <Map
                     center={position}
                     zoom={this.state.zoom}
-                    // minZoom={1}
-                    // maxZoom={19}
-                    // doubleClickZoom={false}
-                    // zoomControl={false}
-                    // attributionControl={false}
-                    // onClick={this.handleClick}
-                    // detectRetina={true}
-                    // collapsed = {false}
-                    // crs={L.CRS.EPSG3857}
+                    minZoom={9}
+                    maxZoom={19}
+                    doubleClickZoom={false}
+                    zoomControl={false}
+                    attributionControl={false}
+                    onClick={this.handleClick}
+                    detectRetina={true}
                 >
                     { baseLayer }
-
-                    {/*{ buildingBaseLayer }*/}
-                    {/*{ boundaryLayer }*/}
-                    {/*{ dataLayer }*/}
-                    {/*{ highlightLayer }*/}
-                    {/*{ numbersLayer }*/}
+                    { buildingBaseLayer }
+                    { boundaryLayer }
+                    { dataLayer }
+                    { highlightLayer }
+                    { numbersLayer }
                     <ZoomControl position="topright" />
                     <AttributionControl prefix=""/>
-
                 </Map>
                 {
                     this.props.mode !== 'basic' &&
