@@ -19,7 +19,7 @@ pipeline {
                   #!/bin/bash
                   echo "copy files"
                   sudo rm -rf /home/alireza/colouring-sydney
-                  sudo cp -r ${WORKSPACE}/build/ /home/alireza/colouring-sydney/
+                  sudo cp -r ${WORKSPACE}/app/build/ /home/alireza/colouring-sydney/
                 '''
             }
         }
