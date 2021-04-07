@@ -3,15 +3,15 @@ pipeline {
      stages {
         stage("Build") {
             steps {
-                sh "sudo cd app"
-                sh "sudo npm install"
-                sh "sudo npm run build"
+                sh "cd app"
+                sh "npm install"
+                sh "npm run build"
             }
         }
         stage("Deploy") {
             steps {
-                sh "sudo rm -rf /var/www/jenkins-react-app"
-                sh "sudo cp -r ${WORKSPACE}/build/ /home/alireza/colouring-sydney/"
+                sh "rm -rf /home/alireza/colouring-sydney"
+                sh "cp -r ${WORKSPACE}/build/ /home/alireza/colouring-sydney/"
             }
         }
     }
