@@ -3,7 +3,12 @@ pipeline {
      stages {
         stage("Build") {
             steps {
-                sh "cd app"
+                sh script:'''
+                  #!/bin/bash
+                  echo "This is start $(pwd)"
+                  cd ./app
+                  echo "This is $(pwd)"
+                '''
                 sh "npm install"
                 sh "npm run build"
             }
