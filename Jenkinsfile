@@ -15,8 +15,6 @@ pipeline {
         }
         stage("Deploy") {
             steps {
-                sh "rm -rf /home/alireza/colouring-sydney"
-                sh "cp -r ${WORKSPACE}/build/ /home/alireza/colouring-sydney/"
                 sh script:'''
                   #!/bin/bash
                   echo "copy files"
