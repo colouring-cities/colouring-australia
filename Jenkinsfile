@@ -8,15 +8,21 @@ pipeline {
                   echo "This is start $(pwd)"
                   cd ./app
                   echo "This is $(pwd)"
+                  npm install
+                  npm run build
                 '''
-                sh "npm install"
-                sh "npm run build"
             }
         }
         stage("Deploy") {
             steps {
                 sh "rm -rf /home/alireza/colouring-sydney"
                 sh "cp -r ${WORKSPACE}/build/ /home/alireza/colouring-sydney/"
+                sh script:'''
+                  #!/bin/bash
+                  echo "copy files"
+                  rm -rf /home/alireza/colouring-sydney
+                  cp -r ${WORKSPACE}/build/ /home/alireza/colouring-sydney/
+                '''
             }
         }
     }
