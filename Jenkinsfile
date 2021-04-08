@@ -20,6 +20,7 @@ pipeline {
                   echo "copy files "
                   sudo rm -rf /home/alireza/colouring-sydney
                   sudo cp -r ${WORKSPACE}/app/build/ /home/alireza/colouring-sydney/
+                  cd /home/alireza/colouring-sydney/
                   aws s3 sync . s3://test-alireza
                 '''
             }
