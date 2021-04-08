@@ -21,9 +21,7 @@ pipeline {
                   sudo rm -rf /home/alireza/colouring-sydney
                   sudo cp -r ${WORKSPACE}/app/build/ /home/alireza/colouring-sydney/
                   cd /home/alireza/colouring-sydney/
-                  sudo su
-                  su alireza
-                  aws s3 sync . s3://test-alireza
+                  sudo aws s3 sync . s3://test-alireza
                 '''
             }
         }
