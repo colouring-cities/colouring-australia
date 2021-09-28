@@ -14,7 +14,8 @@ export enum Category {
     Planning = 'planning',
     Sustainability = 'sustainability',
     Dynamics = 'dynamics',
-    Community = 'community',
+    Community = 'community'
+    // ,Test = 'test'
 }
 
 /**
@@ -34,7 +35,8 @@ export const categoriesOrder: Category[] = [
     Category.Planning,
     Category.Sustainability,
     Category.Dynamics,
-    Category.Community,
+    Category.Community
+    //, Category.Test
 ];
 
 interface CategoryDefinition {
@@ -119,5 +121,12 @@ export const categoriesConfig: {[key in Category]: CategoryDefinition} = {
         name: 'Dynamics',
         aboutUrl: 'https://pages.colouring.london/dynamics',
         intro: 'How has the site of this building changed over time?'
-    },
+    }
+    // ,
+    // [Category.Test]: {
+    //     slug: 'test',
+    //     name: 'Test',
+    //     aboutUrl: 'https://pages.colouring.london/use',
+    //     intro: 'Test?',
+    // }
 };

@@ -218,5 +218,27 @@ export const categoryMapsConfig: {[key in Category]: CategoryMapDefinition} = {
             ],
         },
     }
+   /* ,
+    [Category.Test]: {
+        mapStyle: 'landuse',
+        legend: {
+            title: 'Test',
+            elements: [
+                { color: '#e5050d', text: 'Mixed Use' },
+                { subtitle: 'Single use:'},
+                { color: '#4a54a6', text: 'Residential' },
+                { color: '#ff8c00', text: 'Retail' },
+                { color: '#f5f58f', text: 'Industry & Business' },
+                { color: '#73ccd1', text: 'Community Services' },
+                { color: '#ffbfbf', text: 'Recreation & Leisure' },
+                { color: '#b3de69', text: 'Transport' },
+                { color: '#cccccc', text: 'Utilities & Infrastructure' },
+                { color: '#898944', text: 'Defence' },
+                { color: '#fa667d', text: 'Agriculture' },
+                { color: '#53f5dd', text: 'Minerals' },
+                { color: '#ffffff', text: 'Vacant & Derelict' }
+            ]
+        },
+    }*/
     
 };

@@ -100,7 +100,7 @@ const resetPassword = asyncController(async function(req: express.Request, res: 
 function getWebAppOrigin() : string {
     const origin = process.env.WEBAPP_ORIGIN;
     if (origin == undefined) {
-        throw new Error('WEBAPP_ORIGIN not defined');
+        //throw new Error('WEBAPP_ORIGIN not defined');
     }
     return origin;
 }

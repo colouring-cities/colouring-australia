@@ -8,8 +8,8 @@ pipeline {
                   echo "This is start $(pwd)"
                   cd ./app
                   echo "This is $(pwd)"
-                  npm install
-                  npm run build
+                  yarn install
+                  yarn build
                 '''
             }
         }
@@ -18,10 +18,9 @@ pipeline {
                 sh script:'''
                   #!/bin/bash
                   echo "copy files "
-                  sudo rm -rf /home/alireza/colouring-sydney
-                  sudo cp -r ${WORKSPACE}/app/build/ /home/alireza/colouring-sydney/
-                  cd /home/alireza/colouring-sydney/
-                  aws s3 sync . s3://test-alireza
+                  sudo rm -rf /home/alireza/va-ui
+                  sudo cp -r ${WORKSPACE}/dist/ /home/alireza/va-ui/
+                  cd /home/alireza/va-ui/
                 '''
             }
         }
