@@ -57,7 +57,8 @@ export const dataFields = { /* eslint-disable @typescript-eslint/camelcase */
     location_number: {
         category: Category.Location,
         title: "Building number",
-        example: 12,
+        example: '12b',
+        tooltip: 'Numbers with an optional lowercase letter are accepted, e.g. 141 or 12b'
     },
     location_street: {
         category: Category.Location,
@@ -447,7 +448,7 @@ export const dataFields = { /* eslint-disable @typescript-eslint/camelcase */
 
     dynamics_has_demolished_buildings: {
         category: Category.Dynamics,
-        title: 'Where any other buildings ever built on this site?',
+        title: 'Were any other buildings ever built on this site?',
         example: true,
     },
 
