@@ -12,6 +12,7 @@ import SustainabilityContainer from '../building/data-containers/sustainability'
 import TeamContainer from '../building/data-containers/team';
 import TypeContainer from '../building/data-containers/type';
 import UseContainer from '../building/data-containers/use';
+// import TestContainer from '../building/data-containers/test';
 
 import { DataContainerType } from '../building/data-container';
 
@@ -28,5 +29,6 @@ export const categoryUiConfig: {[key in Category]: DataContainerType} = {
     [Category.Sustainability]: SustainabilityContainer,
     [Category.Dynamics]: DynamicsContainer,
     [Category.Community]: CommunityContainer,
+    /*[Category.Test]: TestContainer,*/
 };
 

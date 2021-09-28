@@ -62,7 +62,7 @@ Make the `nodeapp` user/group `chown` the `colouring-london` directory and its s
 
 Now set appropriate permissions on the `colouring-london` directory
 
-`sudo chmod -R 775 /var/www/colouring-london`
+`sudo chmod -R 775  /var/www/colouring-london`
 
 
 ***

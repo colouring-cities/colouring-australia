@@ -18,7 +18,7 @@ const Logo: React.FunctionComponent<LogoProps> = (props) => {
             <LogoGrid />
             <h1 className="logotype">
                 <span>Colouring</span>
-                <span>London</span>
+                <span>Sydney</span>
             </h1>
         </div>
     );
@@ -44,6 +44,12 @@ const LogoGrid: React.FunctionComponent = () => (
             <div className="cell background-dynamics"></div>
             <div className="cell background-community"></div>
         </div>
+        {/*<div className="row">
+            <div className="cell background-test"></div>
+            <div className="cell"></div>
+            <div className="cell"></div>
+            <div className="cell"></div>
+        </div>*/}
     </div>
 );
 

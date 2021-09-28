@@ -33,3 +33,5 @@ TODO
 
 .idea
 package-lock.json
+/date_year/
+/base_night/

@@ -11,19 +11,19 @@ module.exports = {
             instances: 2,
             env: {
                 NODE_ENV: "production",
-                PGHOST: "hostname",
+                PGHOST: "localhost",
                 PGPORT: 5432,
-                PGDATABASE: "databasename",
-                PGUSER: "username",
-                PGPASSWORD: "longrandomsecret",
+                PGDATABASE: "colouringlondondb",
+                PGUSER: "appusername",
+                PGPASSWORD: "longsecurerandompassword",
                 APP_COOKIE_SECRET: "longrandomsecret",
-                TILECACHE_PATH: "/path/to/tile/cache",
-                MAIL_SERVER_HOST: "mail_hostname",
+                TILECACHE_PATH: "/home/alireza/tile-cache",
+                MAIL_SERVER_HOST: "mail.privateemail.com",
                 MAIL_SERVER_PORT: 587,
-                MAIL_SERVER_USER: "mail_username",
-                MAIL_SERVER_PASSWORD: "longrandompassword",
-                WEBAPP_ORIGIN: "https://beta.colouring.london",
-                EXTRACTS_DIRECTORY:"/path/to/extracts",
+                MAIL_SERVER_USER: "admin@valueaustralia.dev",
+                MAIL_SERVER_PASSWORD: "valueaustralia_987!",
+                WEBAPP_ORIGIN: "https://www.ahdap.dev/",
+                EXTRACTS_DIRECTORY:"/var/www/www.ahdap.dev/downloads"
             }
         }
     ]
