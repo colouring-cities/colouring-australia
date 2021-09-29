@@ -1,6 +1,7 @@
 {
   "name": "colouring-london-app",
   "version": "1.0.0",
+  "homepage": "https://sydney.colouringaustralia.org",
   "description": "Render frontend (server- and client-side)",
   "private": true,
   "license": "MIT",
