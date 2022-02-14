@@ -37,3 +37,5 @@ package-lock.json
 /base_night/
 
 app/run.sh
+
+base_light
