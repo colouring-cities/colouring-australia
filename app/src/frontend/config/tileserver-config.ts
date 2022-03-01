@@ -9,7 +9,7 @@ export type BuildingMapTileset = 'date_year' |
     'location' |
     'likes' |
     'planning_combined' |
-    'sust_dec' |
+    'sust_nabers_energy_rating' |
     'building_attachment_form' |
     'landuse' |
     'dynamics_demolished_count';

@@ -117,6 +117,14 @@ const LAYER_QUERIES = {
             buildings
         WHERE
             sust_dec IS NOT NULL`,
+    sust_nabers_energy_rating: `
+        SELECT
+            geometry_id,
+            sust_nabers_energy_rating
+        FROM
+            buildings
+        WHERE
+            sust_nabers_energy_rating IS NOT NULL`,
     building_attachment_form: `
         SELECT
             geometry_id,

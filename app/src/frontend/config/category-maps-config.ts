@@ -130,18 +130,18 @@ export const categoryMapsConfig: {[key in Category]: CategoryMapDefinition} = {
         },
     },
     [Category.Sustainability]: {
-        mapStyle: 'sust_dec',
+        mapStyle: 'sust_nabers_energy_rating',
         legend: {
             title: 'Sustainability',
-            description: 'DEC Rating',
+            description: 'NABERS Energy Rating',
             elements: [
-                { color: "#007f3d", text: 'A' },
-                { color: "#2c9f29", text: 'B' },
-                { color: "#9dcb3c", text: 'C' },
-                { color: "#fff200", text: 'D' },
-                { color: "#f7af1d", text: 'E' },
-                { color: "#ed6823", text: 'F' },
-                { color: "#e31d23", text: 'G' },
+                { color: "#ff0000", text: '0 Star' },
+                { color: "#e92b00", text: '1 Star' },
+                { color: "#d35500", text: '2 Star' },
+                { color: "#bd8000", text: '3 Star' },
+                { color: "#a6aa00", text: '4 Star' },
+                { color: "#90d500", text: '5 Star' },
+                { color: "#7aff00", text: '6 Star' },
             ]
         },
     },

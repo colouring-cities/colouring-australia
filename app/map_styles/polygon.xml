@@ -335,34 +335,34 @@
             <LineSymbolizer stroke="#95beba" stroke-width="2.5"/>
         </Rule>
     </Style>
-    <Style name="sust_dec">
+    <Style name="sust_nabers_energy_rating">
         <Rule>
-            <Filter>[sust_dec] = A</Filter>
-            <PolygonSymbolizer fill="#007f3d" />
+            <Filter>[sust_nabers_energy_rating] &lt; 1.00</Filter>
+            <PolygonSymbolizer fill="#ff0000" />
         </Rule>
         <Rule>
-            <Filter>[sust_dec] = B</Filter>
-            <PolygonSymbolizer fill="#2c9f29" />
+            <Filter>[sust_nabers_energy_rating] &gt;= 1.00 and [sust_nabers_energy_rating] &lt; 2.00</Filter>
+            <PolygonSymbolizer fill="#e92b00" />
         </Rule>
         <Rule>
-            <Filter>[sust_dec] = C</Filter>
-            <PolygonSymbolizer fill="#9dcb3c" />
+            <Filter>[sust_nabers_energy_rating] &gt;= 2.00 and [sust_nabers_energy_rating] &lt; 3.00</Filter>
+            <PolygonSymbolizer fill="#d35500" />
         </Rule>
         <Rule>
-            <Filter>[sust_dec] = D</Filter>
-            <PolygonSymbolizer fill="#fff200" />
+            <Filter>[sust_nabers_energy_rating] &gt;= 3.00 and [sust_nabers_energy_rating] &lt; 4.00</Filter>
+            <PolygonSymbolizer fill="#bd8000" />
         </Rule>
         <Rule>
-            <Filter>[sust_dec] = E</Filter>
-            <PolygonSymbolizer fill="#f7af1d" />
+            <Filter>[sust_nabers_energy_rating] &gt;= 4.00 and [sust_nabers_energy_rating] &lt; 5.00</Filter>
+            <PolygonSymbolizer fill="#a6aa00" />
         </Rule>
         <Rule>
-            <Filter>[sust_dec] = F</Filter>
-            <PolygonSymbolizer fill="#ed6823" />
+            <Filter>[sust_nabers_energy_rating] &gt;= 5.00 and [sust_nabers_energy_rating] &lt; 6.00</Filter>
+            <PolygonSymbolizer fill="#90d500" />
         </Rule>
         <Rule>
-            <Filter>[sust_dec] = G</Filter>
-            <PolygonSymbolizer fill="#e31d23" />
+            <Filter>[sust_nabers_energy_rating] &gt;= 6.00</Filter>
+            <PolygonSymbolizer fill="#7aff00" />
         </Rule>
 
         <Rule>

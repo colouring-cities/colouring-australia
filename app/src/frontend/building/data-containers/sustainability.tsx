@@ -24,6 +24,19 @@ const BreeamRatingOptions = [
 const SustainabilityView: React.FunctionComponent<CategoryViewProps> = (props) => {
     return (
         <Fragment>
+            <NumericDataEntry
+                title={dataFields.sust_nabers_energy_rating.title}
+                slug="sust_nabers_energy_rating"
+                value={props.building.sust_nabers_energy_rating}
+                tooltip={dataFields.sust_nabers_energy_rating.tooltip}
+                step={0.5}
+                min={0}
+                max={5}
+                mode={props.mode}
+                copy={props.copy}
+                onChange={props.onChange}
+            />
+
             <SelectDataEntry
                 title={dataFields.sust_breeam_rating.title}
                 slug="sust_breeam_rating"

@@ -1,3 +1,8 @@
+-- NABERS energy ratings
+
+ALTER TABLE buildings
+    ADD COLUMN IF NOT EXISTS sust_nabers_energy_rating decimal;
+
 -- BREEAM ratings, one of:
 -- - Outstanding
 -- - Excellent

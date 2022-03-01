@@ -300,6 +300,12 @@ export const dataFields = { /* eslint-disable @typescript-eslint/camelcase */
         tooltip: "(Building Research Establishment Environmental Assessment Method) May not be present for many buildings",
         example: "",
     },
+    sust_nabers_energy_rating: {
+        category: Category.Sustainability,
+        title: "NABERS Energy Star Rating",
+        tooltip: "NABERS Energy Star Rating Value",
+        example: 3,
+    },
     sust_dec: {
         category: Category.Sustainability,
         title: "DEC Rating",

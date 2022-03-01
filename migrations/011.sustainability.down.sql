@@ -1,3 +1,5 @@
+alter TABLE buildings DROP COLUMN IF EXISTS sust_nabers_energy_rating;
+
 -- Remove sustainability fields, update in paralell with adding new fields
 -- BREEAM rating
 ALTER TABLE buildings DROP COLUMN IF EXISTS sust_breeam_rating;
