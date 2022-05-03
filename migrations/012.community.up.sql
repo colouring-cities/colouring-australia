@@ -26,3 +26,6 @@ ALTER TABLE buildings
 
 ALTER TABLE buildings
     ADD COLUMN IF NOT EXISTS ownership_historic boolean DEFAULT null;
+
+ALTER TABLE buildings
+    ADD COLUMN IF NOT EXISTS comm_walk_index decimal;

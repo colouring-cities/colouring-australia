@@ -7,7 +7,7 @@ export type BuildingMapTileset = 'date_year' |
     'size_height' |
     'construction_core_material' |
     'location' |
-    'likes' |
+    'comm_walk_index' |
     'planning_combined' |
     'sust_nabers_energy_rating' |
     'building_attachment_form' |

@@ -405,6 +405,68 @@
             <LineSymbolizer stroke="#888" stroke-width="2.0"/>
         </Rule>
     </Style>
+    <Style name="comm_walk_index">
+        <Rule>
+            <Filter>[comm_walk_index] &gt;= 95.0</Filter>
+            <PolygonSymbolizer fill="#fff9b8" />
+        </Rule>
+        <Rule>
+            <Filter>[comm_walk_index] &gt;= 90.0 and [comm_walk_index] &lt; 95.0</Filter>
+            <PolygonSymbolizer fill="#fae269" />
+        </Rule>
+        <Rule>
+            <Filter>[comm_walk_index] &gt;= 85.0 and [comm_walk_index] &lt; 90.0</Filter>
+            <PolygonSymbolizer fill="#fbaf27" />
+        </Rule>
+        <Rule>
+            <Filter>[comm_walk_index] &gt;= 80.0 and [comm_walk_index] &lt; 85.0</Filter>
+            <PolygonSymbolizer fill="#e6711d" />
+        </Rule>
+        <Rule>
+            <Filter>[comm_walk_index] &gt;= 75.0 and [comm_walk_index] &lt; 80.0</Filter>
+            <PolygonSymbolizer fill="#cc1212" />
+        </Rule>
+        <Rule>
+            <Filter>[comm_walk_index] &gt;= 70.0 and [comm_walk_index] &lt; 75.0</Filter>
+            <PolygonSymbolizer fill="#8f0303" />
+        </Rule>
+        <Rule>
+            <Filter>[comm_walk_index] &gt;= 65.0 and [comm_walk_index] &lt; 70.0</Filter>
+            <PolygonSymbolizer fill="#8f5385" />
+        </Rule>
+        <Rule>
+            <Filter>[comm_walk_index] &gt;= 60.0 and [comm_walk_index] &lt; 65.0</Filter>
+            <PolygonSymbolizer fill="#c3e1eb" />
+        </Rule>
+        <Rule>
+            <Filter>[comm_walk_index] &gt;= 55.0 and [comm_walk_index] &lt; 60.0</Filter>
+            <PolygonSymbolizer fill="#6a9dba" />
+        </Rule>
+        <Rule>
+            <Filter>[comm_walk_index] &gt;= 50.0 and [comm_walk_index] &lt; 55.0</Filter>
+            <PolygonSymbolizer fill="#3b74a3" />
+        </Rule>
+        <Rule>
+            <Filter>[comm_walk_index] &gt;= 45.0 and [comm_walk_index] &lt; 50.0</Filter>
+            <PolygonSymbolizer fill="#95ded8" />
+        </Rule>
+        <Rule>
+            <Filter>[comm_walk_index] &gt;= 40.0 and [comm_walk_index] &lt; 45.0</Filter>
+            <PolygonSymbolizer fill="#68aba5" />
+        </Rule>
+        <Rule>
+            <Filter>[comm_walk_index] &gt;= 35.0 and [comm_walk_index] &lt; 40.0</Filter>
+            <PolygonSymbolizer fill="#acc98f" />
+        </Rule>
+        <Rule>
+            <Filter>[comm_walk_index] &gt;= 30.0 and [comm_walk_index] &lt; 35.0</Filter>
+            <PolygonSymbolizer fill="#6d8a51" />
+        </Rule>
+        <Rule>
+            <Filter>[comm_walk_index] &lt; 30.0</Filter>
+            <PolygonSymbolizer fill="#d0c291" />
+	</Rule>
+    </Style>
     <Style name="likes">
         <Rule>
             <Filter>[likes] &gt;= 100</Filter>

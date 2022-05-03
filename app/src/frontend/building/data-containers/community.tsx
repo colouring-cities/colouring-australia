@@ -1,15 +1,34 @@
 import React, { Fragment } from 'react';
 
-import withCopyEdit from '../data-container';
+import { dataFields } from '../../config/data-fields-config';
+import DataEntry from '../data-components/data-entry';
+import NumericDataEntry from '../data-components/numeric-data-entry';
+import SelectDataEntry from '../data-components/select-data-entry';
+import Verification from '../data-components/verification';
 import LikeDataEntry from '../data-components/like-data-entry';
+import withCopyEdit from '../data-container';
 
 import { CategoryViewProps } from './category-view-props';
 
 /**
 * Community view/edit section
 */
-const CommunityView: React.FunctionComponent<CategoryViewProps> = (props) => (
+const CommunityView: React.FunctionComponent<CategoryViewProps> = (props) => {
+return (
     <Fragment>
+        <NumericDataEntry
+            title={dataFields.comm_walk_index.title}
+            slug="comm_walk_index"
+            value={props.building.comm_walk_index}
+            tooltip={dataFields.comm_walk_index.tooltip}
+            step={0.1}
+            min={0}
+            max={100}
+            mode={props.mode}
+            copy={props.copy}
+            onChange={props.onChange}
+        />
+
         <LikeDataEntry
             userLike={props.building_like}
             totalLikes={props.building.likes_total}
@@ -35,7 +54,8 @@ const CommunityView: React.FunctionComponent<CategoryViewProps> = (props) => (
             }
         </ul>
     </Fragment>
-);
+)
+};
 const CommunityContainer = withCopyEdit(CommunityView);
 
 export default CommunityContainer;

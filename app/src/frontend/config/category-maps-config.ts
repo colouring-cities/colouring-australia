@@ -101,17 +101,25 @@ export const categoryMapsConfig: {[key in Category]: CategoryMapDefinition} = {
         },
     },
     [Category.Community]: {
-        mapStyle: 'likes',
+        mapStyle: 'comm_walk_index',
         legend: {
             title: 'Like Me',
             elements: [
-                { color: '#bd0026', text: '👍👍👍👍 100+' },
-                { color: '#e31a1c', text: '👍👍👍 50–99' },
-                { color: '#fc4e2a', text: '👍👍 20–49' },
-                { color: '#fd8d3c', text: '👍👍 10–19' },
-                { color: '#feb24c', text: '👍 3–9' },
-                { color: '#fed976', text: '👍 2' },
-                { color: '#ffe8a9', text: '👍 1'}
+                { color: '#fff9b8', text: '>95' },
+                { color: '#fae269', text: '90-95' },
+                { color: '#fbaf27', text: '85-90' },
+                { color: '#e6711d', text: '80-85' },
+                { color: '#cc1212', text: '75-80' },
+                { color: '#8f0303', text: '70-75' },
+                { color: '#8f5385', text: '65-70' },
+                { color: '#c3e1eb', text: '60-65' },
+                { color: '#6a9dba', text: '55-60' },
+                { color: '#3b74a3', text: '50-55' },
+                { color: '#95ded8', text: '45-50' },
+                { color: '#68aba5', text: '40-45' },
+                { color: '#acc98f', text: '35-40' },
+                { color: '#6d8a51', text: '30-35' },
+                { color: '#d0c291', text: '<30' },
             ]
         }
     },

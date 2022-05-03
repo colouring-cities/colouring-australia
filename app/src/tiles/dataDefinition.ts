@@ -149,6 +149,14 @@ const LAYER_QUERIES = {
         FROM
             buildings
         WHERE jsonb_array_length(demolished_buildings) > 0 OR dynamics_has_demolished_buildings = FALSE`,
+    comm_walk_index: `
+        SELECT
+            geometry_id,
+            comm_walk_index AS comm_walk_index
+        FROM
+            buildings
+        WHERE
+            comm_walk_index IS NOT NULL`,
 };
 
 const GEOMETRY_FIELD = 'geometry_geom';
