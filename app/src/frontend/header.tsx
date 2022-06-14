@@ -37,37 +37,11 @@ function getCurrentMenuLinks(username: string): MenuLink[][] {
                 text: "Access open code",
                 external: true
             },
-            {
-                to: "/showcase.html",
-                text: "View Data Showcase",
-                disabled: true,
-                note: "Coming soon"
-            },
         ],
         [
             {
-                to: "https://pages.colouring.london",
+                to: "https://www.ahdap.org/colouring-sydney",
                 text: "About",
-                external: true
-            },
-            {
-                to: "https://pages.colouring.london/buildingcategories",
-                text: "Data Categories",
-                external: true
-            },
-            {
-                to: "https://pages.colouring.london/whoisinvolved",
-                text: "Who's Involved?",
-                external: true
-            },
-            {
-                to: "https://pages.colouring.london/data-ethics",
-                text: "Data Ethics",
-                external: true
-            },
-            {
-                to: "https://pages.colouring.london/colouring-cities",
-                text: "Colouring Cities Research Programme",
                 external: true
             },
         ],
@@ -75,11 +49,6 @@ function getCurrentMenuLinks(username: string): MenuLink[][] {
             {
                 to: "/leaderboard.html",
                 text: "Top Contributors"
-            },
-            {
-                to: "https://discuss.colouring.london",
-                text: "Discussion Forum",
-                external: true
             },
         ],
         [
