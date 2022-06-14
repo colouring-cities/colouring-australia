@@ -8,20 +8,15 @@ const Welcome = () => (
         <h1 className="h2">Welcome to Colouring Sydney!</h1>
         <p>
 
-            Colouring Sydney is a free knowledge exchange platform designed to provide over fifty types
-            of open data on Sydney buildings, to help make the city more sustainable.
+	Colouring Sydney is a free knowledge exchange platform designed to provide over fifty types of open data on Sydney buildings, to help make the city more sustainable. 
 
         </p>
         <p>
 
-            Colouring Sydney is also the prototype for the Colouring Cities Research programme
-            based at the Alan Turing Institute (the UK's national Institute for data science and artificial intelligence).
-            The programme works with local, regional, national and international partners to develop
-            open platform code also of relevance to other cities.
+Colouring Sydney is the prototype of both the Australian Housing Data Analytics Platform (AHDAP) and Colouring Australia, which is affiliated with the Colouring Cities Research Programme based at the Alan Turing Institute in London. The programme works with local, regional, national and international partners to develop open platform code also of relevance to other cities. 
         </p>
         <p>
-            New datasets and features are added all the time. Any help you can give, colouring-in our building maps,
-            and enriching and verifying our open datasets is very much appreciated.
+New datasets and features are added all the time. Any help you can give, colouring-in our building maps, and enriching and verifying our open datasets is very much appreciated. 
         </p>
         <p>
             All our <Link to="/data-extracts.html">data</Link> and <a href="https://github.com/colouring-Sydney/colouring-Sydney">code</a> are 
