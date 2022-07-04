@@ -12,7 +12,7 @@ const Welcome = () => (
 
         </p>
         <p>
-Colouring Sydney is also the prototype for the Colouring Cities Research programme based at the Alan Turing Institute and coordinated by the City Futures Research Centre at the University of New South Wales. The programme works with local, regional, national, and international partners to develop open platform code also of relevance to other cities.
+Colouring Perth is also the prototype for the Colouring Cities Research programme based at the Alan Turing Institute and coordinated by the City Futures Research Centre at the University of New South Wales. The programme works with local, regional, national, and international partners to develop open platform code also of relevance to other cities.
         </p>
         <p>
 New datasets and features are added all the time. Any help you can give, colouring-in our building maps, and enriching and verifying our open datasets is very much appreciated. 
