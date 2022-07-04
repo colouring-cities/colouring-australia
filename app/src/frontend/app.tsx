@@ -21,6 +21,7 @@ import LeaderboardPage from './pages/leaderboard';
 import OrdnanceSurveyLicencePage from './pages/ordnance-survey-licence';
 import OrdnanceSurveyUprnPage from './pages/ordnance-survey-uprn';
 import PrivacyPolicyPage from './pages/privacy-policy';
+import EthicsPage from './pages/ethics';
 import ForgottenPassword from './user/forgotten-password';
 import { Login } from './user/login';
 import { MyAccountPage } from './user/my-account';
@@ -71,6 +72,7 @@ export const App: React.FC<AppProps> = props => {
                 <AuthRoute exact path="/sign-up.html" component={SignUp} />
                 <PrivateRoute exact path="/my-account.html" component={MyAccountPage} />
                 <Route exact path="/privacy-policy.html" component={PrivacyPolicyPage} />
+                <Route exact path="/ethics.html" component={EthicsPage} />
                 <Route exact path="/contributor-agreement.html" component={ContributorAgreementPage} />
                 <Route exact path="/ordnance-survey-licence.html" component={OrdnanceSurveyLicencePage} />
                 <Route exact path="/ordnance-survey-uprn.html" component={OrdnanceSurveyUprnPage} />

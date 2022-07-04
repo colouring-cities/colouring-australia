@@ -28,10 +28,6 @@ export const Login: React.FC = () => {
             <section className="main-col">
                 <h1 className="h2">Log in</h1>
                 <InfoBox msg="Welcome to colouring Perth. You're one of the first people to use the site!  ">
-                    <br/>Please <a href="https://discuss.colouring.london/">discuss
-                    suggestions for improvements</a> and <a
-                        href="https://github.com/colouring-london/colouring-london/issues">
-                    report issues or problems</a>.
                 </InfoBox>
                 <ErrorBox msg={error} />
                 <form onSubmit={onSubmit}>

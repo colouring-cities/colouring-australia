@@ -33,7 +33,7 @@ function getCurrentMenuLinks(username: string): MenuLink[][] {
                 text: "Download data"
             },
             {
-                to: "https://github.com/colouring-london/colouring-london",
+                to: "https://github.com/colouring-cities/colouring-australia",
                 text: "Access open code",
                 external: true
             },
@@ -47,11 +47,9 @@ function getCurrentMenuLinks(username: string): MenuLink[][] {
         ],
         [
             {
-                to: "/leaderboard.html",
-                text: "Top Contributors"
+                to: "/ethics.html",
+                text: "Data Ethics"
             },
-        ],
-        [
             {
                 to: "/privacy-policy.html",
                 text: "Privacy Policy"
@@ -61,16 +59,8 @@ function getCurrentMenuLinks(username: string): MenuLink[][] {
                 text: "Contributor Agreement"
             },
             {
-                to: "/code-of-conduct.html",
-                text: "Code of Conduct"
-            },
-            {
                 to: "/data-accuracy.html",
                 text: "Data Accuracy Agreement"
-            },
-            {
-                to: "/ordnance-survey-uprn.html",
-                text: "Ordnance Survey terms of UPRN usage"
             },
         ],
         [

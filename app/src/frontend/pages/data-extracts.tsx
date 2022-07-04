@@ -54,7 +54,7 @@ export default class DataExtracts extends React.Component<{}, DataExtractsState>
                     Choose one of the links below to download an archive containing the open data collected on the colouring Perth platform.
                     </p>
                     <p>
-                    By downloading data extracts from this site, you agree to the <Link to="/data-accuracy.html">data accuracy agreement</Link> and the <Link to="/ordnance-survey-uprn.html">Ordnance Survey terms of UPRN usage</Link>.
+                    COMING SOON (To be released via the AHDAP portal).
                     </p>
 
                     {
