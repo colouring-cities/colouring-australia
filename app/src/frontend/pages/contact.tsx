@@ -7,7 +7,7 @@ const ContactPage = () => (
             <h1 className="h2">
                 Contact
             </h1>
-            <p> colouring Sydney has been designed as a sustainable, low-cost model for knowledge exchange/open data platforms able to be reproduced by other towns and cities using our open platform code.</p>
+            <p> colouring Perth has been designed as a sustainable, low-cost model for knowledge exchange/open data platforms able to be reproduced by other towns and cities using our open platform code.</p>
 
             <p> It is being developed by a small, dedicated team at The Alan Turing Institute. We are unable to answer individual queries but welcome constructive comments on how to improve the site, and on other types of data and new features you might like to see.</p>
 
@@ -18,13 +18,13 @@ const ContactPage = () => (
             <p>For press enquiries please contact <a href="https://www.turing.ac.uk/contact-us/press-office">The Alan Turing Institute press office</a></p>
 
             <p>
-            If you capture images from the maps on colouring Sydney, please credit our
+            If you capture images from the maps on colouring Perth, please credit our
             contributors (who collected the data) and Ordnance Survey
             (who provided the basemaps and building geometries) as follows:
             </p>
             <p>
             <pre><code>
-            colouring Sydney https://colouring.london Building attribute data is © colouring Sydney contributors. Maps contain OS data © Crown copyright: OS Maps baselayers and building outlines.
+            colouring Perth https://colouring.london Building attribute data is © colouring Perth contributors. Maps contain OS data © Crown copyright: OS Maps baselayers and building outlines.
             </code></pre>
             </p>
             <hr />
