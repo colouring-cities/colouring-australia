@@ -52,7 +52,7 @@ function getPasswordResetEmail(email: string, token: string, siteOrigin: string)
 
     const messageBody = `Hi there,
 
-    Someone has requested a password reset for the Colouring Perth account associated with this email address.
+    Someone has requested a password reset for the Colouring Sydney account associated with this email address.
     Click on the following link within the next 24 hours to reset your password:
 
     ${linkString}
@@ -60,7 +60,7 @@ function getPasswordResetEmail(email: string, token: string, siteOrigin: string)
 
     return {
         text: messageBody,
-        subject: 'Reset your Colouring Perth password',
+        subject: 'Reset your Colouring Sydney password',
         to: email,
         from: 'admin@colouringaustralia.org'
     };

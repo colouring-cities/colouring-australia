@@ -111,7 +111,7 @@ class ColouringMap extends Component<ColouringMapProps, ColouringMapState> {
         const layer = (this.state.theme === 'light')? 'Light 3857' : 'Night 3857';
         //const baseUrl = `https://api2.ordnancesurvey.co.uk/mapping_api/v1/service/zxy/${tilematrixSet}/${layer}/{z}/{x}/{y}.png?key=${key}`;
         const baseUrl = `http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png`;
-        const attribution = 'Building attribute data is © Colouring Perth contributors. Maps contain OS data © Crown copyright: OS Maps baselayers and building outlines. <a href=/ordnance-survey-licence.html>OS licence</a>';
+        const attribution = 'Building attribute data is © Colouring Sydney contributors. Maps contain OS data © Crown copyright: OS Maps baselayers and building outlines. <a href=/ordnance-survey-licence.html>OS licence</a>';
        /* const baseLayer = <TileLayer
             url={baseUrl}
             attribution={attribution}
@@ -179,7 +179,7 @@ class ColouringMap extends Component<ColouringMapProps, ColouringMapState> {
             key={'wms'}
             //url={'http://localhost:8080/geoserver/whatif/wms'}
             url={'http://localhost:8080/geoserver/whatif/wms'}
-            layers={'whatif:color_perth_suburb'}
+            layers={'whatif:color_sydney_suburb'}
             version={'1.1.0'}
             transparent={true}
             tms={false}
@@ -195,7 +195,7 @@ class ColouringMap extends Component<ColouringMapProps, ColouringMapState> {
             key={'wms'}
             //url={'http://localhost:8080/geoserver/whatif/wms'}
             url={'https://www.ahdap.dev/geoserver/wms'}
-            layers={'colouringperth:color_perth_suburb'}
+            layers={'colouringsydney:color_sydney_suburb'}
             version={'1.1.0'}
             transparent={true}
             tms={false}
