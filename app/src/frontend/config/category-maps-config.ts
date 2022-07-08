@@ -103,7 +103,7 @@ export const categoryMapsConfig: {[key in Category]: CategoryMapDefinition} = {
     [Category.Community]: {
         mapStyle: 'comm_walk_index',
         legend: {
-            title: 'Like Me',
+            title: 'Walk Index',
             elements: [
                 { color: '#fff9b8', text: '>95' },
                 { color: '#fae269', text: '90-95' },
