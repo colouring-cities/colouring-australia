@@ -448,9 +448,9 @@ export const dataFields = { /* eslint-disable @typescript-eslint/camelcase */
 
     comm_walk_index: {
         category: Category.Community,
-        title: "Walkability Score",
+        title: "Walkability Index",
         example: 85.5,
-        tooltip: "Walkability Score",
+        tooltip: "Walkability Index",
     },
 
     likes_total: {
