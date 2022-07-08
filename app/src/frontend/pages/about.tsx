@@ -21,7 +21,7 @@ const AboutPage = () => (
             </p>
             <p>
 
-        Colouring Sydney is being designed to address these questions by crowdsourcing
+        Colouring Melbourne is being designed to address these questions by crowdsourcing
         and visualising information on London’s buildings. We’re releasing the
         prototype for testing in the late summer. See the slideshow below for what it
         will look like.
@@ -53,7 +53,7 @@ const AboutPage = () => (
         <section className="main-col">
             <p>
 
-        colouring Sydney is being designed and built by the Centre for Advanced Spatial
+        colouring Melbourne is being designed and built by the Centre for Advanced Spatial
         Analysis (CASA), University College London and funded by Historic England.
         Ordnance Survey is providing building footprints required to collect the data,
         facilitated by the GLA, and giving access to its API and technical support. It
@@ -126,7 +126,7 @@ const AboutPage = () => (
 
             Access bulk downloads of data created through the project to use and reuse
             under a liberal open data license. Let us know and we’ll feature showcase
-            projects on the colouring Sydney site.
+            projects on the colouring Melbourne site.
 
                 </p>
                 <img className="border-image" src="images/slide-5-download.png"

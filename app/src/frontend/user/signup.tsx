@@ -30,7 +30,7 @@ export const SignUp: React.FC = () => {
         <article>
             <section className="main-col">
                 <h1 className="h2">Sign up</h1>
-                <InfoBox msg="Welcome to colouring Sydney. You're one of the first people to sign up!  ">
+                <InfoBox msg="Welcome to colouring Melbourne. You're one of the first people to sign up!  ">
                 </InfoBox>
                 <p>
                     Create an account to start colouring in.

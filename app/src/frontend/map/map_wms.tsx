@@ -52,8 +52,8 @@ class ColouringMap extends Component<ColouringMapProps, ColouringMapState> {
         };*/
         this.state = {
             theme: 'night',
-            lat: -33.91715,
-            lng: 151.23351,
+            lat: -37.840935,
+            lng: 144.946457,
             zoom: 16,
             boundary: undefined,
         };
@@ -111,7 +111,7 @@ class ColouringMap extends Component<ColouringMapProps, ColouringMapState> {
         const layer = (this.state.theme === 'light')? 'Light 3857' : 'Night 3857';
         //const baseUrl = `https://api2.ordnancesurvey.co.uk/mapping_api/v1/service/zxy/${tilematrixSet}/${layer}/{z}/{x}/{y}.png?key=${key}`;
         const baseUrl = `http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png`;
-        const attribution = 'Building attribute data is © Colouring Sydney contributors. Maps contain OS data © Crown copyright: OS Maps baselayers and building outlines. <a href=/ordnance-survey-licence.html>OS licence</a>';
+        const attribution = 'Building attribute data is © Colouring Melbourne contributors. Maps contain OS data © Crown copyright: OS Maps baselayers and building outlines. <a href=/ordnance-survey-licence.html>OS licence</a>';
        /* const baseLayer = <TileLayer
             url={baseUrl}
             attribution={attribution}

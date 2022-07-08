@@ -42,16 +42,16 @@ export default class DataExtracts extends React.Component<{}, DataExtractsState>
                 <section className="main-col">
                     <h1 className="h2">Open data extracts</h1>
                     <p>
-                    Choose one of the links below to download an archive containing the open data collected on the colouring Sydney platform
+                    Choose one of the links below to download an archive containing the open data collected on the colouring Melbourne platform
                     </p>
                     <p>
-                    colouring Sydney contributions are open data, licensed under the <a href="http://opendatacommons.org/licenses/odbl/">Open Data Commons Open Database License</a> (ODbL) by colouring Sydney contributors.
+                    colouring Melbourne contributions are open data, licensed under the <a href="http://opendatacommons.org/licenses/odbl/">Open Data Commons Open Database License</a> (ODbL) by colouring Melbourne contributors.
                     </p>
                     <p>
-                    You are free to copy, distribute, transmit and adapt our data, as long as you credit colouring Sydney and our contributors. If you alter or build upon our data, you may distribute the result only under the same licence.
+                    You are free to copy, distribute, transmit and adapt our data, as long as you credit colouring Melbourne and our contributors. If you alter or build upon our data, you may distribute the result only under the same licence.
                     </p>
                     <p>
-                    Choose one of the links below to download an archive containing the open data collected on the colouring Sydney platform.
+                    Choose one of the links below to download an archive containing the open data collected on the colouring Melbourne platform.
                     </p>
                     <p>
                     COMING SOON (To be released via the AHDAP portal).

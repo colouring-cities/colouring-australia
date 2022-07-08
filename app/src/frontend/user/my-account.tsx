@@ -46,7 +46,7 @@ export const MyAccountPage: React.FC = () => {
                 {!userError && (<>
                     <h1 className="h1">Welcome, {user.username}!</h1>
                     <p>
-                        Colouring Sydney is under active development.
+                        Colouring Melbourne is under active development.
                     </p>
                     <p>
                         For reference, here are the{' '}
@@ -82,7 +82,7 @@ export const MyAccountPage: React.FC = () => {
                     </form>
 
                     <h3 className="h3">Open Source Code</h3>
-                    colouring Sydney site code is developed at <a href="http://github.com/colouring-cities/colouring-australia/">colouring-australia</a> on Github
+                    colouring Melbourne site code is developed at <a href="http://github.com/colouring-cities/colouring-australia/">colouring-australia</a> on Github
 
                     <hr />
 

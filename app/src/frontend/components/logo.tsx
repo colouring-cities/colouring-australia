@@ -18,7 +18,7 @@ const Logo: React.FunctionComponent<LogoProps> = (props) => {
             <LogoGrid />
             <h1 className="logotype">
                 <span>Colouring</span>
-                <span>Sydney</span>
+                <span>Melbourne</span>
             </h1>
         </div>
     );

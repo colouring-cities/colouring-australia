@@ -7,7 +7,7 @@ const ContactPage = () => (
             <h1 className="h2">
                 Contact
             </h1>
-            <p> Colouring Sydney has been designed as a sustainable, low-cost model for knowledge exchange/open data platforms able to be reproduced by other towns and cities using our open platform code.</p>
+            <p> Colouring Melbourne has been designed as a sustainable, low-cost model for knowledge exchange/open data platforms able to be reproduced by other towns and cities using our open platform code.</p>
 
             <p> It is being developed by a small, dedicated team at the City Futures Research Centre, University of New South Wales. We are unable to answer individual queries but welcome constructive comments on how to improve the site, and on other types of data and new features you might like to see.</p>
 
@@ -19,7 +19,7 @@ const ContactPage = () => (
 
             <hr />
             <p>
-                <img className="d-block mx-auto" src="images/logo-cperth.png"></img>
+                <img className="d-block mx-auto" src="images/logo-cmelbourne.png"></img>
             </p>
         </section>
     </article>

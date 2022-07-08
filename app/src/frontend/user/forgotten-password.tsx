@@ -62,7 +62,7 @@ export default class ForgottenPassword extends React.Component<{}, ForgottenPass
                     <ErrorBox msg={this.state.error} />
                     <InfoBox msg="">
                         {this.state.success ?
-                            `If the email address is registered on colouring Sydney, a password reset link will be sent to ${this.state.emailUsed}. Please check your inbox.` :
+                            `If the email address is registered on colouring Melbourne, a password reset link will be sent to ${this.state.emailUsed}. Please check your inbox.` :
                             null
                         }
                     </InfoBox>
