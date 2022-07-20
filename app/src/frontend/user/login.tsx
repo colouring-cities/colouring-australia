@@ -27,7 +27,7 @@ export const Login: React.FC = () => {
         <article>
             <section className="main-col">
                 <h1 className="h2">Log in</h1>
-                <InfoBox msg="Welcome to colouring Sydney. You're one of the first people to use the site!  ">
+                <InfoBox msg="Welcome to colouring Brisbane. You're one of the first people to use the site!  ">
                 </InfoBox>
                 <ErrorBox msg={error} />
                 <form onSubmit={onSubmit}>
