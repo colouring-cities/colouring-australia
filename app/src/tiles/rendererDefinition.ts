@@ -24,7 +24,7 @@ const STITCH_THRESHOLD = 12;
  * bbox in CRS epsg:3857 in form: [w, s, e, n]
  */
 //const EXTENT_BBOX: BoundingBox = [-61149.622628, 6667754.851372, 28128.826409, 6744803.375884];
-const EXTENT_BBOX: BoundingBox = [15695967.96276261, -4509772.312438116, 17711537.026709203, -3268784.8799899397];
+const EXTENT_BBOX: BoundingBox = [15326541.415517, -3409702.957745, 17711537.026709203, -1125153.056358];
 
 const allLayersCacheSwitch = parseBooleanExact(process.env.CACHE_TILES) ?? true;
 const dataLayersCacheSwitch = parseBooleanExact(process.env.CACHE_DATA_TILES) ?? true;
