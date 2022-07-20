@@ -19,7 +19,7 @@ const ContactPage = () => (
 
             <hr />
             <p>
-                <img className="d-block mx-auto" src="images/logo-csydney.png"></img>
+                <img className="d-block mx-auto" src="images/logo-cbrisbane.png"></img>
             </p>
         </section>
     </article>
