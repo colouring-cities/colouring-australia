@@ -4,7 +4,7 @@ interface MapViewport {
 }
 
 export const initialMapViewport: MapViewport = {
-  position: [-33.91715, 151.23351 ], // lat,lng
+  position: [-27.4705, 153.0260 ], // lat,lng
   zoom: 16,
 };
 
