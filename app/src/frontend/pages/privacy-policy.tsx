@@ -4,45 +4,45 @@ import { Link } from 'react-router-dom';
 const PrivacyPolicyPage: React.SFC<any> = () => (
     <article>
         <section className='main-col'>
-            <h1 className='h1'>Colouring Brisbane Privacy Policy </ h1>
+            <h1 className='h1'>Colouring Adelaide Privacy Policy </ h1>
             <p>
-                This privacy policy explains how Colouring Brisbane uses the personal data we collect from you when you use our website. Colouring Brisbane is a research project developed by the Bartlett Centre for Advanced Spatial Analysis (CASA) at UCL. Colouring Brisbane is registered for data protection purposes with the UCL data protection office.
+                This privacy policy explains how Colouring Adelaide uses the personal data we collect from you when you use our website. Colouring Adelaide is a research project developed by the Bartlett Centre for Advanced Spatial Analysis (CASA) at UCL. Colouring Adelaide is registered for data protection purposes with the UCL data protection office.
             </p>
 
             <h2 className='h2'>What data do we collect?</h2>
             <p>
-                Colouring Brisbane collects the following personal data:
+                Colouring Adelaide collects the following personal data:
             </p>
             <p>
-                A username and email address. We recommend you do not use your actual name for your username. We also collect your password, which is stored as a cryptographic hash unique to Colouring Brisbane.
+                A username and email address. We recommend you do not use your actual name for your username. We also collect your password, which is stored as a cryptographic hash unique to Colouring Adelaide.
             </p>
 
             <h2 className='h2'>How do we collect your data?</h2>
             <p>
-                You provide Colouring Brisbane with a minimal amount of personal data when you register with the website and accepts the terms and conditions including this privacy policy.
+                You provide Colouring Adelaide with a minimal amount of personal data when you register with the website and accepts the terms and conditions including this privacy policy.
             </p>
 
             <h2 className='h2'>What purposes do we use your data?</h2>
             <p>
-                Colouring Brisbane uses your personal data to enable you to login to access and contribute to the Colouring Brisbane project and to provide a personalised user experience when you are logged in. We will not share your personal data (such as your email address) with any other parties or use your personal data for any purposes other than the Colouring Brisbane project.
+                Colouring Adelaide uses your personal data to enable you to login to access and contribute to the Colouring Adelaide project and to provide a personalised user experience when you are logged in. We will not share your personal data (such as your email address) with any other parties or use your personal data for any purposes other than the Colouring Adelaide project.
             </p>
             <p>
-                If you request a password reset, an automated email will be sent using <a href="https://www.mailgun.com/">Mailgun</a>, who process the email in order to deliver it to your email address. Mailgun retain personal data they process on behalf of Colouring Brisbane for as long as is needed to provide email services. Mailgun will retain the personal information as necessary to comply with their legal obligations, resolve disputes, and enforce their agreements.
+                If you request a password reset, an automated email will be sent using <a href="https://www.mailgun.com/">Mailgun</a>, who process the email in order to deliver it to your email address. Mailgun retain personal data they process on behalf of Colouring Adelaide for as long as is needed to provide email services. Mailgun will retain the personal information as necessary to comply with their legal obligations, resolve disputes, and enforce their agreements.
             </p>
 
             <h2 className='h2'>What is the legal basis for processing your data?</h2>
             <p>
-                Data protection laws require us to meet certain conditions before we are allowed to use your data in the manner described in this notice, including having a ‘legal basis’ for the processing. Colouring Brisbane, as a research project, is processing your personal data in pursuance of performing a task in the public interest. For further details on the ‘public task’ legal basis for processing, please see UCL’s Statement of Tasks in the Public Interest, available <a href='https://www.ucl.ac.uk/legal-services/sites/legal-services/files/ucl_statement_of_tasks_in_the_public_interest_-_august_2018.pdf'>here</a>
+                Data protection laws require us to meet certain conditions before we are allowed to use your data in the manner described in this notice, including having a ‘legal basis’ for the processing. Colouring Adelaide, as a research project, is processing your personal data in pursuance of performing a task in the public interest. For further details on the ‘public task’ legal basis for processing, please see UCL’s Statement of Tasks in the Public Interest, available <a href='https://www.ucl.ac.uk/legal-services/sites/legal-services/files/ucl_statement_of_tasks_in_the_public_interest_-_august_2018.pdf'>here</a>
             </p>
 
             <h2 className='h2'>How do we store your data?</h2>
             <p>
-                Colouring Brisbane stores your data at UCL in London behind the organisation’s firewall in a secure database using industry standard practices.
+                Colouring Adelaide stores your data at UCL in London behind the organisation’s firewall in a secure database using industry standard practices.
             </p>
 
             <h2 className='h2'>How do we use cookies?</h2>
             <p>
-                Colouring Brisbane only uses cookies to improve the user experience of users of the website, for example we use cookies to keep you signed in. We do not use cookies for marketing or advertising purposes.
+                Colouring Adelaide only uses cookies to improve the user experience of users of the website, for example we use cookies to keep you signed in. We do not use cookies for marketing or advertising purposes.
             </p>
 
             <h2 className='h2'>What are your data protection rights?</h2>
@@ -95,12 +95,12 @@ const PrivacyPolicyPage: React.SFC<any> = () => (
 
             <h2 className='h2'>Changes to this privacy policy</h2>
             <p>
-                Changes to this privacy policy will be notified via the Colouring Brisbane website. This privacy policy was last updated on 2 October 2019 to add a paragraph on password reset emails. The previous update was on 13 August 2019.
+                Changes to this privacy policy will be notified via the Colouring Adelaide website. This privacy policy was last updated on 2 October 2019 to add a paragraph on password reset emails. The previous update was on 13 August 2019.
             </p>
 
             <h2 className='h2'>Who do I contact with questions?</h2>
             <p>
-                If you have any questions about your personal data and Colouring Brisbane that are not answered by this privacy notice then please consult UCL's data protection web pages here, where further guidance and relevant UCL policy documentation can be found.
+                If you have any questions about your personal data and Colouring Adelaide that are not answered by this privacy notice then please consult UCL's data protection web pages here, where further guidance and relevant UCL policy documentation can be found.
             </p>
 
             <p>

@@ -95,8 +95,8 @@ function renderHTML(context, data, req, res) {
 
         <meta property="og:url"                content="https://colouring.london" />
         <meta property="og:type"               content="website" />
-        <meta property="og:title"              content="colouring Brisbane" />
-        <meta property="og:description"        content="colouring Brisbane is a knowledge exchange platform collecting information on every building in London, to help make the city more sustainable. We’re building it at The Bartlett Centre for Advanced Spatial Analysis, University College London." />
+        <meta property="og:title"              content="colouring Adelaide" />
+        <meta property="og:description"        content="colouring Adelaide is a knowledge exchange platform collecting information on every building in London, to help make the city more sustainable. We’re building it at The Bartlett Centre for Advanced Spatial Analysis, University College London." />
         <meta property="og:locale"             content="en_GB" />
         <meta property="og:image"              content="https://colouring.london/images/logo-cl-square.png" />
 
@@ -104,13 +104,13 @@ function renderHTML(context, data, req, res) {
 
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="apple-mobile-web-app-status-bar-style" content="black">
-        <meta name="apple-mobile-web-app-title" content="colouring Brisbane">
+        <meta name="apple-mobile-web-app-title" content="colouring Adelaide">
         <link rel="apple-touch-icon" href="icon-192x192.png">
 
         <meta name="mobile-web-app-capable" content="yes">
         <link rel="icon" sizes="192x192" href="icon-192x192.png">
 
-        <title>Colouring Brisbane</title>
+        <title>Colouring Adelaide</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <style>
           @font-face {
