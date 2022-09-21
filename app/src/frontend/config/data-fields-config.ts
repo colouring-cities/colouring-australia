@@ -121,7 +121,7 @@ export const dataFields = { /* eslint-disable @typescript-eslint/camelcase */
 
     current_landuse_group: {
         category: Category.LandUse,
-        title: "Current Land Use (Group)",
+        title: "Assigned Land-use",
         tooltip: "Land use Groups as classified by [NLUD](https://www.gov.uk/government/statistics/national-land-use-database-land-use-and-land-cover-classification)",
         example: ["", ""],
     },
@@ -261,13 +261,13 @@ export const dataFields = { /* eslint-disable @typescript-eslint/camelcase */
     },
 
     size_plot_area_total: {
-        category: Category.Streetscape,
+        category: Category.Size,
         title: "Total area of plot (m²)",
         example: 123.02,
         //tooltip: ,
     },
     size_far_ratio: {
-        category: Category.Streetscape,
+        category: Category.Size,
         title: "FAR ratio (percentage of plot covered by building)",
         example: 0.1,
         //tooltip: ,
@@ -299,12 +299,6 @@ export const dataFields = { /* eslint-disable @typescript-eslint/camelcase */
         title: "BREEAM Rating",
         tooltip: "(Building Research Establishment Environmental Assessment Method) May not be present for many buildings",
         example: "",
-    },
-    sust_nabers_energy_rating: {
-        category: Category.Sustainability,
-        title: "NABERS Energy Star Rating",
-        tooltip: "NABERS Energy Star Rating Value",
-        example: 3,
     },
     sust_dec: {
         category: Category.Sustainability,
@@ -446,13 +440,6 @@ export const dataFields = { /* eslint-disable @typescript-eslint/camelcase */
         //tooltip: ,
     },
 
-    comm_walk_index: {
-        category: Category.Community,
-        title: "Walkability Index",
-        example: 85.5,
-        tooltip: "Walkability Index",
-    },
-
     likes_total: {
         category: Category.Community,
         title: "Total number of likes",
@@ -497,12 +484,110 @@ export const dataFields = { /* eslint-disable @typescript-eslint/camelcase */
                 year_demolished: { min: 1993, max: 1994 },
                 lifespan: "2-5", overlap_present: "50%", links: ["", ""]}
         ]
-    }
-  /*  ,
+    },
+  /*
     test_use: {
         category: Category.Test,
         title: "Test use",
         tooltip: "Test",
         example: "",
     },*/
+
+    ext_walk_index: {
+        category: Category.Streetscape,
+        title: "Walkability Index",
+        example: 85.5,
+        tooltip: "Walkability Index",
+    },
+    ext_predominant_land_use: {
+        category: Category.LandUse,
+        title: "Predominant Building-Use (Ground-Floor)",
+        tooltip: "",
+        example: "",
+    },
+    ext_designated_land_use: {
+        category: Category.LandUse,
+        title: "Designated Land-use",
+        tooltip: "",
+        example: "",
+    },
+    ext_age_year_demolition: {
+        category: Category.Age,
+        title: "Year demolished (best estimate)",
+        example: 1924,
+    },
+    ext_age_year_renovation: {
+        category: Category.Age,
+        title: "Year renovated (best estimate)",
+        example: 1924,
+    },
+    ext_historical_notes: {
+        category: Category.Age,
+        title: "Historical Notes",
+        tooltip: "Historical notes (max 2000 characters)",
+        example: "",
+    },
+    ext_footprintsize: {
+        category: Category.Construction,
+        title: "Size of the building footprint",
+        example: 100,
+    },
+    ext_plotsize: {
+        category: Category.Construction,
+        title: "Size of the building plot",
+        example: 100,
+    },
+    ext_num_trees_within_100: {
+        category: Category.Streetscape,
+        title: "Number of trees within 100 metres.",
+        example: 42,
+    },
+    ext_nabers_energy_rating: {
+        category: Category.Sustainability,
+        title: "NABERS Energy Star Rating",
+        tooltip: "NABERS Energy Star Rating Value",
+        example: 3,
+    },
+    ext_electricity: {
+        category: Category.Sustainability,
+        title: "Utility Usage Electricity",
+        tooltip: "Electricity Usage",
+        example: 3,
+    },
+    ext_water: {
+        category: Category.Sustainability,
+        title: "Utility Usage Water",
+        tooltip: "Water Usage",
+        example: 3,
+    },
+    ext_building_quality: {
+        category: Category.Construction,
+        title: "Building Quality",
+        tooltip: "Building Quality",
+        example: "",
+    },
+    ext_gardens: {
+        category: Category.Construction,
+        title: "Gardens",
+        tooltip: "Gardens",
+        example: "",
+    },
+    ext_greenwalls: {
+        category: Category.Construction,
+        title: "Greenwalls",
+        tooltip: "Greenwalls",
+        example: "",
+    },
+    ext_solarpanels: {
+        category: Category.Construction,
+        title: "Solar Panels",
+        tooltip: "Solar Panels",
+        example: "",
+    },
+    ext_pool: {
+        category: Category.Construction,
+        title: "Swimming Pool",
+        tooltip: "Swimming Pool",
+        example: "",
+    },
 };

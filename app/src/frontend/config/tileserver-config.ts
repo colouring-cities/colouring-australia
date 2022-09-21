@@ -6,12 +6,14 @@
 export type BuildingMapTileset = 'date_year' | 
     'size_height' |
     'construction_core_material' |
+    'ext_solarpanels' |
     'location' |
-    'comm_walk_index' |
+    'ext_walk_index' |
+    'likes' |
     'planning_combined' |
-    'sust_nabers_energy_rating' |
+    'ext_nabers_energy_rating' |
     'building_attachment_form' |
-    'landuse' |
+    'ext_designated_land_use' |
     'dynamics_demolished_count';
 
 export type SpecialMapTileset = 'base_light' | 'base_night' | 'highlight' | 'number_labels';

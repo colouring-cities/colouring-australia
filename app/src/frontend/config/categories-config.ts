@@ -9,7 +9,7 @@ export enum Category {
     Age = 'age',
     Size = 'size',
     Construction = 'construction',
-    Streetscape = 'streetscape',
+    Streetscape = 'context',
     Team = 'team',
     Planning = 'planning',
     Sustainability = 'sustainability',
@@ -31,11 +31,11 @@ export const categoriesOrder: Category[] = [
     Category.Size,
     Category.Construction,
     Category.Streetscape,
-    Category.Team,
     Category.Planning,
     Category.Sustainability,
     Category.Dynamics,
-    Category.Community
+    Category.Community,
+    Category.Team
     //, Category.Test
 ];
 
@@ -50,7 +50,7 @@ interface CategoryDefinition {
 export const categoriesConfig: {[key in Category]: CategoryDefinition} = {
     [Category.Age]: {
         slug: 'age',
-        name: 'Age',
+        name: 'Heritage',
 	aboutUrl: 'https://www.ahdap.org/colouring-sydney#age',
         intro: 'Building age data can support energy analysis and help predict long-term change.',
     },
@@ -86,6 +86,7 @@ export const categoriesConfig: {[key in Category]: CategoryDefinition} = {
         intro: 'How does this building work for the local community?',
     },
     [Category.Planning]: {
+        inactive: true,
         slug: 'planning',
         name: 'Planning',
 	aboutUrl: 'https://www.ahdap.org/colouring-sydney#planning',
@@ -110,9 +111,8 @@ export const categoriesConfig: {[key in Category]: CategoryDefinition} = {
         intro: 'How are buildings used, and how does use change over time?',
     },
     [Category.Streetscape]: {
-        inactive: true,
-        slug: 'streetscape',
-        name: 'Streetscape',
+        slug: 'context',
+        name: 'Street Context',
 	aboutUrl: 'https://www.ahdap.org/colouring-sydney#greenery',
         intro: "What's the building's context? Coming soon…",
     },

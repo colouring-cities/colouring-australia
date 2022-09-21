@@ -335,33 +335,33 @@
             <LineSymbolizer stroke="#95beba" stroke-width="2.5"/>
         </Rule>
     </Style>
-    <Style name="sust_nabers_energy_rating">
+    <Style name="ext_nabers_energy_rating">
         <Rule>
-            <Filter>[sust_nabers_energy_rating] &lt; 1.00</Filter>
+            <Filter>[ext_nabers_energy_rating] &lt; 1.00</Filter>
             <PolygonSymbolizer fill="#ff0000" />
         </Rule>
         <Rule>
-            <Filter>[sust_nabers_energy_rating] &gt;= 1.00 and [sust_nabers_energy_rating] &lt; 2.00</Filter>
+            <Filter>[ext_nabers_energy_rating] &gt;= 1.00 and [ext_nabers_energy_rating] &lt; 2.00</Filter>
             <PolygonSymbolizer fill="#e92b00" />
         </Rule>
         <Rule>
-            <Filter>[sust_nabers_energy_rating] &gt;= 2.00 and [sust_nabers_energy_rating] &lt; 3.00</Filter>
+            <Filter>[ext_nabers_energy_rating] &gt;= 2.00 and [ext_nabers_energy_rating] &lt; 3.00</Filter>
             <PolygonSymbolizer fill="#d35500" />
         </Rule>
         <Rule>
-            <Filter>[sust_nabers_energy_rating] &gt;= 3.00 and [sust_nabers_energy_rating] &lt; 4.00</Filter>
+            <Filter>[ext_nabers_energy_rating] &gt;= 3.00 and [ext_nabers_energy_rating] &lt; 4.00</Filter>
             <PolygonSymbolizer fill="#bd8000" />
         </Rule>
         <Rule>
-            <Filter>[sust_nabers_energy_rating] &gt;= 4.00 and [sust_nabers_energy_rating] &lt; 5.00</Filter>
+            <Filter>[ext_nabers_energy_rating] &gt;= 4.00 and [ext_nabers_energy_rating] &lt; 5.00</Filter>
             <PolygonSymbolizer fill="#a6aa00" />
         </Rule>
         <Rule>
-            <Filter>[sust_nabers_energy_rating] &gt;= 5.00 and [sust_nabers_energy_rating] &lt; 6.00</Filter>
+            <Filter>[ext_nabers_energy_rating] &gt;= 5.00 and [ext_nabers_energy_rating] &lt; 6.00</Filter>
             <PolygonSymbolizer fill="#90d500" />
         </Rule>
         <Rule>
-            <Filter>[sust_nabers_energy_rating] &gt;= 6.00</Filter>
+            <Filter>[ext_nabers_energy_rating] &gt;= 6.00</Filter>
             <PolygonSymbolizer fill="#7aff00" />
         </Rule>
 
@@ -405,65 +405,75 @@
             <LineSymbolizer stroke="#888" stroke-width="2.0"/>
         </Rule>
     </Style>
-    <Style name="comm_walk_index">
+    <Style name="ext_solarpanels">
         <Rule>
-            <Filter>[comm_walk_index] &gt;= 95.0</Filter>
-            <PolygonSymbolizer fill="#fff9b8" />
-        </Rule>
-        <Rule>
-            <Filter>[comm_walk_index] &gt;= 90.0 and [comm_walk_index] &lt; 95.0</Filter>
-            <PolygonSymbolizer fill="#fae269" />
-        </Rule>
-        <Rule>
-            <Filter>[comm_walk_index] &gt;= 85.0 and [comm_walk_index] &lt; 90.0</Filter>
-            <PolygonSymbolizer fill="#fbaf27" />
-        </Rule>
-        <Rule>
-            <Filter>[comm_walk_index] &gt;= 80.0 and [comm_walk_index] &lt; 85.0</Filter>
-            <PolygonSymbolizer fill="#e6711d" />
-        </Rule>
-        <Rule>
-            <Filter>[comm_walk_index] &gt;= 75.0 and [comm_walk_index] &lt; 80.0</Filter>
-            <PolygonSymbolizer fill="#cc1212" />
-        </Rule>
-        <Rule>
-            <Filter>[comm_walk_index] &gt;= 70.0 and [comm_walk_index] &lt; 75.0</Filter>
-            <PolygonSymbolizer fill="#8f0303" />
-        </Rule>
-        <Rule>
-            <Filter>[comm_walk_index] &gt;= 65.0 and [comm_walk_index] &lt; 70.0</Filter>
-            <PolygonSymbolizer fill="#8f5385" />
-        </Rule>
-        <Rule>
-            <Filter>[comm_walk_index] &gt;= 60.0 and [comm_walk_index] &lt; 65.0</Filter>
-            <PolygonSymbolizer fill="#c3e1eb" />
-        </Rule>
-        <Rule>
-            <Filter>[comm_walk_index] &gt;= 55.0 and [comm_walk_index] &lt; 60.0</Filter>
-            <PolygonSymbolizer fill="#6a9dba" />
-        </Rule>
-        <Rule>
-            <Filter>[comm_walk_index] &gt;= 50.0 and [comm_walk_index] &lt; 55.0</Filter>
-            <PolygonSymbolizer fill="#3b74a3" />
-        </Rule>
-        <Rule>
-            <Filter>[comm_walk_index] &gt;= 45.0 and [comm_walk_index] &lt; 50.0</Filter>
+            <Filter>[ext_solarpanels] &gt;= 0.5</Filter>
             <PolygonSymbolizer fill="#95ded8" />
         </Rule>
         <Rule>
-            <Filter>[comm_walk_index] &gt;= 40.0 and [comm_walk_index] &lt; 45.0</Filter>
+            <Filter>[ext_solarpanels] &lt;= 0.5</Filter>
+            <PolygonSymbolizer fill="#cc1212" />
+        </Rule>
+    </Style>
+    <Style name="ext_walk_index">
+        <Rule>
+            <Filter>[ext_walk_index] &gt;= 95.0</Filter>
+            <PolygonSymbolizer fill="#fff9b8" />
+        </Rule>
+        <Rule>
+            <Filter>[ext_walk_index] &gt;= 90.0 and [ext_walk_index] &lt; 95.0</Filter>
+            <PolygonSymbolizer fill="#fae269" />
+        </Rule>
+        <Rule>
+            <Filter>[ext_walk_index] &gt;= 85.0 and [ext_walk_index] &lt; 90.0</Filter>
+            <PolygonSymbolizer fill="#fbaf27" />
+        </Rule>
+        <Rule>
+            <Filter>[ext_walk_index] &gt;= 80.0 and [ext_walk_index] &lt; 85.0</Filter>
+            <PolygonSymbolizer fill="#e6711d" />
+        </Rule>
+        <Rule>
+            <Filter>[ext_walk_index] &gt;= 75.0 and [ext_walk_index] &lt; 80.0</Filter>
+            <PolygonSymbolizer fill="#cc1212" />
+        </Rule>
+        <Rule>
+            <Filter>[ext_walk_index] &gt;= 70.0 and [ext_walk_index] &lt; 75.0</Filter>
+            <PolygonSymbolizer fill="#8f0303" />
+        </Rule>
+        <Rule>
+            <Filter>[ext_walk_index] &gt;= 65.0 and [ext_walk_index] &lt; 70.0</Filter>
+            <PolygonSymbolizer fill="#8f5385" />
+        </Rule>
+        <Rule>
+            <Filter>[ext_walk_index] &gt;= 60.0 and [ext_walk_index] &lt; 65.0</Filter>
+            <PolygonSymbolizer fill="#c3e1eb" />
+        </Rule>
+        <Rule>
+            <Filter>[ext_walk_index] &gt;= 55.0 and [ext_walk_index] &lt; 60.0</Filter>
+            <PolygonSymbolizer fill="#6a9dba" />
+        </Rule>
+        <Rule>
+            <Filter>[ext_walk_index] &gt;= 50.0 and [ext_walk_index] &lt; 55.0</Filter>
+            <PolygonSymbolizer fill="#3b74a3" />
+        </Rule>
+        <Rule>
+            <Filter>[ext_walk_index] &gt;= 45.0 and [ext_walk_index] &lt; 50.0</Filter>
+            <PolygonSymbolizer fill="#95ded8" />
+        </Rule>
+        <Rule>
+            <Filter>[ext_walk_index] &gt;= 40.0 and [ext_walk_index] &lt; 45.0</Filter>
             <PolygonSymbolizer fill="#68aba5" />
         </Rule>
         <Rule>
-            <Filter>[comm_walk_index] &gt;= 35.0 and [comm_walk_index] &lt; 40.0</Filter>
+            <Filter>[ext_walk_index] &gt;= 35.0 and [ext_walk_index] &lt; 40.0</Filter>
             <PolygonSymbolizer fill="#acc98f" />
         </Rule>
         <Rule>
-            <Filter>[comm_walk_index] &gt;= 30.0 and [comm_walk_index] &lt; 35.0</Filter>
+            <Filter>[ext_walk_index] &gt;= 30.0 and [ext_walk_index] &lt; 35.0</Filter>
             <PolygonSymbolizer fill="#6d8a51" />
         </Rule>
         <Rule>
-            <Filter>[comm_walk_index] &lt; 30.0</Filter>
+            <Filter>[ext_walk_index] &lt; 30.0</Filter>
             <PolygonSymbolizer fill="#d0c291" />
 	</Rule>
     </Style>
@@ -508,53 +518,53 @@
             <LineSymbolizer stroke="#888" stroke-width="3.0"/>
         </Rule>
     </Style>
-    <Style name="landuse">
+    <Style name="ext_designated_land_use">
         <Rule>
-            <Filter>[current_landuse_order] = "Agriculture And Fisheries"</Filter>
+            <Filter>[ext_designated_land_use] = "Agriculture And Fisheries"</Filter>
             <PolygonSymbolizer fill="#fa667d" />
         </Rule>
         <Rule>
-            <Filter>[current_landuse_order] = "Minerals"</Filter>
+            <Filter>[ext_designated_land_use] = "Minerals"</Filter>
             <PolygonSymbolizer fill="#53f5dd" />
         </Rule>
         <Rule>
-            <Filter>[current_landuse_order] = "Recreation And Leisure"</Filter>
+            <Filter>[ext_designated_land_use] = "Recreation And Leisure"</Filter>
             <PolygonSymbolizer fill="#ffbfbf" />
         </Rule>
         <Rule>
-            <Filter>[current_landuse_order] = "Transport"</Filter>
+            <Filter>[ext_designated_land_use] = "Transport"</Filter>
             <PolygonSymbolizer fill="#b3de69" />
         </Rule>
         <Rule>
-            <Filter>[current_landuse_order] = "Utilities And Infrastructure"</Filter>
+            <Filter>[ext_designated_land_use] = "Utilities And Infrastructure"</Filter>
             <PolygonSymbolizer fill="#cccccc" />
         </Rule>
         <Rule>
-            <Filter>[current_landuse_order] = "Residential"</Filter>
+            <Filter>[ext_designated_land_use] = "Residential"</Filter>
             <PolygonSymbolizer fill="#4a54a6" />
         </Rule>
         <Rule>
-            <Filter>[current_landuse_order] = "Community Services"</Filter>
+            <Filter>[ext_designated_land_use] = "Community Services"</Filter>
             <PolygonSymbolizer fill="#73ccd1" />
         </Rule>
         <Rule>
-            <Filter>[current_landuse_order] = "Retail"</Filter>
+            <Filter>[ext_designated_land_use] = "Retail"</Filter>
             <PolygonSymbolizer fill="#ff8c00" />
         </Rule>
         <Rule>
-            <Filter>[current_landuse_order] = "Industry And Business"</Filter>
+            <Filter>[ext_designated_land_use] = "Industry And Business"</Filter>
             <PolygonSymbolizer fill="#f5f58f" />
         </Rule>
         <Rule>
-            <Filter>[current_landuse_order] = "Vacant And Derelict"</Filter>
+            <Filter>[ext_designated_land_use] = "Vacant And Derelict"</Filter>
             <PolygonSymbolizer fill="#ffffff" />
         </Rule>
         <Rule>
-            <Filter>[current_landuse_order] = "Defence"</Filter>
+            <Filter>[ext_designated_land_use] = "Defence"</Filter>
             <PolygonSymbolizer fill="#898944" />
         </Rule>
         <Rule>
-            <Filter>[current_landuse_order] = "Mixed Use"</Filter>
+            <Filter>[ext_designated_land_use] = "Mixed Use"</Filter>
             <PolygonSymbolizer fill="#e5050d" />
         </Rule>
 

@@ -117,14 +117,14 @@ const LAYER_QUERIES = {
             buildings
         WHERE
             sust_dec IS NOT NULL`,
-    sust_nabers_energy_rating: `
+    ext_nabers_energy_rating: `
         SELECT
             geometry_id,
-            sust_nabers_energy_rating
+            ext_nabers_energy_rating
         FROM
             buildings
         WHERE
-            sust_nabers_energy_rating IS NOT NULL`,
+            ext_nabers_energy_rating IS NOT NULL`,
     building_attachment_form: `
         SELECT
             geometry_id,
@@ -133,14 +133,14 @@ const LAYER_QUERIES = {
             buildings
         WHERE
             building_attachment_form IS NOT NULL`,
-    landuse: `
+    ext_designated_land_use: `
         SELECT
             geometry_id,
-            current_landuse_order
+            ext_designated_land_use
         FROM
             buildings
         WHERE
-            current_landuse_order IS NOT NULL`,
+            ext_designated_land_use IS NOT NULL`,
     dynamics_demolished_count: `
         SELECT
             geometry_id,
@@ -149,14 +149,22 @@ const LAYER_QUERIES = {
         FROM
             buildings
         WHERE jsonb_array_length(demolished_buildings) > 0 OR dynamics_has_demolished_buildings = FALSE`,
-    comm_walk_index: `
+    ext_walk_index: `
         SELECT
             geometry_id,
-            comm_walk_index AS comm_walk_index
+            ext_walk_index AS ext_walk_index
         FROM
             buildings
         WHERE
-            comm_walk_index IS NOT NULL`,
+            ext_walk_index IS NOT NULL`,
+    ext_solarpanels: `
+        SELECT
+            geometry_id,
+            ext_solarpanels AS ext_solarpanels
+        FROM
+            buildings
+        WHERE
+            ext_solarpanels IS NOT NULL`,
 };
 
 const GEOMETRY_FIELD = 'geometry_geom';

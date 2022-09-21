@@ -16,19 +16,6 @@ import { CategoryViewProps } from './category-view-props';
 const CommunityView: React.FunctionComponent<CategoryViewProps> = (props) => {
 return (
     <Fragment>
-        <NumericDataEntry
-            title={dataFields.comm_walk_index.title}
-            slug="comm_walk_index"
-            value={props.building.comm_walk_index}
-            tooltip={dataFields.comm_walk_index.tooltip}
-            step={0.1}
-            min={0}
-            max={100}
-            mode={props.mode}
-            copy={props.copy}
-            onChange={props.onChange}
-        />
-
         <LikeDataEntry
             userLike={props.building_like}
             totalLikes={props.building.likes_total}

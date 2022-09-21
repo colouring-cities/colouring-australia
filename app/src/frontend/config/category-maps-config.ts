@@ -69,7 +69,8 @@ export const categoryMapsConfig: {[key in Category]: CategoryMapDefinition} = {
             title: 'Team',
             elements: []
         },
-    },
+        },
+        /*
     [Category.Construction]: {
         mapStyle: 'construction_core_material',
         legend: {
@@ -83,6 +84,17 @@ export const categoryMapsConfig: {[key in Category]: CategoryMapDefinition} = {
                 { color: "#5c8970", text: "Other Metal" },
                 { color: "#b5a859", text: "Other Natural Material" },
                 { color: "#c48a85", text: "Other Man-Made Material" }
+            ]
+        },
+        },
+        */
+    [Category.Construction]: {
+        mapStyle: 'ext_solarpanels',
+        legend: {
+            title: 'Solar Panels',
+            elements: [
+                { color: "#95ded8", text: "Present" },
+                { color: "#cc1212", text: "Absent" },
             ]
         },
     },
@@ -101,25 +113,17 @@ export const categoryMapsConfig: {[key in Category]: CategoryMapDefinition} = {
         },
     },
     [Category.Community]: {
-        mapStyle: 'comm_walk_index',
+        mapStyle: 'likes',
         legend: {
-            title: 'Walk Index',
+            title: 'Like Me',
             elements: [
-                { color: '#fff9b8', text: '>95' },
-                { color: '#fae269', text: '90-95' },
-                { color: '#fbaf27', text: '85-90' },
-                { color: '#e6711d', text: '80-85' },
-                { color: '#cc1212', text: '75-80' },
-                { color: '#8f0303', text: '70-75' },
-                { color: '#8f5385', text: '65-70' },
-                { color: '#c3e1eb', text: '60-65' },
-                { color: '#6a9dba', text: '55-60' },
-                { color: '#3b74a3', text: '50-55' },
-                { color: '#95ded8', text: '45-50' },
-                { color: '#68aba5', text: '40-45' },
-                { color: '#acc98f', text: '35-40' },
-                { color: '#6d8a51', text: '30-35' },
-                { color: '#d0c291', text: '<30' },
+            { color: '#bd0026', text: '👍👍👍👍 100+' },
+            { color: '#e31a1c', text: '👍👍👍 50–99' },
+            { color: '#fc4e2a', text: '👍👍 20–49' },
+            { color: '#fd8d3c', text: '👍👍 10–19' },
+            { color: '#feb24c', text: '👍 3–9' },
+            { color: '#fed976', text: '👍 2' },
+            { color: '#ffe8a9', text: '👍 1'}
             ]
         }
     },
@@ -138,7 +142,7 @@ export const categoryMapsConfig: {[key in Category]: CategoryMapDefinition} = {
         },
     },
     [Category.Sustainability]: {
-        mapStyle: 'sust_nabers_energy_rating',
+        mapStyle: 'ext_nabers_energy_rating',
         legend: {
             title: 'Sustainability',
             description: 'NABERS Energy Rating',
@@ -166,7 +170,7 @@ export const categoryMapsConfig: {[key in Category]: CategoryMapDefinition} = {
         },
     },
     [Category.LandUse]: {
-        mapStyle: 'landuse',
+        mapStyle: 'ext_designated_land_use',
         legend: {
             title: 'Land Use',
             elements: [
@@ -187,11 +191,27 @@ export const categoryMapsConfig: {[key in Category]: CategoryMapDefinition} = {
         },
     },
     [Category.Streetscape]: {
-        mapStyle: undefined,
+        mapStyle: 'ext_walk_index',
         legend: {
-            title: 'Streetscape',
-            elements: []
-        },
+            title: 'Walk Index',
+            elements: [
+                { color: '#fff9b8', text: '>95' },
+                { color: '#fae269', text: '90-95' },
+                { color: '#fbaf27', text: '85-90' },
+                { color: '#e6711d', text: '80-85' },
+                { color: '#cc1212', text: '75-80' },
+                { color: '#8f0303', text: '70-75' },
+                { color: '#8f5385', text: '65-70' },
+                { color: '#c3e1eb', text: '60-65' },
+                { color: '#6a9dba', text: '55-60' },
+                { color: '#3b74a3', text: '50-55' },
+                { color: '#95ded8', text: '45-50' },
+                { color: '#68aba5', text: '40-45' },
+                { color: '#acc98f', text: '35-40' },
+                { color: '#6d8a51', text: '30-35' },
+                { color: '#d0c291', text: '<30' },
+            ]
+        }
     },
     [Category.Dynamics]: {
         mapStyle: 'dynamics_demolished_count',
