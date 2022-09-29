@@ -79,6 +79,39 @@
             <LineSymbolizer stroke="#888" stroke-width="3.0"/>
         </Rule>
     </Style>
+    <Style name="team">
+        <Rule>
+            <Filter>[team_info_count] &gt;= 8</Filter>
+            <PolygonSymbolizer fill="#994d00" />
+        </Rule>
+        <Rule>
+            <Filter>[team_info_count] &gt;= 6 and [team_info_count] &lt; 8</Filter>
+            <PolygonSymbolizer fill="#e67300" />
+        </Rule>
+        <Rule>
+            <Filter>[team_info_count] &gt;= 4 and [team_info_count] &lt; 6</Filter>
+            <PolygonSymbolizer fill="#ff9933" />
+        </Rule>
+        <Rule>
+            <Filter>[team_info_count] &gt;= 2 and [team_info_count] &lt; 4</Filter>
+            <PolygonSymbolizer fill="#ffbf80" />
+        </Rule>
+        <Rule>
+            <Filter>[team_info_count] &gt; 0 and [team_info_count] &lt; 2</Filter>
+            <PolygonSymbolizer fill="#ffe6cc" />
+        </Rule>
+
+        <Rule>
+            <MaxScaleDenominator>17061</MaxScaleDenominator>
+            <MinScaleDenominator>4264</MinScaleDenominator>
+            <LineSymbolizer stroke="#888" stroke-width="1.0"/>
+        </Rule>
+        <Rule>
+            <MaxScaleDenominator>4264</MaxScaleDenominator>
+            <MinScaleDenominator>0</MinScaleDenominator>
+            <LineSymbolizer stroke="#888" stroke-width="3.0"/>
+        </Rule>
+    </Style>
     <Style name="size_storeys">
         <Rule>
             <Filter>[size_storeys] &gt;= 40</Filter>
@@ -160,7 +193,7 @@
     <Style name="construction_core_material">
         <Rule>
             <Filter>[construction_core_material] = "Wood"</Filter>
-            <PolygonSymbolizer fill="#96613b" />
+            <PolygonSymbolizer fill="#b5a859" />
         </Rule>
         <Rule>
             <Filter>[construction_core_material] = "Stone"</Filter>
@@ -184,7 +217,7 @@
         </Rule>
         <Rule>
             <Filter>[construction_core_material] = "Other Natural Material"</Filter>
-            <PolygonSymbolizer fill="#b5a859" />
+            <PolygonSymbolizer fill="#96613b" />
         </Rule>
         <Rule>
             <Filter>[construction_core_material] = "Other Man-Made Material"</Filter>
@@ -505,6 +538,109 @@
         <Rule>
             <Filter>[likes] = 1</Filter>
             <PolygonSymbolizer fill="#ffe8a9" />
+        </Rule>
+
+        <Rule>
+            <MaxScaleDenominator>17061</MaxScaleDenominator>
+            <MinScaleDenominator>4264</MinScaleDenominator>
+            <LineSymbolizer stroke="#888" stroke-width="1.0"/>
+        </Rule>
+        <Rule>
+            <MaxScaleDenominator>4264</MaxScaleDenominator>
+            <MinScaleDenominator>0</MinScaleDenominator>
+            <LineSymbolizer stroke="#888" stroke-width="3.0"/>
+        </Rule>
+    </Style>
+    <Style name="community_local_significance_total">
+        <Rule>
+            <Filter>[community_local_significance_total] &gt;= 100</Filter>
+            <PolygonSymbolizer fill="#bd0026" />
+        </Rule>
+        <Rule>
+            <Filter>[community_local_significance_total] &gt;= 50 and [community_local_significance_total] &lt; 100</Filter>
+            <PolygonSymbolizer fill="#e31a1c" />
+        </Rule>
+        <Rule>
+            <Filter>[community_local_significance_total] &gt;= 20 and [community_local_significance_total] &lt; 50</Filter>
+            <PolygonSymbolizer fill="#fc4e2a" />
+        </Rule>
+        <Rule>
+            <Filter>[community_local_significance_total] &gt;= 10 and [community_local_significance_total] &lt; 20</Filter>
+            <PolygonSymbolizer fill="#fd8d3c" />
+        </Rule>
+        <Rule>
+            <Filter>[community_local_significance_total] &gt;= 3 and [community_local_significance_total] &lt; 10</Filter>
+            <PolygonSymbolizer fill="#feb24c" />
+        </Rule>
+        <Rule>
+            <Filter>[community_local_significance_total] = 2</Filter>
+            <PolygonSymbolizer fill="#fed976" />
+        </Rule>
+        <Rule>
+            <Filter>[community_local_significance_total] = 1</Filter>
+            <PolygonSymbolizer fill="#ffe8a9" />
+        </Rule>
+
+        <Rule>
+            <MaxScaleDenominator>17061</MaxScaleDenominator>
+            <MinScaleDenominator>4264</MinScaleDenominator>
+            <LineSymbolizer stroke="#888" stroke-width="1.0"/>
+        </Rule>
+        <Rule>
+            <MaxScaleDenominator>4264</MaxScaleDenominator>
+            <MinScaleDenominator>0</MinScaleDenominator>
+            <LineSymbolizer stroke="#888" stroke-width="3.0"/>
+        </Rule>
+    </Style>
+    <Style name="community_expected_planning_application_total">
+        <Rule>
+            <Filter>[community_expected_planning_application_total] &gt;= 100</Filter>
+            <PolygonSymbolizer fill="#bd0026" />
+        </Rule>
+        <Rule>
+            <Filter>[community_expected_planning_application_total] &gt;= 50 and [community_expected_planning_application_total] &lt; 100</Filter>
+            <PolygonSymbolizer fill="#e31a1c" />
+        </Rule>
+        <Rule>
+            <Filter>[community_expected_planning_application_total] &gt;= 20 and [community_expected_planning_application_total] &lt; 50</Filter>
+            <PolygonSymbolizer fill="#fc4e2a" />
+        </Rule>
+        <Rule>
+            <Filter>[community_expected_planning_application_total] &gt;= 10 and [community_expected_planning_application_total] &lt; 20</Filter>
+            <PolygonSymbolizer fill="#fd8d3c" />
+        </Rule>
+        <Rule>
+            <Filter>[community_expected_planning_application_total] &gt;= 3 and [community_expected_planning_application_total] &lt; 10</Filter>
+            <PolygonSymbolizer fill="#feb24c" />
+        </Rule>
+        <Rule>
+            <Filter>[community_expected_planning_application_total] = 2</Filter>
+            <PolygonSymbolizer fill="#fed976" />
+        </Rule>
+        <Rule>
+            <Filter>[community_expected_planning_application_total] = 1</Filter>
+            <PolygonSymbolizer fill="#ffe8a9" />
+        </Rule>
+
+        <Rule>
+            <MaxScaleDenominator>17061</MaxScaleDenominator>
+            <MinScaleDenominator>4264</MinScaleDenominator>
+            <LineSymbolizer stroke="#888" stroke-width="1.0"/>
+        </Rule>
+        <Rule>
+            <MaxScaleDenominator>4264</MaxScaleDenominator>
+            <MinScaleDenominator>0</MinScaleDenominator>
+            <LineSymbolizer stroke="#888" stroke-width="3.0"/>
+        </Rule>
+    </Style>
+    <Style name="community_in_public_ownership">
+        <Rule>
+            <Filter>[in_public_ownership] = true</Filter>
+            <PolygonSymbolizer fill="#1166ff" />
+        </Rule>
+        <Rule>
+            <Filter>[in_public_ownership] = false</Filter>
+            <PolygonSymbolizer fill="#ffaaa0" />
         </Rule>
 
         <Rule>

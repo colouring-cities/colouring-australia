@@ -14,13 +14,12 @@ export enum Category {
     Planning = 'planning',
     Sustainability = 'sustainability',
     Dynamics = 'dynamics',
-    Community = 'community'
-    // ,Test = 'test'
+    Community = 'community',
 }
 
 /**
  * This is the sole configuration variable that defines the order of the categories
- * in the category grid. The order in the enum defition or the other configs does
+ * in the category grid. The order in the enum definition or the other configs does
  * not affect the order of the grid.
  */
 export const categoriesOrder: Category[] = [
@@ -61,7 +60,6 @@ export const categoriesConfig: {[key in Category]: CategoryDefinition} = {
         intro: 'How big are buildings?',
     },
     [Category.Team]: {
-        inactive: true,
         slug: 'team',
         name: 'Team',
 	aboutUrl: 'https://www.ahdap.org/colouring-sydney#team',

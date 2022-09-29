@@ -23,8 +23,8 @@ export interface CategoryMapDefinition {
 
 export const defaultMapCategory = Category.Age;
 
-export const categoryMapsConfig: {[key in Category]: CategoryMapDefinition} = {
-    [Category.Age]: {
+export const categoryMapsConfig: {[key in Category]: CategoryMapDefinition[]} = {
+    [Category.Age]: [{
         mapStyle: 'date_year',
         legend: {
             title: 'Age',
@@ -46,8 +46,8 @@ export const categoryMapsConfig: {[key in Category]: CategoryMapDefinition} = {
                 { color: '#d0c291', text: '<1700' },
             ]
         },
-    },
-    [Category.Size]: {
+    }],
+    [Category.Size]: [{
         mapStyle: 'size_height',
         legend: {
             title: 'Height to apex',
@@ -62,43 +62,38 @@ export const categoryMapsConfig: {[key in Category]: CategoryMapDefinition} = {
                 { color: '#980043', text: '≥152'}
             ]
         },
-    },
-    [Category.Team]: {
-        mapStyle: undefined,
+    }],
+    [Category.Team]: [{
+        mapStyle: 'team',
         legend: {
             title: 'Team',
-            elements: []
+            description: '% data collected',
+            elements: [
+                { color: '#994d00', text: '≥80%' },
+                { color: '#e67300', text: '60–80%' },
+                { color: '#ff9933', text: '40–60%' },
+                { color: '#ffbf80', text: '20–40%' },
+                { color: '#ffe6cc', text: '<20%' }
+            ]
         },
-        },
-        /*
-    [Category.Construction]: {
+    }],
+    [Category.Construction]: [{
         mapStyle: 'construction_core_material',
         legend: {
             title: 'Construction',
             elements: [
-                { color: "#96613b", text: "Wood" },
+                { color: "#b5a859", text: "Wood" },
                 { color: "#ffffe3", text: "Stone" },
                 { color: "#f5d96b", text: "Brick" },
                 { color: "#beffe8", text: "Steel" },
                 { color: "#fca89d", text: "Reinforced Concrete" },
                 { color: "#5c8970", text: "Other Metal" },
-                { color: "#b5a859", text: "Other Natural Material" },
+                { color: "#96613b", text: "Other Natural Material" },
                 { color: "#c48a85", text: "Other Man-Made Material" }
             ]
         },
-        },
-        */
-    [Category.Construction]: {
-        mapStyle: 'ext_solarpanels',
-        legend: {
-            title: 'Solar Panels',
-            elements: [
-                { color: "#95ded8", text: "Present" },
-                { color: "#cc1212", text: "Absent" },
-            ]
-        },
-    },
-    [Category.Location]: {
+    }],
+    [Category.Location]: [{
         mapStyle: 'location',
         legend: {
             title: 'Location',
@@ -111,23 +106,68 @@ export const categoryMapsConfig: {[key in Category]: CategoryMapDefinition} = {
                 { color: '#bae4bc', text: '<20%' }
             ]
         },
-    },
-    [Category.Community]: {
-        mapStyle: 'likes',
-        legend: {
-            title: 'Like Me',
-            elements: [
-            { color: '#bd0026', text: '👍👍👍👍 100+' },
-            { color: '#e31a1c', text: '👍👍👍 50–99' },
-            { color: '#fc4e2a', text: '👍👍 20–49' },
-            { color: '#fd8d3c', text: '👍👍 10–19' },
-            { color: '#feb24c', text: '👍 3–9' },
-            { color: '#fed976', text: '👍 2' },
-            { color: '#ffe8a9', text: '👍 1'}
-            ]
+    }],
+    [Category.Community]: [
+        {
+            mapStyle: 'likes',
+            legend: {
+                title: 'Like Me',
+                elements: [
+                    { color: '#bd0026', text: '👍👍👍👍 100+' },
+                    { color: '#e31a1c', text: '👍👍👍 50–99' },
+                    { color: '#fc4e2a', text: '👍👍 20–49' },
+                    { color: '#fd8d3c', text: '👍👍 10–19' },
+                    { color: '#feb24c', text: '👍 3–9' },
+                    { color: '#fed976', text: '👍 2' },
+                    { color: '#ffe8a9', text: '👍 1'}
+                ]
+            }
+        },
+        {
+            mapStyle: 'community_local_significance_total',
+            legend: {
+                title: 'Local Significance',
+                description: 'People who think the building should be locally listed',
+                elements: [
+                    { color: '#bd0026', text: '100+' },
+                    { color: '#e31a1c', text: '50–99' },
+                    { color: '#fc4e2a', text: '20–49' },
+                    { color: '#fd8d3c', text: '10–19' },
+                    { color: '#feb24c', text: '3–9' },
+                    { color: '#fed976', text: '2' },
+                    { color: '#ffe8a9', text: '1'}
+                ]
+            }
+        },
+        {
+            mapStyle: 'community_expected_planning_application_total',
+            legend: {
+                title: 'Expected planning application',
+                description: 'People who think the building will be affected by a planning application in the near future',
+                elements: [
+                    { color: '#bd0026', text: '100+' },
+                    { color: '#e31a1c', text: '50–99' },
+                    { color: '#fc4e2a', text: '20–49' },
+                    { color: '#fd8d3c', text: '10–19' },
+                    { color: '#feb24c', text: '3–9' },
+                    { color: '#fed976', text: '2' },
+                    { color: '#ffe8a9', text: '1'}
+                ]
+            }
+        },
+        {
+            mapStyle: 'community_in_public_ownership',
+            legend: {
+                title: 'Public Ownership',
+                description: 'Is the building in some form of public/community ownership',
+                elements: [
+                    {color: '#1166ff', text: 'Yes'},
+                    {color: '#ffaaa0', text: 'No'}
+                ]
+            }
         }
-    },
-    [Category.Planning]: {
+    ],
+    [Category.Planning]: [{
         mapStyle: 'planning_combined',
         legend: {
             title: 'Statutory protections',
@@ -140,8 +180,8 @@ export const categoryMapsConfig: {[key in Category]: CategoryMapDefinition} = {
                 { color: '#858ed4', text: 'Locally listed'},
             ]
         },
-    },
-    [Category.Sustainability]: {
+    }],
+    [Category.Sustainability]: [{
         mapStyle: 'ext_nabers_energy_rating',
         legend: {
             title: 'Sustainability',
@@ -156,8 +196,8 @@ export const categoryMapsConfig: {[key in Category]: CategoryMapDefinition} = {
                 { color: "#7aff00", text: '6 Star' },
             ]
         },
-    },
-    [Category.Type]: {
+    }],
+    [Category.Type]: [{
         mapStyle: 'building_attachment_form',
         legend: {
             title: 'Type',
@@ -168,15 +208,16 @@ export const categoryMapsConfig: {[key in Category]: CategoryMapDefinition} = {
                 { color: "#226291", text: "Mid-Terrace" }
             ]
         },
-    },
-    [Category.LandUse]: {
+    }],
+    [Category.LandUse]: [{
         mapStyle: 'ext_designated_land_use',
         legend: {
             title: 'Land Use',
             elements: [
                 { color: '#e5050d', text: 'Mixed Use' },
                 { subtitle: 'Single use:'},
-                { color: '#4a54a6', text: 'Residential' },
+                { color: '#252aa6', text: 'Residential (unverified)' },
+                { color: '#7025a6', text: 'Residential (verified)' },
                 { color: '#ff8c00', text: 'Retail' },
                 { color: '#f5f58f', text: 'Industry & Business' },
                 { color: '#73ccd1', text: 'Community Services' },
@@ -186,11 +227,12 @@ export const categoryMapsConfig: {[key in Category]: CategoryMapDefinition} = {
                 { color: '#898944', text: 'Defence' },
                 { color: '#fa667d', text: 'Agriculture' },
                 { color: '#53f5dd', text: 'Minerals' },
-                { color: '#ffffff', text: 'Vacant & Derelict' }
+                { color: '#ffffff', text: 'Vacant & Derelict' },
+                { color: '#6c6f8e', text: 'Unclassified, presumed non-residential' }
             ]
         },
-    },
-    [Category.Streetscape]: {
+    }],
+    [Category.Streetscape]: [{
         mapStyle: 'ext_walk_index',
         legend: {
             title: 'Walk Index',
@@ -212,8 +254,8 @@ export const categoryMapsConfig: {[key in Category]: CategoryMapDefinition} = {
                 { color: '#d0c291', text: '<30' },
             ]
         }
-    },
-    [Category.Dynamics]: {
+    }],
+    [Category.Dynamics]: [{
         mapStyle: 'dynamics_demolished_count',
         legend: {
             title: 'Dynamics',
@@ -246,28 +288,6 @@ export const categoryMapsConfig: {[key in Category]: CategoryMapDefinition} = {
                 }
             ],
         },
-    }
-   /* ,
-    [Category.Test]: {
-        mapStyle: 'landuse',
-        legend: {
-            title: 'Test',
-            elements: [
-                { color: '#e5050d', text: 'Mixed Use' },
-                { subtitle: 'Single use:'},
-                { color: '#4a54a6', text: 'Residential' },
-                { color: '#ff8c00', text: 'Retail' },
-                { color: '#f5f58f', text: 'Industry & Business' },
-                { color: '#73ccd1', text: 'Community Services' },
-                { color: '#ffbfbf', text: 'Recreation & Leisure' },
-                { color: '#b3de69', text: 'Transport' },
-                { color: '#cccccc', text: 'Utilities & Infrastructure' },
-                { color: '#898944', text: 'Defence' },
-                { color: '#fa667d', text: 'Agriculture' },
-                { color: '#53f5dd', text: 'Minerals' },
-                { color: '#ffffff', text: 'Vacant & Derelict' }
-            ]
-        },
-    }*/
+    }]
     
 };

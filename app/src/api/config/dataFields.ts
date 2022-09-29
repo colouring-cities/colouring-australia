@@ -2,6 +2,12 @@ import { valueType } from '../../helpers';
 
 /** Configuration for a single data field */
 export interface DataFieldConfig {
+
+    /**
+     * Default: false
+     */
+    perUser?: boolean;
+
     /**
      * Allow editing the field through the API?
      */
@@ -41,12 +47,16 @@ export interface DataFieldConfig {
     sqlCast?: 'json' | 'jsonb';
 }
 
-export const dataFieldsConfig = valueType<DataFieldConfig>()({ /* eslint-disable @typescript-eslint/camelcase */
+export const buildingAttributesConfig = valueType<DataFieldConfig>()({ /* eslint-disable @typescript-eslint/camelcase */
+    ref_toid: {
+        edit: false
+    },
     ref_osm_id: {
         edit: true,
+        verify: true,
     },
     location_name: {
-        edit: false,
+        edit: true,
         verify: true,
     },
     location_number: {
@@ -54,23 +64,28 @@ export const dataFieldsConfig = valueType<DataFieldConfig>()({ /* eslint-disable
         verify: true,
     },
     location_street: {
-        edit: false,
+        edit: true,
         verify: true,
     },
     location_line_two: {
-        edit: false,
+        edit: true,
+        verify: true
     },
     location_town: {
-        edit: false,
+        edit: true,
+        verify: true
     },
     location_postcode: {
-        edit: false,
+        edit: true,
+        verify: true
     },
     location_latitude: {
         edit: true,
+        verify: true,
     },
     location_longitude: {
         edit: true,
+        verify: true,
     },
     date_year: {
         edit: true,
@@ -78,21 +93,26 @@ export const dataFieldsConfig = valueType<DataFieldConfig>()({ /* eslint-disable
     },
     date_lower: {
         edit: true,
+        verify: true,
     },
     date_upper: {
         edit: true,
+        verify: true,
     },
     date_source: {
         edit: true,
+        verify: true,
     },
     date_source_detail: {
         edit: true,
     },
     date_link: {
         edit: true,
+        verify: true,
     },
     facade_year: {
         edit: true,
+        verify: true,
     },
     facade_upper: {
         edit: false,
@@ -136,12 +156,14 @@ export const dataFieldsConfig = valueType<DataFieldConfig>()({ /* eslint-disable
     },
     construction_core_material: {
         edit: true,
+        verify: true,
     },
     construction_secondary_materials: {
         edit: false,
     },
     construction_roof_covering: {
         edit: true,
+        verify: true,
     },
     planning_portal_link: {
         edit: true,
@@ -156,16 +178,20 @@ export const dataFieldsConfig = valueType<DataFieldConfig>()({ /* eslint-disable
         verify: true,
     },
     planning_in_list: {
-        edit: false,
+        edit: true,
+        verify: true,
     },
     planning_list_id: {
-        edit: false,
+        edit: true,
+        verify: true,
     },
     planning_list_cat: {
-        edit: false,
+        edit: true,
+        verify: true,
     },
     planning_list_grade: {
-        edit: false,
+        edit: true,
+        verify: true,
     },
     planning_heritage_at_risk_id: {
         edit: true,
@@ -211,6 +237,10 @@ export const dataFieldsConfig = valueType<DataFieldConfig>()({ /* eslint-disable
         edit: true,
         verify: true,
     },
+    planning_nhle_link: {
+        edit: true,
+        verify: true,
+    },
     sust_breeam_rating: {
         edit: true,
         verify: true,
@@ -248,7 +278,20 @@ export const dataFieldsConfig = valueType<DataFieldConfig>()({ /* eslint-disable
         derivedEdit: true,
         verify: false,
     },
-
+    current_landuse_source: {
+        edit: true,
+        verify: true,
+    },
+    current_landuse_source_detail: {
+        edit: true,
+    },
+    current_landuse_link: {
+        edit: true,
+        verify: true,
+    },
+    current_landuse_verified: {
+        edit: true,
+    },
     dynamics_has_demolished_buildings: {
         edit: true,
         verify: true
@@ -260,7 +303,136 @@ export const dataFieldsConfig = valueType<DataFieldConfig>()({ /* eslint-disable
         asJson: true,
         sqlCast: 'jsonb',
     },
+
+    likes_total: {
+        edit: false,
+        derivedEdit: true,
+        verify: false
+    },
+    community_local_significance_total: {
+        edit: false,
+        derivedEdit: true,
+        verify: false
+    },
+    community_expected_planning_application_total: {
+        edit: false,
+        derivedEdit: true,
+        verify: false
+    },
+    community_activities_current: {
+        edit: true,
+        verify: false
+    },
+    community_activities: {
+        edit: true,
+        verify: false
+    },
+    community_activities_always: {
+        edit: true,
+        verify: false
+    },
+    community_public_ownership: {
+        edit: true,
+        verify: true
+    },
+    community_public_ownership_sources: {
+        edit: true,
+        verify: true
+    },
+    has_extension: {
+        edit: true,
+        verify: true
+    },
+    extension_year: {
+        edit: true,
+        verify: true
+    },
+    developer_type: {
+        edit: true,
+        verify: true
+    },
+    developer_name: {
+        edit: true,
+        verify: true
+    },
+    developer_source_link: {
+        edit: true,
+        verify: true
+    },
+    landowner: {
+        edit: true,
+        verify: true
+    },
+    landowner_source_link: {
+        edit: true,
+        verify: true
+    },
+    designers: {
+        edit: true,
+        verify: true
+    },
+    designers_source_link: {
+        edit: true,
+        verify: true
+    },
+    lead_designer_type: {
+        edit: true,
+        verify: true
+    },
+    designer_awards: {
+        edit: true,
+        verify: true
+    },
+    awards_source_link: {
+        edit: true,
+        verify: true
+    },
+    builder: {
+        edit: true,
+        verify: true
+    },
+    builder_source_link: {
+        edit: true,
+        verify: true
+    },
+    other_team: {
+        edit: true,
+        verify: true
+    },
+    other_team_source_link: {
+        edit: true,
+        verify: true
+    }
+
 });
 
-export type Building = { [k in keyof typeof dataFieldsConfig]: any };
-export type BuildingUpdate = Partial<Building>;
+
+export const buildingUserAttributesConfig = valueType<DataFieldConfig>()({
+    community_like: {
+        perUser: true,
+        edit: true,
+        verify: false,
+    },
+    community_type_worth_keeping: {
+        perUser: true,
+        edit: true,
+        verify: false
+    },
+    community_type_worth_keeping_reasons: {
+        perUser: true,
+        edit: true,
+        verify: false
+    },
+    community_local_significance: {
+        perUser: true,
+        edit: true,
+        verify: false
+    },
+    community_expected_planning_application: {
+        perUser: true,
+        edit: true,
+        verify: false
+    }
+});
+
+export const allAttributesConfig = Object.assign({}, buildingAttributesConfig, buildingUserAttributesConfig);
