@@ -5,16 +5,19 @@
 
 export type BuildingMapTileset = 'date_year' | 
     'size_height' |
+    'size_storeys' |
+    'size_footprint' |
+    'size_plot' |
     'construction_core_material' |
     'ext_solarpanels' |
+    'ext_building_quality' |
     'location' |
     'ext_walk_index' |
+    'ext_num_trees_within_100' |
     'likes' |
-    'community_local_significance_total' |
-    'community_expected_planning_application_total' |
-    'community_in_public_ownership' |
     'planning_combined' |
     'ext_nabers_energy_rating' |
+    'ext_electricity' |
     'building_attachment_form' |
     'ext_designated_land_use' |
     'dynamics_demolished_count' |
@@ -22,6 +25,6 @@ export type BuildingMapTileset = 'date_year' |
     'dynamics_demolished_count' |
     'team';
 
-export type SpecialMapTileset = 'base_light' | 'base_night' | 'highlight' | 'number_labels';
+export type SpecialMapTileset = 'base_night' | 'base_light' | 'highlight' | 'number_labels';
 
 export type MapTileset = BuildingMapTileset | SpecialMapTileset;

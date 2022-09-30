@@ -190,6 +190,88 @@
             <LineSymbolizer stroke="#ccc" stroke-width="3.0"/>
         </Rule>
     </Style>
+    <Style name="size_plot">
+        <Rule>
+            <Filter>[size_plot] &lt; 80</Filter>
+            <PolygonSymbolizer fill="#e7e1ef" />
+        </Rule>
+        <Rule>
+            <Filter>[size_plot] &gt;= 80 and [size_plot] &lt; 150</Filter>
+            <PolygonSymbolizer fill="#d4b9da" />
+        </Rule>
+        <Rule>
+            <Filter>[size_plot] &gt;= 150 and [size_plot] &lt; 300</Filter>
+            <PolygonSymbolizer fill="#c994c7" />
+        </Rule>
+        <Rule>
+            <Filter>[size_plot] &gt;= 300 and [size_plot] &lt; 1000</Filter>
+            <PolygonSymbolizer fill="#df65b0" />
+        </Rule>
+        <Rule>
+            <Filter>[size_plot] &gt;= 1000 and [size_plot] &lt; 10000</Filter>
+            <PolygonSymbolizer fill="#e7298a" />
+        </Rule>
+        <Rule>
+            <Filter>[size_plot] &gt;= 10000 and [size_plot] &lt; 100000</Filter>
+            <PolygonSymbolizer fill="#ce1256" />
+        </Rule>
+        <Rule>
+            <Filter>[size_plot] &gt;= 100000</Filter>
+            <PolygonSymbolizer fill="#980043" />
+        </Rule>
+
+        <Rule>
+            <MaxScaleDenominator>17061</MaxScaleDenominator>
+            <MinScaleDenominator>4264</MinScaleDenominator>
+            <LineSymbolizer stroke="#ccc" stroke-width="1.0"/>
+        </Rule>
+        <Rule>
+            <MaxScaleDenominator>4264</MaxScaleDenominator>
+            <MinScaleDenominator>0</MinScaleDenominator>
+            <LineSymbolizer stroke="#ccc" stroke-width="3.0"/>
+        </Rule>
+    </Style>
+    <Style name="size_footprint">
+        <Rule>
+            <Filter>[size_footprint] &lt; 80</Filter>
+            <PolygonSymbolizer fill="#e7e1ef" />
+        </Rule>
+        <Rule>
+            <Filter>[size_footprint] &gt;= 80 and [size_footprint] &lt; 150</Filter>
+            <PolygonSymbolizer fill="#d4b9da" />
+        </Rule>
+        <Rule>
+            <Filter>[size_footprint] &gt;= 150 and [size_footprint] &lt; 300</Filter>
+            <PolygonSymbolizer fill="#c994c7" />
+        </Rule>
+        <Rule>
+            <Filter>[size_footprint] &gt;= 300 and [size_footprint] &lt; 1000</Filter>
+            <PolygonSymbolizer fill="#df65b0" />
+        </Rule>
+        <Rule>
+            <Filter>[size_footprint] &gt;= 1000 and [size_footprint] &lt; 10000</Filter>
+            <PolygonSymbolizer fill="#e7298a" />
+        </Rule>
+        <Rule>
+            <Filter>[size_footprint] &gt;= 10000 and [size_footprint] &lt; 100000</Filter>
+            <PolygonSymbolizer fill="#ce1256" />
+        </Rule>
+        <Rule>
+            <Filter>[size_footprint] &gt;= 100000</Filter>
+            <PolygonSymbolizer fill="#980043" />
+        </Rule>
+
+        <Rule>
+            <MaxScaleDenominator>17061</MaxScaleDenominator>
+            <MinScaleDenominator>4264</MinScaleDenominator>
+            <LineSymbolizer stroke="#ccc" stroke-width="1.0"/>
+        </Rule>
+        <Rule>
+            <MaxScaleDenominator>4264</MaxScaleDenominator>
+            <MinScaleDenominator>0</MinScaleDenominator>
+            <LineSymbolizer stroke="#ccc" stroke-width="3.0"/>
+        </Rule>
+    </Style>
     <Style name="construction_core_material">
         <Rule>
             <Filter>[construction_core_material] = "Wood"</Filter>
@@ -438,6 +520,44 @@
             <LineSymbolizer stroke="#888" stroke-width="2.0"/>
         </Rule>
     </Style>
+    <Style name="ext_building_quality">
+        <Rule>
+            <Filter>[ext_building_quality] = "Ruin"</Filter>
+            <PolygonSymbolizer fill="#95ded8" />
+        </Rule>
+        <Rule>
+            <Filter>[ext_building_quality] = "Just Habitable"</Filter>
+            <PolygonSymbolizer fill="#7fd3b9" />
+        </Rule>
+        <Rule>
+            <Filter>[ext_building_quality] = "Very Poor"</Filter>
+            <PolygonSymbolizer fill="#79c592" />
+        </Rule>
+        <Rule>
+            <Filter>[ext_building_quality] = "Poor"</Filter>
+            <PolygonSymbolizer fill="#81b568" />
+        </Rule>
+        <Rule>
+            <Filter>[ext_building_quality] = "Basic"</Filter>
+            <PolygonSymbolizer fill="#8fa33c" />
+        </Rule>
+        <Rule>
+            <Filter>[ext_building_quality] = "Below Average"</Filter>
+            <PolygonSymbolizer fill="#9f8d0b" />
+        </Rule>
+        <Rule>
+            <Filter>[ext_building_quality] = "Good"</Filter>
+            <PolygonSymbolizer fill="#b17300" />
+        </Rule>
+        <Rule>
+            <Filter>[ext_building_quality] = "Very Good"</Filter>
+            <PolygonSymbolizer fill="#c05100" />
+        </Rule>
+        <Rule>
+            <Filter>[ext_building_quality] = "Excellent"</Filter>
+            <PolygonSymbolizer fill="#cc1212" />
+        </Rule>
+    </Style>
     <Style name="ext_solarpanels">
         <Rule>
             <Filter>[ext_solarpanels] &gt;= 0.5</Filter>
@@ -509,6 +629,85 @@
             <Filter>[ext_walk_index] &lt; 30.0</Filter>
             <PolygonSymbolizer fill="#d0c291" />
 	</Rule>
+    </Style>
+    <Style name="ext_electricity">
+        <Rule>
+            <Filter>[ext_electricity] &lt; 200000</Filter>
+            <PolygonSymbolizer fill="#e7e1ef" />
+        </Rule>
+        <Rule>
+            <Filter>[ext_electricity] &gt;= 200000 and [ext_electricity] &lt; 2000000</Filter>
+            <PolygonSymbolizer fill="#d4b9da" />
+        </Rule>
+        <Rule>
+            <Filter>[ext_electricity] &gt;= 2000000 and [ext_electricity] &lt; 20000000</Filter>
+            <PolygonSymbolizer fill="#c994c7" />
+        </Rule>
+        <Rule>
+            <Filter>[ext_electricity] &gt;= 20000000 and [ext_electricity] &lt; 200000000</Filter>
+            <PolygonSymbolizer fill="#df65b0" />
+        </Rule>
+        <Rule>
+            <Filter>[ext_electricity] &gt;= 200000000 and [ext_electricity] &lt; 2000000000</Filter>
+            <PolygonSymbolizer fill="#e7298a" />
+        </Rule>
+        <Rule>
+            <Filter>[ext_electricity] &gt;= 2000000000 and [ext_electricity] &lt; 20000000000</Filter>
+            <PolygonSymbolizer fill="#ce1256" />
+        </Rule>
+        <Rule>
+            <Filter>[ext_electricity] &gt;= 20000000000</Filter>
+            <PolygonSymbolizer fill="#980043" />
+        </Rule>
+
+        <Rule>
+            <MaxScaleDenominator>17061</MaxScaleDenominator>
+            <MinScaleDenominator>4264</MinScaleDenominator>
+            <LineSymbolizer stroke="#ccc" stroke-width="1.0"/>
+        </Rule>
+        <Rule>
+            <MaxScaleDenominator>4264</MaxScaleDenominator>
+            <MinScaleDenominator>0</MinScaleDenominator>
+            <LineSymbolizer stroke="#ccc" stroke-width="3.0"/>
+        </Rule>
+    </Style>
+    <Style name="ext_num_trees_within_100">
+        <Rule>
+            <Filter>[ext_num_trees_within_100] &gt;= 300</Filter>
+            <PolygonSymbolizer fill="#95ded8" />
+        </Rule>
+        <Rule>
+            <Filter>[ext_num_trees_within_100] &gt;= 250 and [ext_num_trees_within_100] &lt; 300</Filter>
+            <PolygonSymbolizer fill="#7fd3b9" />
+        </Rule>
+        <Rule>
+            <Filter>[ext_num_trees_within_100] &gt;= 200 and [ext_num_trees_within_100] &lt; 250</Filter>
+            <PolygonSymbolizer fill="#79c592" />
+        </Rule>
+        <Rule>
+            <Filter>[ext_num_trees_within_100] &gt;= 160 and [ext_num_trees_within_100] &lt; 200</Filter>
+            <PolygonSymbolizer fill="#81b568" />
+        </Rule>
+        <Rule>
+            <Filter>[ext_num_trees_within_100] &gt;= 120 and [ext_num_trees_within_100] &lt; 160</Filter>
+            <PolygonSymbolizer fill="#8fa33c" />
+        </Rule>
+        <Rule>
+            <Filter>[ext_num_trees_within_100] &gt;= 80 and [ext_num_trees_within_100] &lt; 120</Filter>
+            <PolygonSymbolizer fill="#9f8d0b" />
+        </Rule>
+        <Rule>
+            <Filter>[ext_num_trees_within_100] &gt;= 40 and [ext_num_trees_within_100] &lt; 80</Filter>
+            <PolygonSymbolizer fill="#b17300" />
+        </Rule>
+        <Rule>
+            <Filter>[ext_num_trees_within_100] &gt;= 20 and [ext_num_trees_within_100] &lt; 40</Filter>
+            <PolygonSymbolizer fill="#c05100" />
+        </Rule>
+        <Rule>
+            <Filter>[ext_num_trees_within_100] &lt; 20</Filter>
+            <PolygonSymbolizer fill="#cc1212" />
+        </Rule>
     </Style>
     <Style name="likes">
         <Rule>

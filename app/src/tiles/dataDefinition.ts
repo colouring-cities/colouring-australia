@@ -51,6 +51,22 @@ const LAYER_QUERIES = {
             buildings
         WHERE
             size_height_apex IS NOT NULL`,
+    size_footprint: `
+        SELECT
+            geometry_id,
+            ext_footprintsize AS size_footprint
+        FROM
+            buildings
+        WHERE
+            ext_footprintsize IS NOT NULL`,
+    size_plot: `
+        SELECT
+            geometry_id,
+            ext_plotsize AS size_plot
+        FROM
+            buildings
+        WHERE
+            ext_plotsize IS NOT NULL`,
     construction_core_material: `
         SELECT
             geometry_id,
@@ -177,6 +193,14 @@ const LAYER_QUERIES = {
             buildings
         WHERE
             ext_nabers_energy_rating IS NOT NULL`,
+    ext_electricity: `
+        SELECT
+            geometry_id,
+            ext_electricity
+        FROM
+            buildings
+        WHERE
+            ext_electricity IS NOT NULL`,
     building_attachment_form: `
         SELECT
             geometry_id,
@@ -219,6 +243,14 @@ const LAYER_QUERIES = {
             buildings
         WHERE
             ext_walk_index IS NOT NULL`,
+    ext_num_trees_within_100: `
+        SELECT
+            geometry_id,
+            ext_num_trees_within_100 AS ext_num_trees_within_100
+        FROM
+            buildings
+        WHERE
+            ext_num_trees_within_100 IS NOT NULL`,
     ext_solarpanels: `
         SELECT
             geometry_id,
@@ -227,6 +259,14 @@ const LAYER_QUERIES = {
             buildings
         WHERE
             ext_solarpanels IS NOT NULL`,
+    ext_building_quality: `
+        SELECT
+            geometry_id,
+            ext_building_quality AS ext_building_quality
+        FROM
+            buildings
+        WHERE
+            ext_building_quality IS NOT NULL`,
 };
 
 const GEOMETRY_FIELD = 'geometry_geom';

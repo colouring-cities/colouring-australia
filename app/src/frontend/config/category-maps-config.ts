@@ -50,7 +50,7 @@ export const categoryMapsConfig: {[key in Category]: CategoryMapDefinition[]} = 
     [Category.Size]: [{
         mapStyle: 'size_height',
         legend: {
-            title: 'Height to apex',
+            title: 'Height to Apex',
             elements: [
                 { color: '#f7f4f9', text: '0-5.55'},
                 { color: '#e7e1ef', text: '5.55-7.73'},
@@ -60,6 +60,46 @@ export const categoryMapsConfig: {[key in Category]: CategoryMapDefinition[]} = 
                 { color: '#e7298a', text: '35.05-89.30'},
                 { color: '#ce1256', text: '89.30-152'},
                 { color: '#980043', text: '≥152'}
+            ]
+        },
+    },{
+        mapStyle: 'size_storeys',
+        legend: {
+            title: 'Number of Storeys',
+            elements: [
+                { color: '#ffffcc', text: '40+'},
+                { color: '#fed976', text: '20-40'},
+                { color: '#fd8d3c', text: '10-20'},
+                { color: '#e31a1c', text: '6-10'},
+                { color: '#800026', text: '1-6'}
+            ]
+        },
+    },{
+        mapStyle: 'size_plot',
+        legend: {
+            title: 'Size of Plot',
+            elements: [
+                { color: '#e7e1ef', text: '0-80'},
+                { color: '#d4b9da', text: '80-150'},
+                { color: '#c994c7', text: '150-300'},
+                { color: '#df65b0', text: '300-1,000'},
+                { color: '#e7298a', text: '1000-10,000'},
+                { color: '#ce1256', text: '10,000-100,000'},
+                { color: '#980043', text: '≥100,000'}
+            ]
+        },
+    },{
+        mapStyle: 'size_footprint',
+        legend: {
+            title: 'Size of Footprint',
+            elements: [
+                { color: '#e7e1ef', text: '0-80'},
+                { color: '#d4b9da', text: '80-150'},
+                { color: '#c994c7', text: '150-300'},
+                { color: '#df65b0', text: '300-1,000'},
+                { color: '#e7298a', text: '1000-10,000'},
+                { color: '#ce1256', text: '10,000-100,000'},
+                { color: '#980043', text: '≥100,000'}
             ]
         },
     }],
@@ -78,6 +118,32 @@ export const categoryMapsConfig: {[key in Category]: CategoryMapDefinition[]} = 
         },
     }],
     [Category.Construction]: [{
+        mapStyle: 'ext_solarpanels',
+        legend: {
+            title: 'Solar Panels',
+            elements: [
+                { color: '#cc1212', text: 'Present' },
+                { color: '#95ded8', text: 'Absent' },
+            ]
+        },
+        },{
+        mapStyle: 'ext_building_quality',
+        legend: {
+            title: 'Building Quality',
+            elements: [
+                { color: '#cc1212', text: 'Excellent' },
+                { color: '#c05100', text: 'Very Good' },
+                { color: '#b17300', text: 'Good' },
+                { color: '#9f8d0b', text: 'Below Average' },
+                { color: '#8fa33c', text: 'Basic' },
+                { color: '#81b568', text: 'Poor' },
+                { color: '#79c592', text: 'Very Poor' },
+                { color: '#7fd3b9', text: 'Just Habitable' },
+                { color: '#95ded8', text: 'Ruin' },
+            ]
+        },
+    },
+    /*{
         mapStyle: 'construction_core_material',
         legend: {
             title: 'Construction',
@@ -92,7 +158,8 @@ export const categoryMapsConfig: {[key in Category]: CategoryMapDefinition[]} = 
                 { color: "#c48a85", text: "Other Man-Made Material" }
             ]
         },
-    }],
+    }*/
+    ],
     [Category.Location]: [{
         mapStyle: 'location',
         legend: {
@@ -123,7 +190,7 @@ export const categoryMapsConfig: {[key in Category]: CategoryMapDefinition[]} = 
                 ]
             }
         },
-        {
+        /*        {
             mapStyle: 'community_local_significance_total',
             legend: {
                 title: 'Local Significance',
@@ -166,6 +233,7 @@ export const categoryMapsConfig: {[key in Category]: CategoryMapDefinition[]} = 
                 ]
             }
         }
+        */
     ],
     [Category.Planning]: [{
         mapStyle: 'planning_combined',
@@ -194,6 +262,20 @@ export const categoryMapsConfig: {[key in Category]: CategoryMapDefinition[]} = 
                 { color: "#a6aa00", text: '4 Star' },
                 { color: "#90d500", text: '5 Star' },
                 { color: "#7aff00", text: '6 Star' },
+            ]
+        },
+    },{
+        mapStyle: 'ext_electricity',
+        legend: {
+            title: 'Electricity Usage',
+            elements: [
+                { color: '#e7e1ef', text: '<2x10^5'},
+                { color: '#d4b9da', text: '≥2x10^5'},
+                { color: '#c994c7', text: '≥2x10^6'},
+                { color: '#df65b0', text: '≥2x10^7'},
+                { color: '#e7298a', text: '≥2x10^8'},
+                { color: '#ce1256', text: '≥2x10^9'},
+                { color: '#980043', text: '≥2x10^10'}
             ]
         },
     }],
@@ -254,6 +336,22 @@ export const categoryMapsConfig: {[key in Category]: CategoryMapDefinition[]} = 
                 { color: '#d0c291', text: '<30' },
             ]
         }
+    },{
+        mapStyle: 'ext_num_trees_within_100',
+        legend: {
+            title: 'Number of Trees Within 100m',
+            elements: [
+            { color: '#95ded8', text: '>300' },
+                { color: '#7fd3b9', text: '250-300' },
+                { color: '#79c592', text: '200-250' },
+                { color: '#81b568', text: '160-200' },
+                { color: '#8fa33c', text: '120-160' },
+                { color: '#9f8d0b', text: '80-120' },
+                { color: '#b17300', text: '40-80' },
+                { color: '#c05100', text: '20-40' },
+                { color: '#cc1212', text: '<20' },
+            ]
+        },
     }],
     [Category.Dynamics]: [{
         mapStyle: 'dynamics_demolished_count',
