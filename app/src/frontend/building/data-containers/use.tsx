@@ -44,6 +44,24 @@ const UseView: React.FunctionComponent<CategoryViewProps> = (props) => (
             copy={props.copy}
             onChange={props.onChange}
         />
+        <DataEntry
+            title={dataFields.ext_avg_bld_density.title}
+            tooltip={dataFields.ext_avg_bld_density.tooltip}
+            slug="ext_avg_bld_density"
+            value={props.building.ext_avg_bld_density}
+            mode={props.mode}
+            copy={props.copy}
+            onChange={props.onChange}
+        />
+        <DataEntry
+            title={dataFields.ext_avg_bld_distance.title}
+            tooltip={dataFields.ext_avg_bld_distance.tooltip}
+            slug="ext_avg_bld_distance"
+            value={props.building.ext_avg_bld_distance}
+            mode={props.mode}
+            copy={props.copy}
+            onChange={props.onChange}
+        />
     </Fragment>
 );
 const UseContainer = withCopyEdit(UseView);

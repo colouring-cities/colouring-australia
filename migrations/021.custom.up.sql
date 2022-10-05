@@ -6,6 +6,8 @@ ALTER TABLE buildings ADD COLUMN IF NOT EXISTS ext_nabers_energy_rating decimal;
 
 ALTER TABLE buildings ADD COLUMN IF NOT EXISTS ext_predominant_land_use text;
 ALTER TABLE buildings ADD COLUMN IF NOT EXISTS ext_designated_land_use text;
+ALTER TABLE buildings ADD COLUMN IF NOT EXISTS ext_avg_bld_density decimal;
+ALTER TABLE buildings ADD COLUMN IF NOT EXISTS ext_avg_bld_distance decimal;
 
 ALTER TABLE buildings ADD COLUMN IF NOT EXISTS ext_ownership text;
 ALTER TABLE buildings ADD COLUMN IF NOT EXISTS ext_building_structure text;
