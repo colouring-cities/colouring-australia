@@ -25,10 +25,10 @@ const SustainabilityView: React.FunctionComponent<CategoryViewProps> = (props) =
     return (
         <Fragment>
             <NumericDataEntry
-                title={dataFields.sust_nabers_energy_rating.title}
-                slug="sust_nabers_energy_rating"
-                value={props.building.sust_nabers_energy_rating}
-                tooltip={dataFields.sust_nabers_energy_rating.tooltip}
+                title={dataFields.ext_nabers_energy_rating.title}
+                slug="ext_nabers_energy_rating"
+                value={props.building.ext_nabers_energy_rating}
+                tooltip={dataFields.ext_nabers_energy_rating.tooltip}
                 step={0.5}
                 min={0}
                 max={5}
@@ -36,100 +36,23 @@ const SustainabilityView: React.FunctionComponent<CategoryViewProps> = (props) =
                 copy={props.copy}
                 onChange={props.onChange}
             />
-
-            <SelectDataEntry
-                title={dataFields.sust_breeam_rating.title}
-                slug="sust_breeam_rating"
-                value={props.building.sust_breeam_rating}
-                tooltip={dataFields.sust_breeam_rating.tooltip}
-                options={BreeamRatingOptions}
-                mode={props.mode}
-                copy={props.copy}
-                onChange={props.onChange}
-            />
-            <Verification
-                slug="sust_breeam_rating"
-                allow_verify={props.user !== undefined && props.building.sust_breeam_rating !== null && !props.edited}
-                onVerify={props.onVerify}
-                user_verified={props.user_verified.hasOwnProperty("sust_breeam_rating")}
-                user_verified_as={props.user_verified.sust_breeam_rating}
-                verified_count={props.building.verified.sust_breeam_rating}
-                />
-
-            <SelectDataEntry
-                title={dataFields.sust_dec.title}
-                slug="sust_dec"
-                value={props.building.sust_dec}
-                tooltip={dataFields.sust_dec.tooltip}
-                options={EnergyCategoryOptions}
-                mode={props.mode}
-                copy={props.copy}
-                onChange={props.onChange}
-            />
-            <Verification
-                slug="sust_dec"
-                allow_verify={props.user !== undefined && props.building.sust_dec !== null && !props.edited}
-                onVerify={props.onVerify}
-                user_verified={props.user_verified.hasOwnProperty("sust_dec")}
-                user_verified_as={props.user_verified.sust_dec}
-                verified_count={props.building.verified.sust_dec}
-                />
-
-            <SelectDataEntry
-                title={dataFields.sust_aggregate_estimate_epc.title}
-                slug="sust_aggregate_estimate_epc"
-                value={props.building.sust_aggregate_estimate_epc}
-                tooltip={dataFields.sust_aggregate_estimate_epc.tooltip}
-                options={EnergyCategoryOptions}
-                disabled={true}
-                mode={props.mode}
-                copy={props.copy}
-                onChange={props.onChange}
-            />
-
             <NumericDataEntry
-                title={dataFields.sust_retrofit_date.title}
-                slug="sust_retrofit_date"
-                value={props.building.sust_retrofit_date}
-                tooltip={dataFields.sust_retrofit_date.tooltip}
-                step={1}
-                min={1086}
-                max={new Date().getFullYear()}
+                title={dataFields.ext_electricity.title}
+                slug="ext_electricity"
+                value={props.building.ext_electricity}
+                tooltip={dataFields.ext_electricity.tooltip}
                 mode={props.mode}
                 copy={props.copy}
                 onChange={props.onChange}
             />
-            <Verification
-                slug="sust_retrofit_date"
-                allow_verify={props.user !== undefined && props.building.sust_retrofit_date !== null && !props.edited}
-                onVerify={props.onVerify}
-                user_verified={props.user_verified.hasOwnProperty("sust_retrofit_date")}
-                user_verified_as={props.user_verified.sust_retrofit_date}
-                verified_count={props.building.verified.sust_retrofit_date}
-                />
-
             <NumericDataEntry
-                title={dataFields.sust_life_expectancy.title}
-                slug="sust_life_expectancy"
-                value={props.building.sust_life_expectancy}
-                step={1}
-                min={1}
-                disabled={true}
+                title={dataFields.ext_water.title}
+                slug="ext_water"
+                value={props.building.ext_water}
+                tooltip={dataFields.ext_water.tooltip}
                 mode={props.mode}
                 copy={props.copy}
                 onChange={props.onChange}
-            />
-            <DataEntry
-                title="Repairability rating for type"
-                slug=""
-                value=""
-                mode='view'
-            />
-            <DataEntry
-                title="Adaptability within plot rating"
-                slug=""
-                value=""
-                mode='view'
             />
         </Fragment>
     );

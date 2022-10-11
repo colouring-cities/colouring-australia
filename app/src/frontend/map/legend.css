@@ -21,10 +21,6 @@
     box-shadow: 0px 0px 1px 1px #222222;
 }
 
-.map-legend * {
-    flex: 0;
-}
-
 .map-legend .logo {
     display: none;
 }
@@ -56,6 +52,16 @@
     }
 }
 
+.map-legend .style-select {
+    background-color: inherit;
+    padding: 0.5rem 0.25rem;
+    margin: 0.25rem 0.5rem;
+    width: auto;
+    font-size: 18px;
+    border: 1px solid;
+    border-radius: 4px;
+}
+
 .map-legend .h4,
 .map-legend p,
 .data-legend {
@@ -77,7 +83,7 @@
 }
 
 .data-legend li {
-    white-space: nowrap;
+    display: flex;
 }
 
 .data-legend .key {
@@ -88,6 +94,7 @@
     vertical-align: middle;
     overflow: hidden;
     border: solid 1px #ddd;
+    flex-shrink: 0;
 }
 
 .data-legend h6 {
@@ -113,11 +120,14 @@
 .expander-button:hover {
     box-shadow: none;
 }
+/* hides expander/hider button of legend on a small screens */
+/*
 @media (min-height: 670px) and (min-width: 880px) {
     .expander-button {
         visibility: hidden;
     }
 }
+*/
 
 .map-legend .logo {
     padding: 0 0.5rem 0.5rem;

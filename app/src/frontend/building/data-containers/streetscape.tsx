@@ -13,64 +13,25 @@ import { CategoryViewProps } from './category-view-props';
 */
 const StreetscapeView: React.FunctionComponent<CategoryViewProps> = (props) => (
     <Fragment>
-        <InfoBox msg="This is what we're planning to collect on the building's context" />
-        <ul className="data-list">
-            <li>Gardens</li>
-            <li>Trees</li>
-            <li>Green walls</li>
-            <li>Green roof</li>
-            <li>Proximity to parks and open greenspace</li>
-            <li>Building shading</li>
-        </ul>
         <NumericDataEntry
-            title={dataFields.size_plot_area_total.title}
-            slug="size_plot_area_total"
-            mode='view'
+            title={dataFields.ext_walk_index.title}
+            slug="ext_walk_index"
+            value={props.building.ext_walk_index}
+            tooltip={dataFields.ext_walk_index.tooltip}
             step={0.1}
             min={0}
+            max={100}
+            mode={props.mode}
+            copy={props.copy}
+            onChange={props.onChange}
         />
         <NumericDataEntry
-            title={dataFields.size_far_ratio.title}
-            slug="size_far_ratio"
-            mode='view'
-            step={0.1}
-            min={0}
-        />
-        <DataEntry
-            title="Plot dimensions"
-            slug=""
-            value=""
-            mode='view'
-        />
-        <DataEntry
-            title="Plot geometry link"
-            slug=""
-            value=""
-            mode='view'
-        />
-        <DataEntry
-            title="Land ownership parcel link"
-            slug=""
-            value=""
-            mode='view'
-        />
-        <DataEntry
-            title="Land ownership type"
-            slug=""
-            value=""
-            mode='view'
-        />
-        <DataEntry
-            title="Street width"
-            slug=""
-            value=""
-            mode='view'
-        />
-        <DataEntry
-            title="Street network geometry link"
-            slug=""
-            value=""
-            mode='view'
+            title={dataFields.ext_num_trees_within_100.title}
+            slug="ext_num_trees_within_100"
+            value={props.building.ext_num_trees_within_100}
+            mode={props.mode}
+            copy={props.copy}
+            onChange={props.onChange}
         />
     </Fragment>
 );

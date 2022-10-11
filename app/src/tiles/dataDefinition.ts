@@ -51,6 +51,22 @@ const LAYER_QUERIES = {
             buildings
         WHERE
             size_height_apex IS NOT NULL`,
+    size_footprint: `
+        SELECT
+            geometry_id,
+            ext_footprintsize AS size_footprint
+        FROM
+            buildings
+        WHERE
+            ext_footprintsize IS NOT NULL`,
+    size_plot: `
+        SELECT
+            geometry_id,
+            ext_plotsize AS size_plot
+        FROM
+            buildings
+        WHERE
+            ext_plotsize IS NOT NULL`,
     construction_core_material: `
         SELECT
             geometry_id,
@@ -76,6 +92,28 @@ const LAYER_QUERIES = {
             ) AS location_info_count
         FROM
             buildings`,
+    team: `
+        SELECT
+            geometry_id,
+            (
+                case when has_extension IS NULL then 0 else 1 end +
+                case when extension_year IS NULL then 0 else 1 end +
+                case when developer_type IS NULL then 0 else 1 end +
+                case when developer_name IS NULL then 0 else 1 end +
+                case when developer_source_link IS NULL then 0 else 1 end +
+                case when designers IS NULL then 0 else 1 end +
+                case when designers_source_link IS NULL then 0 else 1 end +
+                case when lead_designer_type IS NULL then 0 else 1 end +
+                case when designer_awards IS NULL then 0 else 1 end +
+                case when awards_source_link IS NULL then 0 else 1 end +
+                case when builder IS NULL then 0 else 1 end +
+                case when builder_source_link IS NULL then 0 else 1 end +
+                case when other_team IS NULL then 0 else 1 end +
+                case when other_team_source_link IS NULL then 0 else 1 end +
+                case when date_year IS NULL then 0 else 1 end
+            ) AS team_info_count
+        FROM
+            buildings`,
     likes: `
         SELECT
             geometry_id,
@@ -84,6 +122,36 @@ const LAYER_QUERIES = {
             buildings
         WHERE
             likes_total > 0`,
+    community_local_significance_total: `
+        SELECT
+            geometry_id,
+            community_local_significance_total
+        FROM
+            buildings
+        WHERE
+            community_local_significance_total > 0
+    `,
+    community_expected_planning_application_total: `
+        SELECT
+            geometry_id,
+            community_expected_planning_application_total
+        FROM
+            buildings
+        WHERE
+        community_expected_planning_application_total > 0
+    `,
+    community_in_public_ownership: `
+        SELECT
+            geometry_id,
+            CASE
+                WHEN community_public_ownership = 'Not in public/community ownership' THEN false
+                ELSE true
+            END AS in_public_ownership
+        FROM
+            buildings
+        WHERE
+            community_public_ownership IS NOT NULL
+    `,
     planning_combined: `
         SELECT
             geometry_id,
@@ -117,14 +185,22 @@ const LAYER_QUERIES = {
             buildings
         WHERE
             sust_dec IS NOT NULL`,
-    sust_nabers_energy_rating: `
+    ext_nabers_energy_rating: `
         SELECT
             geometry_id,
-            sust_nabers_energy_rating
+            ext_nabers_energy_rating
         FROM
             buildings
         WHERE
-            sust_nabers_energy_rating IS NOT NULL`,
+            ext_nabers_energy_rating IS NOT NULL`,
+    ext_electricity: `
+        SELECT
+            geometry_id,
+            ext_electricity
+        FROM
+            buildings
+        WHERE
+            ext_electricity IS NOT NULL`,
     building_attachment_form: `
         SELECT
             geometry_id,
@@ -136,11 +212,21 @@ const LAYER_QUERIES = {
     landuse: `
         SELECT
             geometry_id,
-            current_landuse_order
+            current_landuse_order,
+            current_landuse_group[1] as current_landuse_group,
+            current_landuse_verified
         FROM
             buildings
         WHERE
             current_landuse_order IS NOT NULL`,
+    ext_designated_land_use: `
+        SELECT
+            geometry_id,
+            ext_designated_land_use
+        FROM
+            buildings
+        WHERE
+            ext_designated_land_use IS NOT NULL`,
     dynamics_demolished_count: `
         SELECT
             geometry_id,
@@ -149,14 +235,38 @@ const LAYER_QUERIES = {
         FROM
             buildings
         WHERE jsonb_array_length(demolished_buildings) > 0 OR dynamics_has_demolished_buildings = FALSE`,
-    comm_walk_index: `
+    ext_walk_index: `
         SELECT
             geometry_id,
-            comm_walk_index AS comm_walk_index
+            ext_walk_index AS ext_walk_index
         FROM
             buildings
         WHERE
-            comm_walk_index IS NOT NULL`,
+            ext_walk_index IS NOT NULL`,
+    ext_num_trees_within_100: `
+        SELECT
+            geometry_id,
+            ext_num_trees_within_100 AS ext_num_trees_within_100
+        FROM
+            buildings
+        WHERE
+            ext_num_trees_within_100 IS NOT NULL`,
+    ext_solarpanels: `
+        SELECT
+            geometry_id,
+            ext_solarpanels AS ext_solarpanels
+        FROM
+            buildings
+        WHERE
+            ext_solarpanels IS NOT NULL`,
+    ext_building_quality: `
+        SELECT
+            geometry_id,
+            ext_building_quality AS ext_building_quality
+        FROM
+            buildings
+        WHERE
+            ext_building_quality IS NOT NULL`,
 };
 
 const GEOMETRY_FIELD = 'geometry_geom';
@@ -175,7 +285,7 @@ function getDataConfig(tileset: string): DataConfig {
     if(table == undefined) {
         throw new Error('Invalid tileset requested');
     }
-
+    
     const query = `(
         SELECT
             d.*,
@@ -186,6 +296,11 @@ function getDataConfig(tileset: string): DataConfig {
         JOIN
             geometries AS g
         ON d.geometry_id = g.geometry_id
+        JOIN
+            buildings AS b
+        ON d.geometry_id = b.geometry_id
+        WHERE
+            b.latest_demolish_date IS NULL
     ) AS data
     `;
 
