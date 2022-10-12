@@ -20,6 +20,7 @@ export type BuildingMapTileset = 'date_year' |
     'ext_electricity' |
     'building_attachment_form' |
     'ext_designated_land_use' |
+    'ext_predominant_land_use' |
     'dynamics_demolished_count' |
     'landuse' |
     'dynamics_demolished_count' |

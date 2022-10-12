@@ -109,8 +109,7 @@ const LAYER_QUERIES = {
                 case when builder IS NULL then 0 else 1 end +
                 case when builder_source_link IS NULL then 0 else 1 end +
                 case when other_team IS NULL then 0 else 1 end +
-                case when other_team_source_link IS NULL then 0 else 1 end +
-                case when date_year IS NULL then 0 else 1 end
+                case when other_team_source_link IS NULL then 0 else 1 end
             ) AS team_info_count
         FROM
             buildings`,
@@ -219,6 +218,14 @@ const LAYER_QUERIES = {
             buildings
         WHERE
             current_landuse_order IS NOT NULL`,
+    ext_predominant_land_use: `
+        SELECT
+            geometry_id,
+            ext_predominant_land_use
+        FROM
+            buildings
+        WHERE
+            ext_predominant_land_use IS NOT NULL`,
     ext_designated_land_use: `
         SELECT
             geometry_id,

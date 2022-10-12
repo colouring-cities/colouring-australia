@@ -252,7 +252,7 @@ export const categoryMapsConfig: {[key in Category]: CategoryMapDefinition[]} = 
     [Category.Sustainability]: [{
         mapStyle: 'ext_nabers_energy_rating',
         legend: {
-            title: 'Sustainability',
+            title: 'NABERS',
             description: 'NABERS Energy Rating',
             elements: [
                 { color: "#ff0000", text: '0 Star' },
@@ -294,7 +294,29 @@ export const categoryMapsConfig: {[key in Category]: CategoryMapDefinition[]} = 
     [Category.LandUse]: [{
         mapStyle: 'ext_designated_land_use',
         legend: {
-            title: 'Land Use',
+            title: 'Designated Land Use',
+            elements: [
+                { color: '#e5050d', text: 'Mixed Use' },
+                { subtitle: 'Single use:'},
+                { color: '#252aa6', text: 'Residential (unverified)' },
+                { color: '#7025a6', text: 'Residential (verified)' },
+                { color: '#ff8c00', text: 'Retail' },
+                { color: '#f5f58f', text: 'Industry & Business' },
+                { color: '#73ccd1', text: 'Community Services' },
+                { color: '#ffbfbf', text: 'Recreation & Leisure' },
+                { color: '#b3de69', text: 'Transport' },
+                { color: '#cccccc', text: 'Utilities & Infrastructure' },
+                { color: '#898944', text: 'Defence' },
+                { color: '#fa667d', text: 'Agriculture' },
+                { color: '#53f5dd', text: 'Minerals' },
+                { color: '#ffffff', text: 'Vacant & Derelict' },
+                { color: '#6c6f8e', text: 'Unclassified, presumed non-residential' }
+            ]
+            },
+    },{
+        mapStyle: 'ext_predominant_land_use',
+        legend: {
+            title: 'Predominant Land Use',
             elements: [
                 { color: '#e5050d', text: 'Mixed Use' },
                 { subtitle: 'Single use:'},
