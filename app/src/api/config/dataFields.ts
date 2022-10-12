@@ -402,6 +402,82 @@ export const buildingAttributesConfig = valueType<DataFieldConfig>()({ /* eslint
     other_team_source_link: {
         edit: true,
         verify: true
+    },
+    ext_walk_index: {
+        edit: false,
+        verify: true
+    },
+    ext_predominant_land_use: {
+        edit: true,
+        verify: true
+    },
+    ext_designated_land_use: {
+        edit: false,
+        verify: true
+    },
+    ext_avg_bld_density: {
+        edit: false,
+        verify: true
+    },
+    ext_avg_bld_distance: {
+        edit: false,
+        verify: true
+    },
+    ext_age_year_demolition: {
+        edit: true,
+        verify: true
+    },
+    ext_age_year_renovation: {
+        edit: true,
+        verify: true
+    },
+    ext_historical_notes: {
+        edit: true,
+        verify: true
+    },
+    ext_footprintsize: {
+        edit: false,
+        verify: true
+    },
+    ext_plotsize: {
+        edit: false,
+        verify: true
+    },
+    ext_num_trees_within_100: {
+        edit: true,
+        verify: true
+    },
+    ext_nabers_energy_rating: {
+        edit: false,
+        verify: true
+    },
+    ext_electricity: {
+        edit: true,
+        verify: true
+    },
+    ext_water: {
+        edit: true,
+        verify: true
+    },
+    ext_building_quality: {
+        edit: true,
+        verify: true
+    },
+    ext_gardens: {
+        edit: true,
+        verify: true
+    },
+    ext_greenwalls: {
+        edit: true,
+        verify: true
+    },
+    ext_solarpanels: {
+        edit: true,
+        verify: true
+    },
+    ext_pool: {
+        edit: true,
+        verify: true
     }
 
 });
