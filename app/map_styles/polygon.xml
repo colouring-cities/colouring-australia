@@ -717,8 +717,12 @@
             <PolygonSymbolizer fill="#c05100" />
         </Rule>
         <Rule>
-            <Filter>[ext_num_trees_within_100] &lt; 20</Filter>
+            <Filter>[ext_num_trees_within_100] &gt;= 0 and [ext_num_trees_within_100] &lt; 20</Filter>
             <PolygonSymbolizer fill="#cc1212" />
+        </Rule>
+        <Rule>
+            <Filter>[ext_num_trees_within_100] &lt;= 0</Filter>
+            <PolygonSymbolizer fill="#dd0606" />
         </Rule>
     </Style>
     <Style name="likes">
