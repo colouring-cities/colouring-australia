@@ -147,7 +147,11 @@
     </Style>
     <Style name="size_height">
         <Rule>
-            <Filter>[size_height] &lt; 5.55</Filter>
+            <Filter>[size_height] &lt;= 0</Filter>
+            <PolygonSymbolizer fill="#ffffff" />
+        </Rule>
+        <Rule>
+            <Filter>[size_height] &gt; 0 and [size_height] &lt; 5.55</Filter>
             <PolygonSymbolizer fill="#f7f4f9" />
         </Rule>
         <Rule>
@@ -192,7 +196,11 @@
     </Style>
     <Style name="size_plot">
         <Rule>
-            <Filter>[size_plot] &lt; 80</Filter>
+            <Filter>[size_plot] &lt;= 0</Filter>
+            <PolygonSymbolizer fill="#ffffff" />
+        </Rule>
+        <Rule>
+            <Filter>[size_plot] &gt; 0 and [size_plot] &lt; 80</Filter>
             <PolygonSymbolizer fill="#e7e1ef" />
         </Rule>
         <Rule>
@@ -233,7 +241,11 @@
     </Style>
     <Style name="size_footprint">
         <Rule>
-            <Filter>[size_footprint] &lt; 80</Filter>
+            <Filter>[size_footprint] &lt;= 0</Filter>
+            <PolygonSymbolizer fill="#ffffff" />
+        </Rule>
+        <Rule>
+            <Filter>[size_footprint] &gt; 0 and [size_footprint] &lt; 80</Filter>
             <PolygonSymbolizer fill="#e7e1ef" />
         </Rule>
         <Rule>
@@ -855,7 +867,7 @@
     </Style>
     <Style name="ext_designated_land_use">
         <Rule>
-            <Filter>[ext_designated_land_use] = "Agriculture And Fisheries"</Filter>
+            <Filter>[ext_designated_land_use] = "Agriculture & Fisheries"</Filter>
             <PolygonSymbolizer fill="#fa667d" />
         </Rule>
         <Rule>
@@ -863,7 +875,7 @@
             <PolygonSymbolizer fill="#53f5dd" />
         </Rule>
         <Rule>
-            <Filter>[ext_designated_land_use] = "Recreation And Leisure"</Filter>
+            <Filter>[ext_designated_land_use] = "Recreation & Leisure"</Filter>
             <PolygonSymbolizer fill="#ffbfbf" />
         </Rule>
         <Rule>
@@ -871,7 +883,7 @@
             <PolygonSymbolizer fill="#b3de69" />
         </Rule>
         <Rule>
-            <Filter>[ext_designated_land_use] = "Utilities And Infrastructure"</Filter>
+            <Filter>[ext_designated_land_use] = "Utilities & Infrastructure"</Filter>
             <PolygonSymbolizer fill="#cccccc" />
         </Rule>
         <Rule>
@@ -887,11 +899,11 @@
             <PolygonSymbolizer fill="#ff8c00" />
         </Rule>
         <Rule>
-            <Filter>[ext_designated_land_use] = "Industry And Business"</Filter>
+            <Filter>[ext_designated_land_use] = "Industry & Business"</Filter>
             <PolygonSymbolizer fill="#f5f58f" />
         </Rule>
         <Rule>
-            <Filter>[ext_designated_land_use] = "Vacant And Derelict"</Filter>
+            <Filter>[ext_designated_land_use] = "Vacant & Derelict"</Filter>
             <PolygonSymbolizer fill="#ffffff" />
         </Rule>
         <Rule>
@@ -916,7 +928,7 @@
     </Style>
     <Style name="ext_predominant_land_use">
         <Rule>
-            <Filter>[ext_predominant_land_use] = "Agriculture And Fisheries"</Filter>
+            <Filter>[ext_predominant_land_use] = "Agriculture & Fisheries"</Filter>
             <PolygonSymbolizer fill="#fa667d" />
         </Rule>
         <Rule>
@@ -924,7 +936,7 @@
             <PolygonSymbolizer fill="#53f5dd" />
         </Rule>
         <Rule>
-            <Filter>[ext_predominant_land_use] = "Recreation And Leisure"</Filter>
+            <Filter>[ext_predominant_land_use] = "Recreation & Leisure"</Filter>
             <PolygonSymbolizer fill="#ffbfbf" />
         </Rule>
         <Rule>
@@ -932,7 +944,7 @@
             <PolygonSymbolizer fill="#b3de69" />
         </Rule>
         <Rule>
-            <Filter>[ext_predominant_land_use] = "Utilities And Infrastructure"</Filter>
+            <Filter>[ext_predominant_land_use] = "Utilities & Infrastructure"</Filter>
             <PolygonSymbolizer fill="#cccccc" />
         </Rule>
         <Rule>
@@ -948,11 +960,11 @@
             <PolygonSymbolizer fill="#ff8c00" />
         </Rule>
         <Rule>
-            <Filter>[ext_predominant_land_use] = "Industry And Business"</Filter>
+            <Filter>[ext_predominant_land_use] = "Industry & Business"</Filter>
             <PolygonSymbolizer fill="#f5f58f" />
         </Rule>
         <Rule>
-            <Filter>[ext_predominant_land_use] = "Vacant And Derelict"</Filter>
+            <Filter>[ext_predominant_land_use] = "Vacant & Derelict"</Filter>
             <PolygonSymbolizer fill="#ffffff" />
         </Rule>
         <Rule>

@@ -18,7 +18,6 @@ const StreetscapeView: React.FunctionComponent<CategoryViewProps> = (props) => (
             slug="ext_walk_index"
             value={props.building.ext_walk_index}
             tooltip={dataFields.ext_walk_index.tooltip}
-            step={0.1}
             min={0}
             max={100}
             mode={props.mode}

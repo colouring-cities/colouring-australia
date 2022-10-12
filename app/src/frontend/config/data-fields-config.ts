@@ -685,13 +685,13 @@ export const dataFields = { /* eslint-disable @typescript-eslint/camelcase */
         category: Category.LandUse,
         title: "Average Building Density",
         tooltip: "",
-        example: "",
+        example: 0.5,
     },
     ext_avg_bld_distance: {
         category: Category.LandUse,
         title: "Average Distance to Buildings",
         tooltip: "",
-        example: "",
+        example: 10.0,
     },
     ext_age_year_demolition: {
         category: Category.Age,
