@@ -674,6 +674,22 @@ export const dataFields = { /* eslint-disable @typescript-eslint/camelcase */
         title: "Predominant Building-Use (Ground-Floor)",
         tooltip: "",
         example: "",
+        items: [
+            "Mixed Use",
+            "Single use",
+            "Residential",
+            "Retail",
+            "Industry & Business",
+            "Community Services",
+            "Recreation & Leisure",
+            "Transport",
+            "Utilities & Infrastructure",
+            "Defence",
+            "Agriculture",
+            "Minerals",
+            "Vacant & Derelict",
+            "Unclassified, presumed non-residential"
+        ]
     },
     ext_designated_land_use: {
         category: Category.LandUse,

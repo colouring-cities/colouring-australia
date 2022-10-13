@@ -404,7 +404,7 @@ export const buildingAttributesConfig = valueType<DataFieldConfig>()({ /* eslint
         verify: true
     },
     ext_walk_index: {
-        edit: false,
+        edit: true,
         verify: true
     },
     ext_predominant_land_use: {
@@ -416,11 +416,11 @@ export const buildingAttributesConfig = valueType<DataFieldConfig>()({ /* eslint
         verify: true
     },
     ext_avg_bld_density: {
-        edit: false,
+        edit: true,
         verify: true
     },
     ext_avg_bld_distance: {
-        edit: false,
+        edit: true,
         verify: true
     },
     ext_age_year_demolition: {
@@ -436,11 +436,11 @@ export const buildingAttributesConfig = valueType<DataFieldConfig>()({ /* eslint
         verify: true
     },
     ext_footprintsize: {
-        edit: false,
+        edit: true,
         verify: true
     },
     ext_plotsize: {
-        edit: false,
+        edit: true,
         verify: true
     },
     ext_num_trees_within_100: {
@@ -448,7 +448,7 @@ export const buildingAttributesConfig = valueType<DataFieldConfig>()({ /* eslint
         verify: true
     },
     ext_nabers_energy_rating: {
-        edit: false,
+        edit: true,
         verify: true
     },
     ext_electricity: {
