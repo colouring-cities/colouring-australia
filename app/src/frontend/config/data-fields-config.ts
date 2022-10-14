@@ -719,6 +719,17 @@ export const dataFields = { /* eslint-disable @typescript-eslint/camelcase */
         title: "Year renovated (best estimate)",
         example: 1924,
     },
+    ext_heritage_zoning: {
+        category: Category.Age,
+        title: "Heritage Zoning",
+        tooltip: "Heritage Zoning",
+        example: "",
+        items: [
+            "In State and Local Heritage Area",
+            "In conservation area",
+            "In State Heritage Area"
+        ]
+    },
     ext_historical_notes: {
         category: Category.Age,
         title: "Historical Notes",
@@ -739,6 +750,11 @@ export const dataFields = { /* eslint-disable @typescript-eslint/camelcase */
         category: Category.Streetscape,
         title: "Number of trees within 100 metres.",
         example: 42,
+    },
+    ext_greenspace_proximity: {
+        category: Category.Streetscape,
+        title: "Distance to nearest park.",
+        example: 500,
     },
     ext_nabers_energy_rating: {
         category: Category.Sustainability,

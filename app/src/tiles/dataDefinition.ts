@@ -32,6 +32,13 @@ const LAYER_QUERIES = {
         FROM
             buildings
         WHERE date_year IS NOT NULL`,
+    ext_heritage_zoning: `
+        SELECT
+            geometry_id,
+            ext_heritage_zoning
+        FROM
+            buildings
+        WHERE ext_heritage_zoning IS NOT NULL`,
     size_storeys: `
         SELECT
             geometry_id,
@@ -250,6 +257,14 @@ const LAYER_QUERIES = {
             buildings
         WHERE
             ext_walk_index IS NOT NULL`,
+    ext_greenspace_proximity: `
+        SELECT
+            geometry_id,
+            ext_greenspace_proximity AS ext_greenspace_proximity
+        FROM
+            buildings
+        WHERE
+            ext_greenspace_proximity IS NOT NULL`,
     ext_num_trees_within_100: `
         SELECT
             geometry_id,
@@ -257,7 +272,8 @@ const LAYER_QUERIES = {
         FROM
             buildings
         WHERE
-            ext_num_trees_within_100 IS NOT NULL`,
+            ext_num_trees_within_100 IS NOT NULL and
+            ext_num_trees_within_100 > 0`,
     ext_solarpanels: `
         SELECT
             geometry_id,

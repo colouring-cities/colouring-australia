@@ -725,6 +725,44 @@
             <PolygonSymbolizer fill="#dd0606" />
         </Rule>
     </Style>
+    <Style name="ext_greenspace_proximity">
+        <Rule>
+            <Filter>[ext_greenspace_proximity] &gt;= 1000</Filter>
+            <PolygonSymbolizer fill="#dd0606" />
+        </Rule>
+        <Rule>
+            <Filter>[ext_greenspace_proximity] &gt;= 500 and [ext_greenspace_proximity] &lt; 1000</Filter>
+            <PolygonSymbolizer fill="#c05100" />
+        </Rule>
+        <Rule>
+            <Filter>[ext_greenspace_proximity] &gt;= 400 and [ext_greenspace_proximity] &lt; 500</Filter>
+            <PolygonSymbolizer fill="#b17300" />
+        </Rule>
+        <Rule>
+            <Filter>[ext_greenspace_proximity] &gt;= 300 and [ext_greenspace_proximity] &lt; 400</Filter>
+            <PolygonSymbolizer fill="#9f8d0b" />
+        </Rule>
+        <Rule>
+            <Filter>[ext_greenspace_proximity] &gt;= 200 and [ext_greenspace_proximity] &lt; 300</Filter>
+            <PolygonSymbolizer fill="#8fa33c" />
+        </Rule>
+        <Rule>
+            <Filter>[ext_greenspace_proximity] &gt;= 100 and [ext_greenspace_proximity] &lt; 200</Filter>
+            <PolygonSymbolizer fill="#81b568" />
+        </Rule>
+        <Rule>
+            <Filter>[ext_greenspace_proximity] &gt;= 50 and [ext_greenspace_proximity] &lt; 100</Filter>
+            <PolygonSymbolizer fill="#79c592" />
+        </Rule>
+        <Rule>
+            <Filter>[ext_greenspace_proximity] &gt; 0 and [ext_greenspace_proximity] &lt; 50</Filter>
+            <PolygonSymbolizer fill="#7fd3b9" />
+        </Rule>
+        <Rule>
+            <Filter>[ext_greenspace_proximity] &lt;= 0</Filter>
+            <PolygonSymbolizer fill="#95ded8" />
+        </Rule>
+    </Style>
     <Style name="likes">
         <Rule>
             <Filter>[likes] &gt;= 100</Filter>
@@ -978,6 +1016,31 @@
         <Rule>
             <Filter>[ext_predominant_land_use] = "Mixed Use"</Filter>
             <PolygonSymbolizer fill="#e5050d" />
+        </Rule>
+
+        <Rule>
+            <MaxScaleDenominator>8530</MaxScaleDenominator>
+            <MinScaleDenominator>4264</MinScaleDenominator>
+            <LineSymbolizer stroke="#888" stroke-width="0.8"/>
+        </Rule>
+        <Rule>
+            <MaxScaleDenominator>4264</MaxScaleDenominator>
+            <MinScaleDenominator>0</MinScaleDenominator>
+            <LineSymbolizer stroke="#888" stroke-width="3.0"/>
+        </Rule>
+    </Style>
+    <Style name="ext_heritage_zoning">
+        <Rule>
+            <Filter>[ext_heritage_zoning] = "In State and Local Heritage Area"</Filter>
+            <PolygonSymbolizer fill="#e5050d" />
+        </Rule>
+        <Rule>
+            <Filter>[ext_heritage_zoning] = "In conservation area"</Filter>
+            <PolygonSymbolizer fill="#252aa6" />
+        </Rule>
+        <Rule>
+            <Filter>[ext_heritage_zoning] = "In State Heritage Area"</Filter>
+            <PolygonSymbolizer fill="#ff8c00" />
         </Rule>
 
         <Rule>
