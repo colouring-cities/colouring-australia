@@ -3,6 +3,8 @@ import React, { Fragment } from 'react';
 import InfoBox from '../../components/info-box';
 import { dataFields } from '../../config/data-fields-config';
 import DataEntry from '../data-components/data-entry';
+import NumericDataEntry from '../data-components/numeric-data-entry';
+import SelectDataEntry from '../data-components/select-data-entry';
 import { MultiDataEntry } from '../data-components/multi-data-entry/multi-data-entry';
 import withCopyEdit from '../data-container';
 
@@ -14,7 +16,7 @@ import Verification from '../data-components/verification';
  */
 const UseView: React.FunctionComponent<CategoryViewProps> = (props) => (
     <Fragment>
-        <DataEntry
+        <SelectDataEntry
             title={dataFields.ext_predominant_land_use.title}
             tooltip={dataFields.ext_predominant_land_use.tooltip}
             slug="ext_predominant_land_use"
@@ -22,9 +24,7 @@ const UseView: React.FunctionComponent<CategoryViewProps> = (props) => (
             mode={props.mode}
             copy={props.copy}
             onChange={props.onChange}
-            confirmOnEnter={true}
-            autofill={true}
-            showAllOptionsOnEmpty={true}
+            options={dataFields.ext_predominant_land_use.items}
         />
         <Verification
             slug="ext_predominant_land_use"
@@ -44,7 +44,7 @@ const UseView: React.FunctionComponent<CategoryViewProps> = (props) => (
             copy={props.copy}
             onChange={props.onChange}
         />
-        <DataEntry
+        <NumericDataEntry
             title={dataFields.ext_avg_bld_density.title}
             tooltip={dataFields.ext_avg_bld_density.tooltip}
             slug="ext_avg_bld_density"
@@ -52,8 +52,9 @@ const UseView: React.FunctionComponent<CategoryViewProps> = (props) => (
             mode={props.mode}
             copy={props.copy}
             onChange={props.onChange}
+            min={0}
         />
-        <DataEntry
+        <NumericDataEntry
             title={dataFields.ext_avg_bld_distance.title}
             tooltip={dataFields.ext_avg_bld_distance.tooltip}
             slug="ext_avg_bld_distance"
@@ -61,6 +62,7 @@ const UseView: React.FunctionComponent<CategoryViewProps> = (props) => (
             mode={props.mode}
             copy={props.copy}
             onChange={props.onChange}
+            min={0}
         />
     </Fragment>
 );

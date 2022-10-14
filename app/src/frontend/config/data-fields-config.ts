@@ -674,6 +674,22 @@ export const dataFields = { /* eslint-disable @typescript-eslint/camelcase */
         title: "Predominant Building-Use (Ground-Floor)",
         tooltip: "",
         example: "",
+        items: [
+            "Mixed Use",
+            "Single use",
+            "Residential",
+            "Retail",
+            "Industry & Business",
+            "Community Services",
+            "Recreation & Leisure",
+            "Transport",
+            "Utilities & Infrastructure",
+            "Defence",
+            "Agriculture",
+            "Minerals",
+            "Vacant & Derelict",
+            "Unclassified, presumed non-residential"
+        ]
     },
     ext_designated_land_use: {
         category: Category.LandUse,
@@ -685,13 +701,13 @@ export const dataFields = { /* eslint-disable @typescript-eslint/camelcase */
         category: Category.LandUse,
         title: "Average Building Density",
         tooltip: "",
-        example: "",
+        example: 0.5,
     },
     ext_avg_bld_distance: {
         category: Category.LandUse,
         title: "Average Distance to Buildings",
         tooltip: "",
-        example: "",
+        example: 10.0,
     },
     ext_age_year_demolition: {
         category: Category.Age,
@@ -702,6 +718,17 @@ export const dataFields = { /* eslint-disable @typescript-eslint/camelcase */
         category: Category.Age,
         title: "Year renovated (best estimate)",
         example: 1924,
+    },
+    ext_heritage_zoning: {
+        category: Category.Age,
+        title: "Heritage Zoning",
+        tooltip: "Heritage Zoning",
+        example: "",
+        items: [
+            "In State and Local Heritage Area",
+            "In conservation area",
+            "In State Heritage Area"
+        ]
     },
     ext_historical_notes: {
         category: Category.Age,
@@ -723,6 +750,11 @@ export const dataFields = { /* eslint-disable @typescript-eslint/camelcase */
         category: Category.Streetscape,
         title: "Number of trees within 100 metres.",
         example: 42,
+    },
+    ext_greenspace_proximity: {
+        category: Category.Streetscape,
+        title: "Distance to nearest park.",
+        example: 500,
     },
     ext_nabers_energy_rating: {
         category: Category.Sustainability,

@@ -18,7 +18,6 @@ const StreetscapeView: React.FunctionComponent<CategoryViewProps> = (props) => (
             slug="ext_walk_index"
             value={props.building.ext_walk_index}
             tooltip={dataFields.ext_walk_index.tooltip}
-            step={0.1}
             min={0}
             max={100}
             mode={props.mode}
@@ -29,6 +28,14 @@ const StreetscapeView: React.FunctionComponent<CategoryViewProps> = (props) => (
             title={dataFields.ext_num_trees_within_100.title}
             slug="ext_num_trees_within_100"
             value={props.building.ext_num_trees_within_100}
+            mode={props.mode}
+            copy={props.copy}
+            onChange={props.onChange}
+        />
+        <NumericDataEntry
+            title={dataFields.ext_greenspace_proximity.title}
+            slug="ext_greenspace_proximity"
+            value={props.building.ext_greenspace_proximity}
             mode={props.mode}
             copy={props.copy}
             onChange={props.onChange}

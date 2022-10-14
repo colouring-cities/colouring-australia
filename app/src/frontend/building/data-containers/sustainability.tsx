@@ -29,7 +29,6 @@ const SustainabilityView: React.FunctionComponent<CategoryViewProps> = (props) =
                 slug="ext_nabers_energy_rating"
                 value={props.building.ext_nabers_energy_rating}
                 tooltip={dataFields.ext_nabers_energy_rating.tooltip}
-                step={0.5}
                 min={0}
                 max={5}
                 mode={props.mode}

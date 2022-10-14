@@ -46,6 +46,16 @@ export const categoryMapsConfig: {[key in Category]: CategoryMapDefinition[]} = 
                 { color: '#d0c291', text: '<1700' },
             ]
         },
+    },{
+        mapStyle: 'ext_heritage_zoning',
+        legend: {
+            title: 'Heritage Zoning Status',
+            elements: [
+                { color: '#e5050d', text: 'In State and Local Heritage Area' },
+                { color: '#252aa6', text: 'In conservation area' },
+                { color: '#ff8c00', text: 'In State Heritage Area' },
+            ]
+        },
     }],
     [Category.Size]: [{
         mapStyle: 'size_height',
@@ -252,7 +262,7 @@ export const categoryMapsConfig: {[key in Category]: CategoryMapDefinition[]} = 
     [Category.Sustainability]: [{
         mapStyle: 'ext_nabers_energy_rating',
         legend: {
-            title: 'Sustainability',
+            title: 'NABERS',
             description: 'NABERS Energy Rating',
             elements: [
                 { color: "#ff0000", text: '0 Star' },
@@ -294,7 +304,29 @@ export const categoryMapsConfig: {[key in Category]: CategoryMapDefinition[]} = 
     [Category.LandUse]: [{
         mapStyle: 'ext_designated_land_use',
         legend: {
-            title: 'Land Use',
+            title: 'Designated Land Use',
+            elements: [
+                { color: '#e5050d', text: 'Mixed Use' },
+                { subtitle: 'Single use:'},
+                { color: '#252aa6', text: 'Residential (unverified)' },
+                { color: '#7025a6', text: 'Residential (verified)' },
+                { color: '#ff8c00', text: 'Retail' },
+                { color: '#f5f58f', text: 'Industry & Business' },
+                { color: '#73ccd1', text: 'Community Services' },
+                { color: '#ffbfbf', text: 'Recreation & Leisure' },
+                { color: '#b3de69', text: 'Transport' },
+                { color: '#cccccc', text: 'Utilities & Infrastructure' },
+                { color: '#898944', text: 'Defence' },
+                { color: '#fa667d', text: 'Agriculture' },
+                { color: '#53f5dd', text: 'Minerals' },
+                { color: '#ffffff', text: 'Vacant & Derelict' },
+                { color: '#6c6f8e', text: 'Unclassified, presumed non-residential' }
+            ]
+            },
+    },{
+        mapStyle: 'ext_predominant_land_use',
+        legend: {
+            title: 'Predominant Land Use',
             elements: [
                 { color: '#e5050d', text: 'Mixed Use' },
                 { subtitle: 'Single use:'},
@@ -349,7 +381,24 @@ export const categoryMapsConfig: {[key in Category]: CategoryMapDefinition[]} = 
                 { color: '#9f8d0b', text: '80-120' },
                 { color: '#b17300', text: '40-80' },
                 { color: '#c05100', text: '20-40' },
-                { color: '#cc1212', text: '<20' },
+                { color: '#cc1212', text: '0-20' },
+                { color: '#dd0606', text: '0' },
+            ]
+        },
+    },{
+        mapStyle: 'ext_greenspace_proximity',
+        legend: {
+            title: 'Distance to nearest park',
+            elements: [
+                { color: '#dd0606', text: '>1000' },
+                { color: '#c05100', text: '500-1000' },
+                { color: '#b17300', text: '400-500' },
+                { color: '#9f8d0b', text: '300-400' },
+                { color: '#8fa33c', text: '200-300' },
+                { color: '#81b568', text: '100-200' },
+                { color: '#79c592', text: '50-100' },
+                { color: '#7fd3b9', text: '0-50' },
+                { color: '#95ded8', text: '0' },
             ]
         },
     }],

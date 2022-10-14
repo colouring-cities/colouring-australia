@@ -52,6 +52,16 @@ const AgeView: React.FunctionComponent<CategoryViewProps> = (props) => {
                 max={currentYear}
                 // "type": "year_estimator"
                 />
+            <SelectDataEntry
+                title={dataFields.ext_heritage_zoning.title}
+                tooltip={dataFields.ext_heritage_zoning.tooltip}
+                slug="ext_heritage_zoning"
+                value={props.building.ext_heritage_zoning}
+                mode={props.mode}
+                copy={props.copy}
+                onChange={props.onChange}
+                options={dataFields.ext_heritage_zoning.items}
+            />
 
             <TextboxDataEntry
                 title={dataFields.ext_historical_notes.title}

@@ -147,7 +147,11 @@
     </Style>
     <Style name="size_height">
         <Rule>
-            <Filter>[size_height] &lt; 5.55</Filter>
+            <Filter>[size_height] &lt;= 0</Filter>
+            <PolygonSymbolizer fill="#ffffff" />
+        </Rule>
+        <Rule>
+            <Filter>[size_height] &gt; 0 and [size_height] &lt; 5.55</Filter>
             <PolygonSymbolizer fill="#f7f4f9" />
         </Rule>
         <Rule>
@@ -192,7 +196,11 @@
     </Style>
     <Style name="size_plot">
         <Rule>
-            <Filter>[size_plot] &lt; 80</Filter>
+            <Filter>[size_plot] &lt;= 0</Filter>
+            <PolygonSymbolizer fill="#ffffff" />
+        </Rule>
+        <Rule>
+            <Filter>[size_plot] &gt; 0 and [size_plot] &lt; 80</Filter>
             <PolygonSymbolizer fill="#e7e1ef" />
         </Rule>
         <Rule>
@@ -233,7 +241,11 @@
     </Style>
     <Style name="size_footprint">
         <Rule>
-            <Filter>[size_footprint] &lt; 80</Filter>
+            <Filter>[size_footprint] &lt;= 0</Filter>
+            <PolygonSymbolizer fill="#ffffff" />
+        </Rule>
+        <Rule>
+            <Filter>[size_footprint] &gt; 0 and [size_footprint] &lt; 80</Filter>
             <PolygonSymbolizer fill="#e7e1ef" />
         </Rule>
         <Rule>
@@ -705,8 +717,50 @@
             <PolygonSymbolizer fill="#c05100" />
         </Rule>
         <Rule>
-            <Filter>[ext_num_trees_within_100] &lt; 20</Filter>
+            <Filter>[ext_num_trees_within_100] &gt;= 0 and [ext_num_trees_within_100] &lt; 20</Filter>
             <PolygonSymbolizer fill="#cc1212" />
+        </Rule>
+        <Rule>
+            <Filter>[ext_num_trees_within_100] &lt;= 0</Filter>
+            <PolygonSymbolizer fill="#dd0606" />
+        </Rule>
+    </Style>
+    <Style name="ext_greenspace_proximity">
+        <Rule>
+            <Filter>[ext_greenspace_proximity] &gt;= 1000</Filter>
+            <PolygonSymbolizer fill="#dd0606" />
+        </Rule>
+        <Rule>
+            <Filter>[ext_greenspace_proximity] &gt;= 500 and [ext_greenspace_proximity] &lt; 1000</Filter>
+            <PolygonSymbolizer fill="#c05100" />
+        </Rule>
+        <Rule>
+            <Filter>[ext_greenspace_proximity] &gt;= 400 and [ext_greenspace_proximity] &lt; 500</Filter>
+            <PolygonSymbolizer fill="#b17300" />
+        </Rule>
+        <Rule>
+            <Filter>[ext_greenspace_proximity] &gt;= 300 and [ext_greenspace_proximity] &lt; 400</Filter>
+            <PolygonSymbolizer fill="#9f8d0b" />
+        </Rule>
+        <Rule>
+            <Filter>[ext_greenspace_proximity] &gt;= 200 and [ext_greenspace_proximity] &lt; 300</Filter>
+            <PolygonSymbolizer fill="#8fa33c" />
+        </Rule>
+        <Rule>
+            <Filter>[ext_greenspace_proximity] &gt;= 100 and [ext_greenspace_proximity] &lt; 200</Filter>
+            <PolygonSymbolizer fill="#81b568" />
+        </Rule>
+        <Rule>
+            <Filter>[ext_greenspace_proximity] &gt;= 50 and [ext_greenspace_proximity] &lt; 100</Filter>
+            <PolygonSymbolizer fill="#79c592" />
+        </Rule>
+        <Rule>
+            <Filter>[ext_greenspace_proximity] &gt; 0 and [ext_greenspace_proximity] &lt; 50</Filter>
+            <PolygonSymbolizer fill="#7fd3b9" />
+        </Rule>
+        <Rule>
+            <Filter>[ext_greenspace_proximity] &lt;= 0</Filter>
+            <PolygonSymbolizer fill="#95ded8" />
         </Rule>
     </Style>
     <Style name="likes">
@@ -855,7 +909,7 @@
     </Style>
     <Style name="ext_designated_land_use">
         <Rule>
-            <Filter>[ext_designated_land_use] = "Agriculture And Fisheries"</Filter>
+            <Filter>[ext_designated_land_use] = "Agriculture & Fisheries"</Filter>
             <PolygonSymbolizer fill="#fa667d" />
         </Rule>
         <Rule>
@@ -863,7 +917,7 @@
             <PolygonSymbolizer fill="#53f5dd" />
         </Rule>
         <Rule>
-            <Filter>[ext_designated_land_use] = "Recreation And Leisure"</Filter>
+            <Filter>[ext_designated_land_use] = "Recreation & Leisure"</Filter>
             <PolygonSymbolizer fill="#ffbfbf" />
         </Rule>
         <Rule>
@@ -871,7 +925,7 @@
             <PolygonSymbolizer fill="#b3de69" />
         </Rule>
         <Rule>
-            <Filter>[ext_designated_land_use] = "Utilities And Infrastructure"</Filter>
+            <Filter>[ext_designated_land_use] = "Utilities & Infrastructure"</Filter>
             <PolygonSymbolizer fill="#cccccc" />
         </Rule>
         <Rule>
@@ -887,11 +941,11 @@
             <PolygonSymbolizer fill="#ff8c00" />
         </Rule>
         <Rule>
-            <Filter>[ext_designated_land_use] = "Industry And Business"</Filter>
+            <Filter>[ext_designated_land_use] = "Industry & Business"</Filter>
             <PolygonSymbolizer fill="#f5f58f" />
         </Rule>
         <Rule>
-            <Filter>[ext_designated_land_use] = "Vacant And Derelict"</Filter>
+            <Filter>[ext_designated_land_use] = "Vacant & Derelict"</Filter>
             <PolygonSymbolizer fill="#ffffff" />
         </Rule>
         <Rule>
@@ -901,6 +955,92 @@
         <Rule>
             <Filter>[ext_designated_land_use] = "Mixed Use"</Filter>
             <PolygonSymbolizer fill="#e5050d" />
+        </Rule>
+
+        <Rule>
+            <MaxScaleDenominator>8530</MaxScaleDenominator>
+            <MinScaleDenominator>4264</MinScaleDenominator>
+            <LineSymbolizer stroke="#888" stroke-width="0.8"/>
+        </Rule>
+        <Rule>
+            <MaxScaleDenominator>4264</MaxScaleDenominator>
+            <MinScaleDenominator>0</MinScaleDenominator>
+            <LineSymbolizer stroke="#888" stroke-width="3.0"/>
+        </Rule>
+    </Style>
+    <Style name="ext_predominant_land_use">
+        <Rule>
+            <Filter>[ext_predominant_land_use] = "Agriculture & Fisheries"</Filter>
+            <PolygonSymbolizer fill="#fa667d" />
+        </Rule>
+        <Rule>
+            <Filter>[ext_predominant_land_use] = "Minerals"</Filter>
+            <PolygonSymbolizer fill="#53f5dd" />
+        </Rule>
+        <Rule>
+            <Filter>[ext_predominant_land_use] = "Recreation & Leisure"</Filter>
+            <PolygonSymbolizer fill="#ffbfbf" />
+        </Rule>
+        <Rule>
+            <Filter>[ext_predominant_land_use] = "Transport"</Filter>
+            <PolygonSymbolizer fill="#b3de69" />
+        </Rule>
+        <Rule>
+            <Filter>[ext_predominant_land_use] = "Utilities & Infrastructure"</Filter>
+            <PolygonSymbolizer fill="#cccccc" />
+        </Rule>
+        <Rule>
+            <Filter>[ext_predominant_land_use] = "Residential"</Filter>
+            <PolygonSymbolizer fill="#4a54a6" />
+        </Rule>
+        <Rule>
+            <Filter>[ext_predominant_land_use] = "Community Services"</Filter>
+            <PolygonSymbolizer fill="#73ccd1" />
+        </Rule>
+        <Rule>
+            <Filter>[ext_predominant_land_use] = "Retail"</Filter>
+            <PolygonSymbolizer fill="#ff8c00" />
+        </Rule>
+        <Rule>
+            <Filter>[ext_predominant_land_use] = "Industry & Business"</Filter>
+            <PolygonSymbolizer fill="#f5f58f" />
+        </Rule>
+        <Rule>
+            <Filter>[ext_predominant_land_use] = "Vacant & Derelict"</Filter>
+            <PolygonSymbolizer fill="#ffffff" />
+        </Rule>
+        <Rule>
+            <Filter>[ext_predominant_land_use] = "Defence"</Filter>
+            <PolygonSymbolizer fill="#898944" />
+        </Rule>
+        <Rule>
+            <Filter>[ext_predominant_land_use] = "Mixed Use"</Filter>
+            <PolygonSymbolizer fill="#e5050d" />
+        </Rule>
+
+        <Rule>
+            <MaxScaleDenominator>8530</MaxScaleDenominator>
+            <MinScaleDenominator>4264</MinScaleDenominator>
+            <LineSymbolizer stroke="#888" stroke-width="0.8"/>
+        </Rule>
+        <Rule>
+            <MaxScaleDenominator>4264</MaxScaleDenominator>
+            <MinScaleDenominator>0</MinScaleDenominator>
+            <LineSymbolizer stroke="#888" stroke-width="3.0"/>
+        </Rule>
+    </Style>
+    <Style name="ext_heritage_zoning">
+        <Rule>
+            <Filter>[ext_heritage_zoning] = "In State and Local Heritage Area"</Filter>
+            <PolygonSymbolizer fill="#e5050d" />
+        </Rule>
+        <Rule>
+            <Filter>[ext_heritage_zoning] = "In conservation area"</Filter>
+            <PolygonSymbolizer fill="#252aa6" />
+        </Rule>
+        <Rule>
+            <Filter>[ext_heritage_zoning] = "In State Heritage Area"</Filter>
+            <PolygonSymbolizer fill="#ff8c00" />
         </Rule>
 
         <Rule>

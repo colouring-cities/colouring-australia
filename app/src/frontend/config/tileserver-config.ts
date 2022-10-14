@@ -4,6 +4,7 @@
  */
 
 export type BuildingMapTileset = 'date_year' | 
+    'ext_heritage_zoning' |
     'size_height' |
     'size_storeys' |
     'size_footprint' |
@@ -14,12 +15,14 @@ export type BuildingMapTileset = 'date_year' |
     'location' |
     'ext_walk_index' |
     'ext_num_trees_within_100' |
+    'ext_greenspace_proximity' |
     'likes' |
     'planning_combined' |
     'ext_nabers_energy_rating' |
     'ext_electricity' |
     'building_attachment_form' |
     'ext_designated_land_use' |
+    'ext_predominant_land_use' |
     'dynamics_demolished_count' |
     'landuse' |
     'dynamics_demolished_count' |
