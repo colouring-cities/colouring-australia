@@ -35,6 +35,33 @@ const RoofCoveringOptions = [
 const ConstructionView: React.FunctionComponent<CategoryViewProps> = (props) => {
     return (
          <Fragment>
+            <DataEntry
+                title={dataFields.ext_building_quality.title}
+                tooltip={dataFields.ext_building_quality.tooltip}
+                slug="ext_building_quality"
+                value={props.building.ext_building_quality}
+                mode={props.mode}
+                copy={props.copy}
+                onChange={props.onChange}
+            />
+            <DataEntry
+                title={dataFields.ext_gardens.title}
+                tooltip={dataFields.ext_gardens.tooltip}
+                slug="ext_gardens"
+                value={props.building.ext_gardens}
+                mode={props.mode}
+                copy={props.copy}
+                onChange={props.onChange}
+            />
+            <DataEntry
+                title={dataFields.ext_greenwalls.title}
+                tooltip={dataFields.ext_greenwalls.tooltip}
+                slug="ext_greenwalls"
+                value={props.building.ext_greenwalls}
+                mode={props.mode}
+                copy={props.copy}
+                onChange={props.onChange}
+            />
              <SelectDataEntry
                 title={dataFields.construction_core_material.title}
                 slug="construction_core_material"
@@ -45,32 +72,23 @@ const ConstructionView: React.FunctionComponent<CategoryViewProps> = (props) => 
                 copy={props.copy}
                 onChange={props.onChange}
             />
-            <SelectDataEntry
-                title={dataFields.construction_secondary_materials.title}
-                disabled={true}
-                slug="construction_secondary_materials"
-                value={props.building.construction_secondary_materials}
-                tooltip={dataFields.construction_secondary_materials.tooltip}
-                options={ConstructionMaterialsOptions}
-                mode={props.mode}
-                copy={props.copy}
-                onChange={props.onChange}
-            />
-            <SelectDataEntry
-                title={dataFields.construction_roof_covering.title}
-                slug="construction_roof_covering"
-                value={props.building.construction_roof_covering}
-                tooltip={dataFields.construction_roof_covering.tooltip}
-                options={RoofCoveringOptions}
+            <DataEntry
+                title={dataFields.ext_solarpanels.title}
+                tooltip={dataFields.ext_solarpanels.tooltip}
+                slug="ext_solarpanels"
+                value={props.building.ext_solarpanels}
                 mode={props.mode}
                 copy={props.copy}
                 onChange={props.onChange}
             />
             <DataEntry
-                title="Construction system"
-                slug=""
-                value=""
-                mode='view'
+                title={dataFields.ext_pool.title}
+                tooltip={dataFields.ext_pool.tooltip}
+                slug="ext_pool"
+                value={props.building.ext_pool}
+                mode={props.mode}
+                copy={props.copy}
+                onChange={props.onChange}
             />
         </Fragment>
     );

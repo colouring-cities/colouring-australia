@@ -1,5 +1,6 @@
 import { Category } from './categories-config';
 
+
 /**
  * This interface is used only in code which uses dataFields, not in the dataFields definition itself
  * Cannot make dataFields an indexed type ({[key: string]: DataFieldDefinition}),
@@ -35,6 +36,12 @@ export interface DataFieldDefinition {
      */
     items?: { [key: string]: Omit<DataFieldDefinition, 'category'> };
 
+
+    /**
+     * If the defined type is a dictionary, this describes the types of the dictionary's fields
+     */
+    fields?: { [key: string]: Omit<DataFieldDefinition, 'category'>}
+
     /**
      * The example is used to determine the runtime type in which the attribute data is stored (e.g. number, string, object)
      * This gives the programmer auto-complete of all available building attributes when implementing a category view.
@@ -45,14 +52,75 @@ export interface DataFieldDefinition {
      * E.g. for building attachment form, you could use "Detached" as example
      */
     example: any;
+
+    /**
+     * Whether the field is a field that has an independent value for each user.
+     * For example, user building likes are one of such fields.
+     * By default this is false - fields are treated as not user-specific.
+     */
+    perUser?: boolean;
 }
+
+export const buildingUserFields = {
+    community_like: {
+        perUser: true,
+        category: Category.Community,
+        title: "Do you like this building and think it contributes to the city?",
+        example: true,
+    },
+    community_type_worth_keeping: {
+        perUser: true,
+        category: Category.Community,
+        title: "Do you think this **type** of building is generally worth keeping?",
+        example: true,
+    },
+    community_type_worth_keeping_reasons: {
+        perUser: true,
+        category: Category.Community,
+        title: 'Why is this type of building worth keeping?',
+        fields: {
+            external_design: {
+                title: "because the external design contributes to the streetscape"
+            },
+            internal_design: {
+                title: 'because the internal design works well'
+            },
+            adaptable: {
+                title: 'because the building is adaptable / can be reused to make the city more sustainable'
+            },
+            other: {
+                title: 'other'
+            }
+        },
+        example: {
+            external_design: true,
+            internal_design: true,
+            adaptable: false,
+            other: false
+        }
+    },
+    
+    community_local_significance: {
+        perUser: true,
+        category: Category.Community,
+        title: "Do you think this building should be recorded as a local heritage asset?",
+        example: true
+    },
+    community_expected_planning_application: {
+        perUser: true,
+        category: Category.Community,
+        title: "Do you expect this site to be affected by a planning application in the near future?",
+        example: true
+    }
+};
+
 
 export const dataFields = { /* eslint-disable @typescript-eslint/camelcase */
     location_name: {
         category: Category.Location,
-        title: "Building Name",
-        tooltip: "May not be needed for many buildings.",
-        example: "The Cruciform",
+        title: "Building information (link)",
+        tooltip: "Link to a website with information on the building, not needed for most.",
+        example: "https://en.wikipedia.org/wiki/Palace_of_Westminster",
     },
     location_number: {
         category: Category.Location,
@@ -121,7 +189,7 @@ export const dataFields = { /* eslint-disable @typescript-eslint/camelcase */
 
     current_landuse_group: {
         category: Category.LandUse,
-        title: "Current Land Use (Group)",
+        title: "Assigned Land-use",
         tooltip: "Land use Groups as classified by [NLUD](https://www.gov.uk/government/statistics/national-land-use-database-land-use-and-land-cover-classification)",
         example: ["", ""],
     },
@@ -131,7 +199,38 @@ export const dataFields = { /* eslint-disable @typescript-eslint/camelcase */
         tooltip: "Land use Order as classified by [NLUD](https://www.gov.uk/government/statistics/national-land-use-database-land-use-and-land-cover-classification)",
         example: "",
     },
-
+    current_landuse_source: {
+        category: Category.LandUse,
+        title: "Source of information",
+        tooltip: "Source for the current land use",
+        example: "",
+        items: [
+            "Expert/personal knowledge of building",
+            "Online streetview image",
+            "Open planning authority dataset",
+            "Open property tax dataset",
+            "Open housing dataset",
+            "Open address dataset",
+            "Other"
+        ],
+    },
+    current_landuse_source_detail: {
+        category: Category.LandUse,
+        title: "Source details",
+        tooltip: "References for current land use source (max 500 characters)",
+        example: "",
+    },
+    current_landuse_link: {
+        category: Category.LandUse,
+        title: "Source Links",
+        tooltip: "URL for current land use reference",
+        example: ["", "", ""],
+    },
+    current_landuse_verified: {
+        category: Category.LandUse,
+        title: 'Has this land use been manually verified?',
+        example: true,
+    },
     building_attachment_form: {
         category: Category.Type,
         title: "Adjacency/configuration",
@@ -189,6 +288,22 @@ export const dataFields = { /* eslint-disable @typescript-eslint/camelcase */
         category: Category.Age,
         title: "Source of information",
         tooltip: "Source for the main start date",
+        items: [
+            "Expert knowledge of building",
+            "Expert estimate from image",
+            "Survey of London",
+            "Pevsner Guides",
+            "Victoria County History",
+            "Local history publication",
+            "Other publication",
+            "National Heritage List for England",
+            "Other database or gazetteer",
+            "Historical map",
+            "Other archive document",
+            "Film/Video",
+            "Other website",
+            "Other"
+        ],
         example: "",
     },
     date_source_detail: {
@@ -261,13 +376,13 @@ export const dataFields = { /* eslint-disable @typescript-eslint/camelcase */
     },
 
     size_plot_area_total: {
-        category: Category.Streetscape,
+        category: Category.Size,
         title: "Total area of plot (m²)",
         example: 123.02,
         //tooltip: ,
     },
     size_far_ratio: {
-        category: Category.Streetscape,
+        category: Category.Size,
         title: "FAR ratio (percentage of plot covered by building)",
         example: 0.1,
         //tooltip: ,
@@ -282,7 +397,7 @@ export const dataFields = { /* eslint-disable @typescript-eslint/camelcase */
 
     construction_secondary_materials: {
         category: Category.Construction,
-        title: "Secondary Construction Material/s",
+        title: "Main Secondary Construction Material/s",
         tooltip:"Other construction materials",
         example: "",
     },
@@ -300,12 +415,6 @@ export const dataFields = { /* eslint-disable @typescript-eslint/camelcase */
         tooltip: "(Building Research Establishment Environmental Assessment Method) May not be present for many buildings",
         example: "",
     },
-    sust_nabers_energy_rating: {
-        category: Category.Sustainability,
-        title: "NABERS Energy Star Rating",
-        tooltip: "NABERS Energy Star Rating Value",
-        example: 3,
-    },
     sust_dec: {
         category: Category.Sustainability,
         title: "DEC Rating",
@@ -315,7 +424,7 @@ export const dataFields = { /* eslint-disable @typescript-eslint/camelcase */
     sust_aggregate_estimate_epc: {
         category: Category.Sustainability,
         title: "EPC Rating",
-        tooltip: "(Energy Performance Certifcate) Any premises sold or rented is required to have an EPC to show how energy efficient it is. Only buildings rate grade E or higher maybe rented",
+        tooltip: "(Energy Performance Certificate) Any premises sold or rented is required to have an EPC to show how energy efficient it is. Only buildings rate grade E or higher maybe rented",
         example: "",
     },
     sust_retrofit_date: {
@@ -351,9 +460,15 @@ export const dataFields = { /* eslint-disable @typescript-eslint/camelcase */
     },
     planning_in_list: {
         category: Category.Planning,
-        title: "Is listed on the National Heritage List for England?",
+        title: "Is it listed on the National Heritage List for England?",
         example: true,
         //tooltip: ,
+    },
+    planning_nhle_link: {
+        category: Category.Planning,
+        title: "NHLE list entry link",
+        tooltip: "URL for National Heritage List for England entry",
+        example: ["", "", ""],
     },
     planning_list_id: {
         category: Category.Planning,
@@ -446,17 +561,59 @@ export const dataFields = { /* eslint-disable @typescript-eslint/camelcase */
         //tooltip: ,
     },
 
-    comm_walk_index: {
-        category: Category.Community,
-        title: "Walkability Index",
-        example: 85.5,
-        tooltip: "Walkability Index",
-    },
-
     likes_total: {
         category: Category.Community,
         title: "Total number of likes",
         example: 100,
+        tooltip: "People who like the building and think it contributes to the city.",
+    },
+
+    community_local_significance_total: {
+        category: Category.Community,
+        title: "People who think the building should be recorded as one of local significance",
+        example: 100,
+    },
+
+    community_expected_planning_application_total: {
+        category: Category.Community,
+        title: "People who think the building will be affected by a planning application in the near future",
+        example: 100,
+    },
+
+    community_activities_current: {
+        category: Category.Community,
+        title: "Are activities open to the community currently taking place in the building?",
+        tooltip: "E.g. youth club, place of worship, GP surgery, pub",
+        example: true
+    },
+    community_activities: {
+        category: Category.Community,
+        title: "Has this ever been used for community activities in the past?",
+        tooltip: "E.g. youth club, place of worship, GP surgery, pub",
+        example: true
+    },
+    community_activities_always: {
+        category: Category.Community,
+        title: "Has the building always been used for community activities?",
+        tooltip: "E.g. youth club, place of worship, GP surgery, pub",
+        example: true
+    },
+    // community_activities_dates: {
+    //     category: Category.Community,
+    //     title: "When was this building used for community activities?"
+    // },
+
+
+    community_public_ownership: {
+        category: Category.Community,
+        title: "Is the building in public/community ownership?",
+        example: "Not in public/community ownership"
+    },
+
+    community_public_ownership_sources: {
+        category: Category.Community,
+        title: "Community ownership source link",
+        example: ["https://example.com"]
     },
 
     dynamics_has_demolished_buildings: {
@@ -497,12 +654,249 @@ export const dataFields = { /* eslint-disable @typescript-eslint/camelcase */
                 year_demolished: { min: 1993, max: 1994 },
                 lifespan: "2-5", overlap_present: "50%", links: ["", ""]}
         ]
-    }
-  /*  ,
+    },
+  /*
     test_use: {
         category: Category.Test,
         title: "Test use",
         tooltip: "Test",
         example: "",
     },*/
+
+    ext_walk_index: {
+        category: Category.Streetscape,
+        title: "Walkability Index",
+        example: 85.5,
+        tooltip: "Walkability Index",
+    },
+    ext_predominant_land_use: {
+        category: Category.LandUse,
+        title: "Predominant Building-Use (Ground-Floor)",
+        tooltip: "",
+        example: "",
+        items: [
+            "Mixed Use",
+            "Single use",
+            "Residential",
+            "Retail",
+            "Industry & Business",
+            "Community Services",
+            "Recreation & Leisure",
+            "Transport",
+            "Utilities & Infrastructure",
+            "Defence",
+            "Agriculture",
+            "Minerals",
+            "Vacant & Derelict",
+            "Unclassified, presumed non-residential"
+        ]
+    },
+    ext_designated_land_use: {
+        category: Category.LandUse,
+        title: "Designated Land-use",
+        tooltip: "",
+        example: "",
+    },
+    ext_avg_bld_density: {
+        category: Category.LandUse,
+        title: "Average Building Density",
+        tooltip: "",
+        example: 0.5,
+    },
+    ext_avg_bld_distance: {
+        category: Category.LandUse,
+        title: "Average Distance to Buildings",
+        tooltip: "",
+        example: 10.0,
+    },
+    ext_age_year_demolition: {
+        category: Category.Age,
+        title: "Year demolished (best estimate)",
+        example: 1924,
+    },
+    ext_age_year_renovation: {
+        category: Category.Age,
+        title: "Year renovated (best estimate)",
+        example: 1924,
+    },
+    ext_historical_notes: {
+        category: Category.Age,
+        title: "Historical Notes",
+        tooltip: "Historical notes (max 2000 characters)",
+        example: "",
+    },
+    ext_footprintsize: {
+        category: Category.Construction,
+        title: "Size of the building footprint",
+        example: 100,
+    },
+    ext_plotsize: {
+        category: Category.Construction,
+        title: "Size of the building plot",
+        example: 100,
+    },
+    ext_num_trees_within_100: {
+        category: Category.Streetscape,
+        title: "Number of trees within 100 metres.",
+        example: 42,
+    },
+    ext_nabers_energy_rating: {
+        category: Category.Sustainability,
+        title: "NABERS Energy Star Rating",
+        tooltip: "NABERS Energy Star Rating Value",
+        example: 3,
+    },
+    ext_electricity: {
+        category: Category.Sustainability,
+        title: "Utility Usage Electricity",
+        tooltip: "Electricity Usage",
+        example: 3,
+    },
+    ext_water: {
+        category: Category.Sustainability,
+        title: "Utility Usage Water",
+        tooltip: "Water Usage",
+        example: 3,
+    },
+    ext_building_quality: {
+        category: Category.Construction,
+        title: "Building Quality",
+        tooltip: "Building Quality",
+        example: "",
+    },
+    ext_gardens: {
+        category: Category.Construction,
+        title: "Gardens",
+        tooltip: "Gardens",
+        example: "",
+    },
+    ext_greenwalls: {
+        category: Category.Construction,
+        title: "Greenwalls",
+        tooltip: "Greenwalls",
+        example: "",
+    },
+    ext_solarpanels: {
+        category: Category.Construction,
+        title: "Solar Panels",
+        tooltip: "Solar Panels",
+        example: "",
+    },
+    ext_pool: {
+        category: Category.Construction,
+        title: "Swimming Pool",
+        tooltip: "Swimming Pool",
+        example: "",
+    },
+    has_extension: {
+        category: Category.Team,
+        title: "Is there an extension?",
+        tooltip: "",
+        example: false
+    },
+    extension_year: {
+        category: Category.Team,
+        title: "Year extension built (best estimate)",
+        tooltip: "This field is the same as 'Year built (best estimate)' in the Age category'",
+        tooltip_extension: "This should be the year the extension was built, not the original building",
+        example: 2020
+    },
+    developer_type: {
+        category: Category.Team,
+        title: "What type of developer built the building?",
+        example: "",
+        items: [
+            "State",
+            "Charity",
+            "Community/Cooperative",
+            "Other non-profit body",
+            "Private (individual)",
+            "Commercial (company/estate)",
+            "Religious body",
+            "Other"
+        ]
+    },
+    developer_name: {
+        category: Category.Team,
+        title: "Who were the developer(s)?",
+        tooltip: "Free text. First name, space, then Last name",
+        example: ["", "", ""],
+    },
+    developer_source_link: {
+        category: Category.Team,
+        title: "Source links for developer(s)",
+        tooltip: "URL for source for developer(s)",
+        example: ["", "", ""],
+    },
+    landowner: {
+        category: Category.Team,
+        title: "Landowner(s) at time of construction",
+        tooltip: "Free text. First name, space, then Last name",
+        example: ["", "", ""],
+    },
+    landowner_source_link: {
+        category: Category.Team,
+        title: "Source links for landowner(s)",
+        tooltip: "URL for source for landowner(s)",
+        example: ["", "", ""],
+    },
+    designers: {
+        category: Category.Team,
+        title: "Who were the main designer(s)?",
+        tooltip: "Free text. First name, space, then Last name",
+        example: ["", "", ""],
+    },
+    designers_source_link: {
+        category: Category.Team,
+        title: "Source links for designer(s)",
+        tooltip: "URL for source for designer(s)",
+        example: ["", "", ""],
+    },
+    lead_designer_type: {
+        category: Category.Team,
+        title: "Which best describes the lead designer?",
+        example: "",
+        items: [
+            "Landowner",
+            "Speculative builder",
+            "Government architecture department",
+            "Architect/ architectural firm",
+            "Engineer/ Engineering firm",
+            "Other"
+        ]
+    },
+    designer_awards: {
+        category: Category.Team,
+        title: "Did the design team win any awards for this building?",
+        tooltip: "",
+        example: false
+    },
+    awards_source_link: {
+        category: Category.Team,
+        title: "Source links for designer award(s)",
+        tooltip: "URL for source for designer award(s)",
+        example: ["", "", ""],
+    },
+    builder: {
+        category: Category.Team,
+        title: "Name of builder/ construction team",
+        example: ["", "", ""],
+    },
+    builder_source_link: {
+        category: Category.Team,
+        title: "Source builder/ construction team",
+        example: ["", "", ""],
+    },
+    other_team: {
+        category: Category.Team,
+        title: "Other significant members of the team",
+        example: ["", "", ""],
+    },
+    other_team_source_link: {
+        category: Category.Team,
+        title: "Source other significant team members",
+        example: ["", "", ""],
+    },
 };
+
+export const allFieldsConfig = {...dataFields, ...buildingUserFields};

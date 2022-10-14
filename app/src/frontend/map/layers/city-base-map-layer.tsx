@@ -9,7 +9,7 @@ const OS_API_KEY = 'UVWEspgInusDKKYANE5bmyddoEmCSD4r';
  * Base raster layer for the map.
  * @param theme map theme
  */
-export function CityBaseMapLayer({theme}: {theme: MapTheme}) {
+export function CityBaseMapLayer({ theme }: { theme: MapTheme }) {
 
     /**
      * Ordnance Survey maps - UK / London specific
@@ -17,6 +17,9 @@ export function CityBaseMapLayer({theme}: {theme: MapTheme}) {
      */
     const apiKey = OS_API_KEY;
     const layer = theme === 'light' ? 'Light_3857' : 'Night 3857';
+
+    // In either theme case, we will use OS's light theme, but add our own filter
+    const theme_class = theme === 'light' ? "light-theme" : "night-theme";
     
     //const baseUrl = `https://api.os.uk/maps/raster/v1/zxy/${layer}/{z}/{x}/{y}.png?key=${apiKey}`;
     const baseUrl = `https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png`;
@@ -26,12 +29,12 @@ export function CityBaseMapLayer({theme}: {theme: MapTheme}) {
     const attribution = '';
     
     return <TileLayer
-        key={theme} /* needed because TileLayer.key is not mutabe in react-leaflet v3 */
         url={baseUrl}
         attribution={attribution}
         maxNativeZoom={18}
         maxZoom={19}
         detectRetina={true}
+        className={theme_class}
     />;
 }
 

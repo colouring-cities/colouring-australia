@@ -179,7 +179,7 @@ class ColouringMap extends Component<ColouringMapProps, ColouringMapState> {
             key={'wms'}
             //url={'http://localhost:8080/geoserver/whatif/wms'}
             url={'http://localhost:8080/geoserver/whatif/wms'}
-            layers={'whatif:color_sydney_suburb'}
+            layers={'whatif:color_brisbane_suburb'}
             version={'1.1.0'}
             transparent={true}
             tms={false}
@@ -195,7 +195,7 @@ class ColouringMap extends Component<ColouringMapProps, ColouringMapState> {
             key={'wms'}
             //url={'http://localhost:8080/geoserver/whatif/wms'}
             url={'https://www.ahdap.dev/geoserver/wms'}
-            layers={'colouringsydney:color_sydney_suburb'}
+            layers={'colouringbrisbane:color_brisbane_suburb'}
             version={'1.1.0'}
             transparent={true}
             tms={false}

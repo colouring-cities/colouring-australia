@@ -10,6 +10,7 @@ type GetAutofillOptionsFn = (value: string, all?: boolean) => Promise<AutofillOp
 
 const autofillFunctionMap : { [fieldName: string] : GetAutofillOptionsFn } = {
     current_landuse_group: getLanduseGroupOptions,
+    ext_predominant_land_use: getLanduseGroupOptions,
 };
 
 

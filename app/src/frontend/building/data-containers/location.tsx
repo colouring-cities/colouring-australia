@@ -102,55 +102,6 @@ const LocationView: React.FunctionComponent<CategoryViewProps> = (props) => (
             valueTransform={x=>x.toUpperCase()}
             disabled={true}
             />
-        <DataEntry
-            title={dataFields.ref_toid.title}
-            slug="ref_toid"
-            value={props.building.ref_toid}
-            mode={props.mode}
-            copy={props.copy}
-            tooltip={dataFields.ref_toid.tooltip}
-            onChange={props.onChange}
-            disabled={true}
-            />
-        <UPRNsDataEntry
-            title={dataFields.uprns.title}
-            value={props.building.uprns}
-            tooltip={dataFields.uprns.tooltip}
-            />
-        <DataEntry
-            title={dataFields.ref_osm_id.title}
-            slug="ref_osm_id"
-            value={props.building.ref_osm_id}
-            mode={props.mode}
-            copy={props.copy}
-            tooltip={dataFields.ref_osm_id.tooltip}
-            maxLength={20}
-            onChange={props.onChange}
-            />
-        <NumericDataEntry
-            title={dataFields.location_latitude.title}
-            slug="location_latitude"
-            value={props.building.location_latitude}
-            mode={props.mode}
-            copy={props.copy}
-            step={0.00001}
-            min={-90}
-            max={90}
-            placeholder="Latitude, e.g. 51.5467"
-            onChange={props.onChange}
-            />
-        <NumericDataEntry
-            title={dataFields.location_longitude.title}
-            slug="location_longitude"
-            value={props.building.location_longitude}
-            mode={props.mode}
-            copy={props.copy}
-            step={0.00001}
-            min={-180}
-            max={180}
-            placeholder="Longitude, e.g. -0.0586"
-            onChange={props.onChange}
-            />
     </Fragment>
 );
 const LocationContainer = withCopyEdit(LocationView);
