@@ -394,7 +394,7 @@ export const categoryMapsConfig: {[key in Category]: CategoryMapDefinition[]} = 
                 { color: '#c05100', text: '500-1000' },
                 { color: '#b17300', text: '400-500' },
                 { color: '#9f8d0b', text: '300-400' },
-                { color: '##8fa33c', text: '200-300' },
+                { color: '#8fa33c', text: '200-300' },
                 { color: '#81b568', text: '100-200' },
                 { color: '#79c592', text: '50-100' },
                 { color: '#7fd3b9', text: '0-50' },
