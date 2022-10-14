@@ -32,6 +32,14 @@ const StreetscapeView: React.FunctionComponent<CategoryViewProps> = (props) => (
             copy={props.copy}
             onChange={props.onChange}
         />
+        <NumericDataEntry
+            title={dataFields.ext_greenspace_proximity.title}
+            slug="ext_greenspace_proximity"
+            value={props.building.ext_greenspace_proximity}
+            mode={props.mode}
+            copy={props.copy}
+            onChange={props.onChange}
+        />
     </Fragment>
 );
 const StreetscapeContainer = withCopyEdit(StreetscapeView);

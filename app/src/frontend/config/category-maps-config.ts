@@ -46,6 +46,16 @@ export const categoryMapsConfig: {[key in Category]: CategoryMapDefinition[]} = 
                 { color: '#d0c291', text: '<1700' },
             ]
         },
+    },{
+        mapStyle: 'ext_heritage_zoning',
+        legend: {
+            title: 'Heritage Zoning Status',
+            elements: [
+                { color: '#e5050d', text: 'In State and Local Heritage Area' },
+                { color: '#252aa6', text: 'In conservation area' },
+                { color: '#ff8c00', text: 'In State Heritage Area' },
+            ]
+        },
     }],
     [Category.Size]: [{
         mapStyle: 'size_height',
@@ -373,6 +383,22 @@ export const categoryMapsConfig: {[key in Category]: CategoryMapDefinition[]} = 
                 { color: '#c05100', text: '20-40' },
                 { color: '#cc1212', text: '0-20' },
                 { color: '#dd0606', text: '0' },
+            ]
+        },
+    },{
+        mapStyle: 'ext_greenspace_proximity',
+        legend: {
+            title: 'Distance to nearest park',
+            elements: [
+                { color: '#dd0606', text: '>1000' },
+                { color: '#c05100', text: '500-1000' },
+                { color: '#b17300', text: '400-500' },
+                { color: '#9f8d0b', text: '300-400' },
+                { color: '##8fa33c', text: '200-300' },
+                { color: '#81b568', text: '100-200' },
+                { color: '#79c592', text: '50-100' },
+                { color: '#7fd3b9', text: '0-50' },
+                { color: '#95ded8', text: '0' },
             ]
         },
     }],
