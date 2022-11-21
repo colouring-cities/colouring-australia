@@ -381,7 +381,7 @@ export const dataFields = { /* eslint-disable @typescript-eslint/camelcase */
         example: 123.02,
         //tooltip: ,
     },
-    size_far_ratio: {
+    ext_far_ratio: {
         category: Category.Size,
         title: "FAR ratio (percentage of plot covered by building)",
         example: 0.1,

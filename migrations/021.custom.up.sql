@@ -22,6 +22,7 @@ ALTER TABLE buildings ADD CONSTRAINT ext_historical_notes_len CHECK (length(date
 
 ALTER TABLE buildings ADD COLUMN IF NOT EXISTS ext_footprintsize real;
 ALTER TABLE buildings ADD COLUMN IF NOT EXISTS ext_plotsize real;
+ALTER TABLE buildings ADD COLUMN IF NOT EXISTS ext_far_ratio real;
 
 ALTER TABLE buildings ADD COLUMN IF NOT EXISTS ext_building_quality text;
 ALTER TABLE buildings ADD COLUMN IF NOT EXISTS ext_gardens boolean;

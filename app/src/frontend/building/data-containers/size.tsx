@@ -50,9 +50,9 @@ const SizeView: React.FunctionComponent<CategoryViewProps> = (props) => (
                 verified_count={props.building.verified.size_height_apex}
                 />
         <NumericDataEntry
-            title={dataFields.size_far_ratio.title}
-            slug="size_far_ratio"
-            value={props.building.size_far_ratio}
+            title={dataFields.ext_far_ratio.title}
+            slug="ext_far_ratio"
+            value={props.building.ext_far_ratio}
             mode={props.mode}
             copy={props.copy}
             onChange={props.onChange}
