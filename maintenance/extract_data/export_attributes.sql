@@ -9,6 +9,8 @@ COPY (SELECT
     location_line_two,
     location_town,
     location_postcode,
+    location_latitude,
+    location_longitude,
     ext_predominant_land_use,
     ext_designated_land_use,
     ext_avg_bld_density,
