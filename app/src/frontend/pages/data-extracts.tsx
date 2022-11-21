@@ -54,7 +54,7 @@ export default class DataExtracts extends React.Component<{}, DataExtractsState>
                     Choose one of the links below to download an archive containing the open data collected on the colouring Sydney platform.
                     </p>
                     <p>
-                    COMING SOON (To be released via the AHDAP portal).
+                    Extracts include attributes and point locations only. Footprints are available via the AHDAP National Housing Data Exchance Portal.
                     </p>
 
                     {
