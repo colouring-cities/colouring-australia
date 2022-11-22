@@ -669,6 +669,36 @@ export const dataFields = { /* eslint-disable @typescript-eslint/camelcase */
         example: 85.5,
         tooltip: "Walkability Index",
     },
+    ext_walk_employment: {
+        category: Category.Streetscape,
+        title: "Walkability Employment",
+        example: 85.5,
+        tooltip: "Employment component of the walkability index",
+    },
+    ext_walk_education: {
+        category: Category.Streetscape,
+        title: "Walkability Education",
+        example: 85.5,
+        tooltip: "Education component of the walkability index",
+    },
+    ext_walk_shopping: {
+        category: Category.Streetscape,
+        title: "Walkability Shopping",
+        example: 85.5,
+        tooltip: "Shopping component of the walkability index",
+    },
+    ext_walk_errands: {
+        category: Category.Streetscape,
+        title: "Walkability Errands",
+        example: 85.5,
+        tooltip: "Errands component of the walkability index",
+    },
+    ext_walk_recreation: {
+        category: Category.Streetscape,
+        title: "Walkability Recreation",
+        example: 85.5,
+        tooltip: "Recreation component of the walkability index",
+    },
     ext_predominant_land_use: {
         category: Category.LandUse,
         title: "Predominant Building-Use (Ground-Floor)",

@@ -31,6 +31,11 @@ ALTER TABLE buildings ADD COLUMN IF NOT EXISTS ext_pool boolean;
 ALTER TABLE buildings ADD COLUMN IF NOT EXISTS ext_solarpanels real;
 
 ALTER TABLE buildings ADD COLUMN IF NOT EXISTS ext_walk_index real;
+ALTER TABLE buildings ADD COLUMN IF NOT EXISTS ext_walk_employment real;
+ALTER TABLE buildings ADD COLUMN IF NOT EXISTS ext_walk_education real;
+ALTER TABLE buildings ADD COLUMN IF NOT EXISTS ext_walk_shopping real;
+ALTER TABLE buildings ADD COLUMN IF NOT EXISTS ext_walk_errands real;
+ALTER TABLE buildings ADD COLUMN IF NOT EXISTS ext_walk_recreation real;
 ALTER TABLE buildings ADD COLUMN IF NOT EXISTS ext_greenspace_proximity real;
 ALTER TABLE buildings ADD COLUMN IF NOT EXISTS ext_num_trees_within_100 real;
 
