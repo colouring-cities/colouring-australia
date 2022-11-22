@@ -14,6 +14,11 @@ export type BuildingMapTileset = 'date_year' |
     'ext_building_quality' |
     'location' |
     'ext_walk_index' |
+    'ext_walk_employment' |
+    'ext_walk_education' |
+    'ext_walk_shopping' |
+    'ext_walk_errands' |
+    'ext_walk_recreation' |
     'ext_num_trees_within_100' |
     'ext_greenspace_proximity' |
     'likes' |
