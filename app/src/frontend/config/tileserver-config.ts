@@ -24,6 +24,9 @@ export type BuildingMapTileset = 'date_year' |
     'likes' |
     'planning_combined' |
     'ext_nabers_energy_rating' |
+    'ext_nabers_water_rating' |
+    'ext_nabers_indoor_rating' |
+    'ext_nabers_waste_rating' |
     'ext_electricity' |
     'building_attachment_form' |
     'ext_designated_land_use' |

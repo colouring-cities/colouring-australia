@@ -1,6 +1,9 @@
 -- NABERS energy ratings
 
 ALTER TABLE buildings ADD COLUMN IF NOT EXISTS ext_nabers_energy_rating real;
+ALTER TABLE buildings ADD COLUMN IF NOT EXISTS ext_nabers_water_rating real;
+ALTER TABLE buildings ADD COLUMN IF NOT EXISTS ext_nabers_indoor_rating real;
+ALTER TABLE buildings ADD COLUMN IF NOT EXISTS ext_nabers_waste_rating real;
 
 -- Walkability data
 

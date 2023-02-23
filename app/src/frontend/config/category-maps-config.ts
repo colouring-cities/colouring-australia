@@ -262,8 +262,53 @@ export const categoryMapsConfig: {[key in Category]: CategoryMapDefinition[]} = 
     [Category.Sustainability]: [{
         mapStyle: 'ext_nabers_energy_rating',
         legend: {
-            title: 'NABERS',
+            title: 'NABERS Energy',
             description: 'NABERS Energy Rating',
+            elements: [
+                { color: "#ff0000", text: '0 Star' },
+                { color: "#e92b00", text: '1 Star' },
+                { color: "#d35500", text: '2 Star' },
+                { color: "#bd8000", text: '3 Star' },
+                { color: "#a6aa00", text: '4 Star' },
+                { color: "#90d500", text: '5 Star' },
+                { color: "#7aff00", text: '6 Star' },
+            ]
+        },
+    },{
+        mapStyle: 'ext_nabers_water_rating',
+        legend: {
+            title: 'NABERS Water',
+            description: 'NABERS Water Rating',
+            elements: [
+                { color: "#ff0000", text: '0 Star' },
+                { color: "#e92b00", text: '1 Star' },
+                { color: "#d35500", text: '2 Star' },
+                { color: "#bd8000", text: '3 Star' },
+                { color: "#a6aa00", text: '4 Star' },
+                { color: "#90d500", text: '5 Star' },
+                { color: "#7aff00", text: '6 Star' },
+            ]
+        },
+    },{
+        mapStyle: 'ext_nabers_indoor_rating',
+        legend: {
+            title: 'NABERS Indoors',
+            description: 'NABERS Indoor Environment Quality Rating',
+            elements: [
+                { color: "#ff0000", text: '0 Star' },
+                { color: "#e92b00", text: '1 Star' },
+                { color: "#d35500", text: '2 Star' },
+                { color: "#bd8000", text: '3 Star' },
+                { color: "#a6aa00", text: '4 Star' },
+                { color: "#90d500", text: '5 Star' },
+                { color: "#7aff00", text: '6 Star' },
+            ]
+        },
+    },{
+        mapStyle: 'ext_nabers_waste_rating',
+        legend: {
+            title: 'NABERS Waste',
+            description: 'NABERS Waste Rating',
             elements: [
                 { color: "#ff0000", text: '0 Star' },
                 { color: "#e92b00", text: '1 Star' },

@@ -503,6 +503,129 @@
             <LineSymbolizer stroke="#888" stroke-width="3.0"/>
         </Rule>
     </Style>
+    <Style name="ext_nabers_water_rating">
+        <Rule>
+            <Filter>[ext_nabers_water_rating] &lt; 1.00</Filter>
+            <PolygonSymbolizer fill="#ff0000" />
+        </Rule>
+        <Rule>
+            <Filter>[ext_nabers_water_rating] &gt;= 1.00 and [ext_nabers_water_rating] &lt; 2.00</Filter>
+            <PolygonSymbolizer fill="#e92b00" />
+        </Rule>
+        <Rule>
+            <Filter>[ext_nabers_water_rating] &gt;= 2.00 and [ext_nabers_water_rating] &lt; 3.00</Filter>
+            <PolygonSymbolizer fill="#d35500" />
+        </Rule>
+        <Rule>
+            <Filter>[ext_nabers_water_rating] &gt;= 3.00 and [ext_nabers_water_rating] &lt; 4.00</Filter>
+            <PolygonSymbolizer fill="#bd8000" />
+        </Rule>
+        <Rule>
+            <Filter>[ext_nabers_water_rating] &gt;= 4.00 and [ext_nabers_water_rating] &lt; 5.00</Filter>
+            <PolygonSymbolizer fill="#a6aa00" />
+        </Rule>
+        <Rule>
+            <Filter>[ext_nabers_water_rating] &gt;= 5.00 and [ext_nabers_water_rating] &lt; 6.00</Filter>
+            <PolygonSymbolizer fill="#90d500" />
+        </Rule>
+        <Rule>
+            <Filter>[ext_nabers_water_rating] &gt;= 6.00</Filter>
+            <PolygonSymbolizer fill="#7aff00" />
+        </Rule>
+
+        <Rule>
+            <MaxScaleDenominator>17061</MaxScaleDenominator>
+            <MinScaleDenominator>4264</MinScaleDenominator>
+            <LineSymbolizer stroke="#888" stroke-width="1.0"/>
+        </Rule>
+        <Rule>
+            <MaxScaleDenominator>4264</MaxScaleDenominator>
+            <MinScaleDenominator>0</MinScaleDenominator>
+            <LineSymbolizer stroke="#888" stroke-width="3.0"/>
+        </Rule>
+    </Style>
+    <Style name="ext_nabers_indoor_rating">
+        <Rule>
+            <Filter>[ext_nabers_indoor_rating] &lt; 1.00</Filter>
+            <PolygonSymbolizer fill="#ff0000" />
+        </Rule>
+        <Rule>
+            <Filter>[ext_nabers_indoor_rating] &gt;= 1.00 and [ext_nabers_indoor_rating] &lt; 2.00</Filter>
+            <PolygonSymbolizer fill="#e92b00" />
+        </Rule>
+        <Rule>
+            <Filter>[ext_nabers_indoor_rating] &gt;= 2.00 and [ext_nabers_indoor_rating] &lt; 3.00</Filter>
+            <PolygonSymbolizer fill="#d35500" />
+        </Rule>
+        <Rule>
+            <Filter>[ext_nabers_indoor_rating] &gt;= 3.00 and [ext_nabers_indoor_rating] &lt; 4.00</Filter>
+            <PolygonSymbolizer fill="#bd8000" />
+        </Rule>
+        <Rule>
+            <Filter>[ext_nabers_indoor_rating] &gt;= 4.00 and [ext_nabers_indoor_rating] &lt; 5.00</Filter>
+            <PolygonSymbolizer fill="#a6aa00" />
+        </Rule>
+        <Rule>
+            <Filter>[ext_nabers_indoor_rating] &gt;= 5.00 and [ext_nabers_indoor_rating] &lt; 6.00</Filter>
+            <PolygonSymbolizer fill="#90d500" />
+        </Rule>
+        <Rule>
+            <Filter>[ext_nabers_indoor_rating] &gt;= 6.00</Filter>
+            <PolygonSymbolizer fill="#7aff00" />
+        </Rule>
+
+        <Rule>
+            <MaxScaleDenominator>17061</MaxScaleDenominator>
+            <MinScaleDenominator>4264</MinScaleDenominator>
+            <LineSymbolizer stroke="#888" stroke-width="1.0"/>
+        </Rule>
+        <Rule>
+            <MaxScaleDenominator>4264</MaxScaleDenominator>
+            <MinScaleDenominator>0</MinScaleDenominator>
+            <LineSymbolizer stroke="#888" stroke-width="3.0"/>
+        </Rule>
+    </Style>
+    <Style name="ext_nabers_waste_rating">
+        <Rule>
+            <Filter>[ext_nabers_waste_rating] &lt; 1.00</Filter>
+            <PolygonSymbolizer fill="#ff0000" />
+        </Rule>
+        <Rule>
+            <Filter>[ext_nabers_waste_rating] &gt;= 1.00 and [ext_nabers_waste_rating] &lt; 2.00</Filter>
+            <PolygonSymbolizer fill="#e92b00" />
+        </Rule>
+        <Rule>
+            <Filter>[ext_nabers_waste_rating] &gt;= 2.00 and [ext_nabers_waste_rating] &lt; 3.00</Filter>
+            <PolygonSymbolizer fill="#d35500" />
+        </Rule>
+        <Rule>
+            <Filter>[ext_nabers_waste_rating] &gt;= 3.00 and [ext_nabers_waste_rating] &lt; 4.00</Filter>
+            <PolygonSymbolizer fill="#bd8000" />
+        </Rule>
+        <Rule>
+            <Filter>[ext_nabers_waste_rating] &gt;= 4.00 and [ext_nabers_waste_rating] &lt; 5.00</Filter>
+            <PolygonSymbolizer fill="#a6aa00" />
+        </Rule>
+        <Rule>
+            <Filter>[ext_nabers_waste_rating] &gt;= 5.00 and [ext_nabers_waste_rating] &lt; 6.00</Filter>
+            <PolygonSymbolizer fill="#90d500" />
+        </Rule>
+        <Rule>
+            <Filter>[ext_nabers_waste_rating] &gt;= 6.00</Filter>
+            <PolygonSymbolizer fill="#7aff00" />
+        </Rule>
+
+        <Rule>
+            <MaxScaleDenominator>17061</MaxScaleDenominator>
+            <MinScaleDenominator>4264</MinScaleDenominator>
+            <LineSymbolizer stroke="#888" stroke-width="1.0"/>
+        </Rule>
+        <Rule>
+            <MaxScaleDenominator>4264</MaxScaleDenominator>
+            <MinScaleDenominator>0</MinScaleDenominator>
+            <LineSymbolizer stroke="#888" stroke-width="3.0"/>
+        </Rule>
+    </Style>
     <Style name="building_attachment_form">
         <Rule>
             <Filter>[building_attachment_form] = "Detached"</Filter>

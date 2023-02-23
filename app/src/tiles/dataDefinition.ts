@@ -199,6 +199,30 @@ const LAYER_QUERIES = {
             buildings
         WHERE
             ext_nabers_energy_rating IS NOT NULL`,
+    ext_nabers_water_rating: `
+        SELECT
+            geometry_id,
+            ext_nabers_water_rating
+        FROM
+            buildings
+        WHERE
+            ext_nabers_water_rating IS NOT NULL`,
+    ext_nabers_indoor_rating: `
+        SELECT
+            geometry_id,
+            ext_nabers_indoor_rating
+        FROM
+            buildings
+        WHERE
+            ext_nabers_indoor_rating IS NOT NULL`,
+    ext_nabers_waste_rating: `
+        SELECT
+            geometry_id,
+            ext_nabers_waste_rating
+        FROM
+            buildings
+        WHERE
+            ext_nabers_waste_rating IS NOT NULL`,
     ext_electricity: `
         SELECT
             geometry_id,

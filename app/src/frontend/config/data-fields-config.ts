@@ -792,6 +792,24 @@ export const dataFields = { /* eslint-disable @typescript-eslint/camelcase */
         tooltip: "NABERS Energy Star Rating Value",
         example: 3,
     },
+    ext_nabers_water_rating: {
+        category: Category.Sustainability,
+        title: "NABERS Water Star Rating",
+        tooltip: "NABERS Water Star Rating Value",
+        example: 3,
+    },
+    ext_nabers_indoor_rating: {
+        category: Category.Sustainability,
+        title: "NABERS Indoor Environment Star Rating",
+        tooltip: "NABERS Indoor Environment Star Rating Value",
+        example: 3,
+    },
+    ext_nabers_waste_rating: {
+        category: Category.Sustainability,
+        title: "NABERS Waste Star Rating",
+        tooltip: "NABERS Waste Star Rating Value",
+        example: 3,
+    },
     ext_electricity: {
         category: Category.Sustainability,
         title: "Utility Usage Electricity",
