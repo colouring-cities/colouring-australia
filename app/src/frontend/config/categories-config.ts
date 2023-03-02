@@ -9,18 +9,17 @@ export enum Category {
     Age = 'age',
     Size = 'size',
     Construction = 'construction',
-    Streetscape = 'streetscape',
+    Streetscape = 'context',
     Team = 'team',
     Planning = 'planning',
     Sustainability = 'sustainability',
     Dynamics = 'dynamics',
-    Community = 'community'
-    // ,Test = 'test'
+    Community = 'community',
 }
 
 /**
  * This is the sole configuration variable that defines the order of the categories
- * in the category grid. The order in the enum defition or the other configs does
+ * in the category grid. The order in the enum definition or the other configs does
  * not affect the order of the grid.
  */
 export const categoriesOrder: Category[] = [
@@ -31,11 +30,11 @@ export const categoriesOrder: Category[] = [
     Category.Size,
     Category.Construction,
     Category.Streetscape,
-    Category.Team,
     Category.Planning,
     Category.Sustainability,
     Category.Dynamics,
-    Category.Community
+    Category.Community,
+    Category.Team
     //, Category.Test
 ];
 
@@ -50,7 +49,7 @@ interface CategoryDefinition {
 export const categoriesConfig: {[key in Category]: CategoryDefinition} = {
     [Category.Age]: {
         slug: 'age',
-        name: 'Age',
+        name: 'Heritage',
 	aboutUrl: 'https://www.ahdap.org/colouring-sydney#age',
         intro: 'Building age data can support energy analysis and help predict long-term change.',
     },
@@ -61,7 +60,6 @@ export const categoriesConfig: {[key in Category]: CategoryDefinition} = {
         intro: 'How big are buildings?',
     },
     [Category.Team]: {
-        inactive: true,
         slug: 'team',
         name: 'Team',
 	aboutUrl: 'https://www.ahdap.org/colouring-sydney#team',
@@ -86,6 +84,7 @@ export const categoriesConfig: {[key in Category]: CategoryDefinition} = {
         intro: 'How does this building work for the local community?',
     },
     [Category.Planning]: {
+        inactive: true,
         slug: 'planning',
         name: 'Planning',
 	aboutUrl: 'https://www.ahdap.org/colouring-sydney#planning',
@@ -110,9 +109,8 @@ export const categoriesConfig: {[key in Category]: CategoryDefinition} = {
         intro: 'How are buildings used, and how does use change over time?',
     },
     [Category.Streetscape]: {
-        inactive: true,
-        slug: 'streetscape',
-        name: 'Streetscape',
+        slug: 'context',
+        name: 'Street Context',
 	aboutUrl: 'https://www.ahdap.org/colouring-sydney#greenery',
         intro: "What's the building's context? Coming soon…",
     },

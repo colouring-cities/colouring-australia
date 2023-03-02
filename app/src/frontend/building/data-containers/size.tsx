@@ -15,7 +15,48 @@ import { CategoryViewProps } from './category-view-props';
 */
 const SizeView: React.FunctionComponent<CategoryViewProps> = (props) => (
     <Fragment>
-        <DataEntryGroup name="Storeys">
+        <NumericDataEntry
+            title={dataFields.ext_footprintsize.title}
+            slug="ext_footprintsize"
+            value={props.building.ext_footprintsize}
+            mode={props.mode}
+            copy={props.copy}
+            onChange={props.onChange}
+            />
+        <NumericDataEntry
+            title={dataFields.ext_plotsize.title}
+            slug="ext_plotsize"
+            value={props.building.ext_plotsize}
+            mode={props.mode}
+            copy={props.copy}
+            onChange={props.onChange}
+            />
+            <NumericDataEntry
+                title={dataFields.size_height_apex.title}
+                slug="size_height_apex"
+                value={props.building.size_height_apex}
+                mode={props.mode}
+                copy={props.copy}
+                onChange={props.onChange}
+                step={0.1}
+                min={0}
+                />
+            <Verification
+                slug="size_height_apex"
+                allow_verify={props.user !== undefined && props.building.size_height_apex !== null}
+                onVerify={props.onVerify}
+                user_verified={props.user_verified.hasOwnProperty("size_height_apex")}
+                user_verified_as={props.user_verified.size_height_apex}
+                verified_count={props.building.verified.size_height_apex}
+                />
+        <NumericDataEntry
+            title={dataFields.ext_far_ratio.title}
+            slug="ext_far_ratio"
+            value={props.building.ext_far_ratio}
+            mode={props.mode}
+            copy={props.copy}
+            onChange={props.onChange}
+            />
             <NumericDataEntry
                 title={dataFields.size_storeys_core.title}
                 slug="size_storeys_core"
@@ -36,144 +77,6 @@ const SizeView: React.FunctionComponent<CategoryViewProps> = (props) => (
                 verified_count={props.building.verified.size_storeys_core}
                 />
 
-            <NumericDataEntry
-                title={dataFields.size_storeys_attic.title}
-                slug="size_storeys_attic"
-                value={props.building.size_storeys_attic}
-                mode={props.mode}
-                copy={props.copy}
-                tooltip={dataFields.size_storeys_attic.tooltip}
-                onChange={props.onChange}
-                step={1}
-                min={0}
-                />
-            <Verification
-                slug="size_storeys_attic"
-                allow_verify={props.user !== undefined && props.building.size_storeys_attic !== null}
-                onVerify={props.onVerify}
-                user_verified={props.user_verified.hasOwnProperty("size_storeys_attic")}
-                user_verified_as={props.user_verified.size_storeys_attic}
-                verified_count={props.building.verified.size_storeys_attic}
-                />
-
-            <NumericDataEntry
-                title={dataFields.size_storeys_basement.title}
-                slug="size_storeys_basement"
-                value={props.building.size_storeys_basement}
-                mode={props.mode}
-                copy={props.copy}
-                tooltip={dataFields.size_storeys_basement.tooltip}
-                onChange={props.onChange}
-                step={1}
-                min={0}
-                />
-            <Verification
-                slug="size_storeys_basement"
-                allow_verify={props.user !== undefined && props.building.size_storeys_basement !== null}
-                onVerify={props.onVerify}
-                user_verified={props.user_verified.hasOwnProperty("size_storeys_basement")}
-                user_verified_as={props.user_verified.size_storeys_basement}
-                verified_count={props.building.verified.size_storeys_basement}
-                />
-
-        </DataEntryGroup>
-        <DataEntryGroup name="Height" collapsed={false}>
-            <NumericDataEntry
-                title={dataFields.size_height_apex.title}
-                slug="size_height_apex"
-                value={props.building.size_height_apex}
-                mode={props.mode}
-                copy={props.copy}
-                onChange={props.onChange}
-                step={0.1}
-                min={0}
-                />
-            <Verification
-                slug="size_height_apex"
-                allow_verify={props.user !== undefined && props.building.size_height_apex !== null}
-                onVerify={props.onVerify}
-                user_verified={props.user_verified.hasOwnProperty("size_height_apex")}
-                user_verified_as={props.user_verified.size_height_apex}
-                verified_count={props.building.verified.size_height_apex}
-                />
-
-            <NumericDataEntry
-                title={dataFields.size_height_eaves.title}
-                slug="size_height_eaves"
-                disabled={true}
-                value={props.building.size_height_eaves}
-                mode={props.mode}
-                copy={props.copy}
-                onChange={props.onChange}
-                step={0.1}
-                min={0}
-                />
-        </DataEntryGroup>
-        <DataEntryGroup name="Floor area">
-            <NumericDataEntry
-                title={dataFields.size_floor_area_ground.title}
-                slug="size_floor_area_ground"
-                value={props.building.size_floor_area_ground}
-                mode={props.mode}
-                copy={props.copy}
-                onChange={props.onChange}
-                step={0.1}
-                min={0}
-                />
-            <Verification
-                slug="size_floor_area_ground"
-                allow_verify={props.user !== undefined && props.building.size_floor_area_ground !== null}
-                onVerify={props.onVerify}
-                user_verified={props.user_verified.hasOwnProperty("size_floor_area_ground")}
-                user_verified_as={props.user_verified.size_floor_area_ground}
-                verified_count={props.building.verified.size_floor_area_ground}
-                />
-
-            <NumericDataEntry
-                title={dataFields.size_floor_area_total.title}
-                slug="size_floor_area_total"
-                value={props.building.size_floor_area_total}
-                mode={props.mode}
-                copy={props.copy}
-                onChange={props.onChange}
-                step={0.1}
-                min={0}
-                />
-            <Verification
-                slug="size_floor_area_total"
-                allow_verify={props.user !== undefined && props.building.size_floor_area_total !== null}
-                onVerify={props.onVerify}
-                user_verified={props.user_verified.hasOwnProperty("size_floor_area_total")}
-                user_verified_as={props.user_verified.size_floor_area_total}
-                verified_count={props.building.verified.size_floor_area_total}
-                />
-
-        </DataEntryGroup>
-        <NumericDataEntry
-            title={dataFields.size_width_frontage.title}
-            slug="size_width_frontage"
-            value={props.building.size_width_frontage}
-            mode={props.mode}
-            copy={props.copy}
-            onChange={props.onChange}
-            step={0.1}
-            min={0}
-            />
-        <Verification
-            slug="size_width_frontage"
-            allow_verify={props.user !== undefined && props.building.size_width_frontage !== null}
-            onVerify={props.onVerify}
-            user_verified={props.user_verified.hasOwnProperty("size_width_frontage")}
-            user_verified_as={props.user_verified.size_width_frontage}
-            verified_count={props.building.verified.size_width_frontage}
-            />
-
-        <DataEntry
-            title="Total opening area"
-            slug=""
-            value=""
-            mode='view'
-        />
     </Fragment>
 );
 const SizeContainer = withCopyEdit(SizeView);

@@ -10,22 +10,7 @@ import { CategoryViewProps } from './category-view-props';
 */
 const TeamView: React.FunctionComponent<CategoryViewProps> = (props) => (
     <Fragment>
-        <InfoBox msg="This is what we're planning to collect in this section" />
-        <ul>
-            <li>Construction and design team (original building)</li>
-            {
-                // "disabled": true,
-                // "slug": "team_original",
-                // "type": "text"
-            }
-            <li>Construction and design team (significant additional works)</li>
-            {
-                // "disabled": true,
-                // "slug": "team_after_original",
-                // "type": "text_multi"
-            }
-            <li>Awards</li>
-        </ul>
+        <InfoBox msg="No attributes at present. Coming soon..." />
     </Fragment>
 );
 const TeamContainer = withCopyEdit(TeamView);

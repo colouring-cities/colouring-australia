@@ -19,86 +19,58 @@ const AgeView: React.FunctionComponent<CategoryViewProps> = (props) => {
 
     return (
         <Fragment>
-            <YearDataEntry
-                year={props.building.date_year}
-                upper={props.building.date_upper}
-                lower={props.building.date_lower}
-                mode={props.mode}
-                copy={props.copy}
-                onChange={props.onChange}
-
-                allow_verify={props.user !== undefined && props.building.date_year !== null && !props.edited}
-                onVerify={props.onVerify}
-                user_verified={props.user_verified.hasOwnProperty("date_year")}
-                user_verified_as={props.user_verified.date_year}
-                verified_count={props.building.verified.date_year}
-                />
             <NumericDataEntry
-                title={dataFields.facade_year.title}
-                slug="facade_year"
-                value={props.building.facade_year}
+                title={dataFields.date_year.title}
+                slug="date_year"
+                value={props.building.date_year}
                 mode={props.mode}
                 copy={props.copy}
                 onChange={props.onChange}
-                step={1}
                 min={1}
                 max={currentYear}
-                tooltip={dataFields.facade_year.tooltip}
+                // "type": "year_estimator"
                 />
-            <Verification
-                slug="facade_year"
-                allow_verify={props.user !== undefined && props.building.facade_year !== null && !props.edited}
-                onVerify={props.onVerify}
-                user_verified={props.user_verified.hasOwnProperty("facade_year")}
-                user_verified_as={props.user_verified.facade_year}
-                verified_count={props.building.verified.facade_year}
-                />
-
-            <SelectDataEntry
-                title={dataFields.date_source.title}
-                slug="date_source"
-                value={props.building.date_source}
+            <NumericDataEntry
+                title={dataFields.ext_age_year_demolition.title}
+                slug="ext_age_year_demolition"
+                value={props.building.ext_age_year_demolition}
                 mode={props.mode}
                 copy={props.copy}
                 onChange={props.onChange}
-                tooltip={dataFields.date_source.tooltip}
-                placeholder=""
-                options={[
-                    "Expert knowledge of building",
-                    "Expert estimate from image",
-                    "Survey of London",
-                    "Pevsner Guides",
-                    "Victoria County History",
-                    "Local history publication",
-                    "Other publication",
-                    "National Heritage List for England",
-                    "Other database or gazetteer",
-                    "Historical map",
-                    "Other archive document",
-                    "Film/Video",
-                    "Other website",
-                    "Other"
-                ]}
+                min={1}
+                max={currentYear}
+                // "type": "year_estimator"
                 />
+            <NumericDataEntry
+                title={dataFields.ext_age_year_renovation.title}
+                slug="ext_age_year_renovation"
+                value={props.building.ext_age_year_renovation}
+                mode={props.mode}
+                copy={props.copy}
+                onChange={props.onChange}
+                min={1}
+                max={currentYear}
+                // "type": "year_estimator"
+                />
+            <SelectDataEntry
+                title={dataFields.ext_heritage_zoning.title}
+                tooltip={dataFields.ext_heritage_zoning.tooltip}
+                slug="ext_heritage_zoning"
+                value={props.building.ext_heritage_zoning}
+                mode={props.mode}
+                copy={props.copy}
+                onChange={props.onChange}
+                options={dataFields.ext_heritage_zoning.items}
+            />
+
             <TextboxDataEntry
-                title={dataFields.date_source_detail.title}
-                slug="date_source_detail"
-                value={props.building.date_source_detail}
+                title={dataFields.ext_historical_notes.title}
+                slug="ext_historical_notes"
+                value={props.building.ext_historical_notes}
                 mode={props.mode}
                 copy={props.copy}
                 onChange={props.onChange}
                 tooltip={dataFields.date_source_detail.tooltip}
-                />
-            <MultiDataEntry
-                title={dataFields.date_link.title}
-                slug="date_link"
-                value={props.building.date_link}
-                mode={props.mode}
-                copy={props.copy}
-                onChange={props.onChange}
-                tooltip={dataFields.date_link.tooltip}
-                placeholder="https://..."
-                editableEntries={true}
                 />
         </Fragment>
     );

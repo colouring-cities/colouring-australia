@@ -23,8 +23,8 @@ export interface CategoryMapDefinition {
 
 export const defaultMapCategory = Category.Age;
 
-export const categoryMapsConfig: {[key in Category]: CategoryMapDefinition} = {
-    [Category.Age]: {
+export const categoryMapsConfig: {[key in Category]: CategoryMapDefinition[]} = {
+    [Category.Age]: [{
         mapStyle: 'date_year',
         legend: {
             title: 'Age',
@@ -46,11 +46,21 @@ export const categoryMapsConfig: {[key in Category]: CategoryMapDefinition} = {
                 { color: '#d0c291', text: '<1700' },
             ]
         },
-    },
-    [Category.Size]: {
+    },{
+        mapStyle: 'ext_heritage_zoning',
+        legend: {
+            title: 'Heritage Zoning Status',
+            elements: [
+                { color: '#e5050d', text: 'In State and Local Heritage Area' },
+                { color: '#252aa6', text: 'In conservation area' },
+                { color: '#ff8c00', text: 'In State Heritage Area' },
+            ]
+        },
+    }],
+    [Category.Size]: [{
         mapStyle: 'size_height',
         legend: {
-            title: 'Height to apex',
+            title: 'Height to Apex',
             elements: [
                 { color: '#f7f4f9', text: '0-5.55'},
                 { color: '#e7e1ef', text: '5.55-7.73'},
@@ -62,31 +72,105 @@ export const categoryMapsConfig: {[key in Category]: CategoryMapDefinition} = {
                 { color: '#980043', text: '≥152'}
             ]
         },
-    },
-    [Category.Team]: {
-        mapStyle: undefined,
+    },{
+        mapStyle: 'size_storeys',
+        legend: {
+            title: 'Number of Storeys',
+            elements: [
+                { color: '#ffffcc', text: '40+'},
+                { color: '#fed976', text: '20-40'},
+                { color: '#fd8d3c', text: '10-20'},
+                { color: '#e31a1c', text: '6-10'},
+                { color: '#800026', text: '1-6'}
+            ]
+        },
+    },{
+        mapStyle: 'size_plot',
+        legend: {
+            title: 'Size of Plot',
+            elements: [
+                { color: '#e7e1ef', text: '0-80'},
+                { color: '#d4b9da', text: '80-150'},
+                { color: '#c994c7', text: '150-300'},
+                { color: '#df65b0', text: '300-1,000'},
+                { color: '#e7298a', text: '1000-10,000'},
+                { color: '#ce1256', text: '10,000-100,000'},
+                { color: '#980043', text: '≥100,000'}
+            ]
+        },
+    },{
+        mapStyle: 'size_footprint',
+        legend: {
+            title: 'Size of Footprint',
+            elements: [
+                { color: '#e7e1ef', text: '0-80'},
+                { color: '#d4b9da', text: '80-150'},
+                { color: '#c994c7', text: '150-300'},
+                { color: '#df65b0', text: '300-1,000'},
+                { color: '#e7298a', text: '1000-10,000'},
+                { color: '#ce1256', text: '10,000-100,000'},
+                { color: '#980043', text: '≥100,000'}
+            ]
+        },
+    }],
+    [Category.Team]: [{
+        mapStyle: 'team',
         legend: {
             title: 'Team',
-            elements: []
+            description: '% data collected',
+            elements: [
+                { color: '#994d00', text: '≥80%' },
+                { color: '#e67300', text: '60–80%' },
+                { color: '#ff9933', text: '40–60%' },
+                { color: '#ffbf80', text: '20–40%' },
+                { color: '#ffe6cc', text: '<20%' }
+            ]
+        },
+    }],
+    [Category.Construction]: [{
+        mapStyle: 'ext_solarpanels',
+        legend: {
+            title: 'Solar Panels',
+            elements: [
+                { color: '#cc1212', text: 'Present' },
+                { color: '#95ded8', text: 'Absent' },
+            ]
+        },
+        },{
+        mapStyle: 'ext_building_quality',
+        legend: {
+            title: 'Building Quality',
+            elements: [
+                { color: '#cc1212', text: 'Excellent' },
+                { color: '#c05100', text: 'Very Good' },
+                { color: '#b17300', text: 'Good' },
+                { color: '#9f8d0b', text: 'Below Average' },
+                { color: '#8fa33c', text: 'Basic' },
+                { color: '#81b568', text: 'Poor' },
+                { color: '#79c592', text: 'Very Poor' },
+                { color: '#7fd3b9', text: 'Just Habitable' },
+                { color: '#95ded8', text: 'Ruin' },
+            ]
         },
     },
-    [Category.Construction]: {
+    /*{
         mapStyle: 'construction_core_material',
         legend: {
             title: 'Construction',
             elements: [
-                { color: "#96613b", text: "Wood" },
+                { color: "#b5a859", text: "Wood" },
                 { color: "#ffffe3", text: "Stone" },
                 { color: "#f5d96b", text: "Brick" },
                 { color: "#beffe8", text: "Steel" },
                 { color: "#fca89d", text: "Reinforced Concrete" },
                 { color: "#5c8970", text: "Other Metal" },
-                { color: "#b5a859", text: "Other Natural Material" },
+                { color: "#96613b", text: "Other Natural Material" },
                 { color: "#c48a85", text: "Other Man-Made Material" }
             ]
         },
-    },
-    [Category.Location]: {
+    }*/
+    ],
+    [Category.Location]: [{
         mapStyle: 'location',
         legend: {
             title: 'Location',
@@ -99,31 +183,69 @@ export const categoryMapsConfig: {[key in Category]: CategoryMapDefinition} = {
                 { color: '#bae4bc', text: '<20%' }
             ]
         },
-    },
-    [Category.Community]: {
-        mapStyle: 'comm_walk_index',
-        legend: {
-            title: 'Walk Index',
-            elements: [
-                { color: '#fff9b8', text: '>95' },
-                { color: '#fae269', text: '90-95' },
-                { color: '#fbaf27', text: '85-90' },
-                { color: '#e6711d', text: '80-85' },
-                { color: '#cc1212', text: '75-80' },
-                { color: '#8f0303', text: '70-75' },
-                { color: '#8f5385', text: '65-70' },
-                { color: '#c3e1eb', text: '60-65' },
-                { color: '#6a9dba', text: '55-60' },
-                { color: '#3b74a3', text: '50-55' },
-                { color: '#95ded8', text: '45-50' },
-                { color: '#68aba5', text: '40-45' },
-                { color: '#acc98f', text: '35-40' },
-                { color: '#6d8a51', text: '30-35' },
-                { color: '#d0c291', text: '<30' },
-            ]
+    }],
+    [Category.Community]: [
+        {
+            mapStyle: 'likes',
+            legend: {
+                title: 'Like Me',
+                elements: [
+                    { color: '#bd0026', text: '👍👍👍👍 100+' },
+                    { color: '#e31a1c', text: '👍👍👍 50–99' },
+                    { color: '#fc4e2a', text: '👍👍 20–49' },
+                    { color: '#fd8d3c', text: '👍👍 10–19' },
+                    { color: '#feb24c', text: '👍 3–9' },
+                    { color: '#fed976', text: '👍 2' },
+                    { color: '#ffe8a9', text: '👍 1'}
+                ]
+            }
+        },
+        /*        {
+            mapStyle: 'community_local_significance_total',
+            legend: {
+                title: 'Local Significance',
+                description: 'People who think the building should be locally listed',
+                elements: [
+                    { color: '#bd0026', text: '100+' },
+                    { color: '#e31a1c', text: '50–99' },
+                    { color: '#fc4e2a', text: '20–49' },
+                    { color: '#fd8d3c', text: '10–19' },
+                    { color: '#feb24c', text: '3–9' },
+                    { color: '#fed976', text: '2' },
+                    { color: '#ffe8a9', text: '1'}
+                ]
+            }
+        },
+        {
+            mapStyle: 'community_expected_planning_application_total',
+            legend: {
+                title: 'Expected planning application',
+                description: 'People who think the building will be affected by a planning application in the near future',
+                elements: [
+                    { color: '#bd0026', text: '100+' },
+                    { color: '#e31a1c', text: '50–99' },
+                    { color: '#fc4e2a', text: '20–49' },
+                    { color: '#fd8d3c', text: '10–19' },
+                    { color: '#feb24c', text: '3–9' },
+                    { color: '#fed976', text: '2' },
+                    { color: '#ffe8a9', text: '1'}
+                ]
+            }
+        },
+        {
+            mapStyle: 'community_in_public_ownership',
+            legend: {
+                title: 'Public Ownership',
+                description: 'Is the building in some form of public/community ownership',
+                elements: [
+                    {color: '#1166ff', text: 'Yes'},
+                    {color: '#ffaaa0', text: 'No'}
+                ]
+            }
         }
-    },
-    [Category.Planning]: {
+        */
+    ],
+    [Category.Planning]: [{
         mapStyle: 'planning_combined',
         legend: {
             title: 'Statutory protections',
@@ -136,11 +258,11 @@ export const categoryMapsConfig: {[key in Category]: CategoryMapDefinition} = {
                 { color: '#858ed4', text: 'Locally listed'},
             ]
         },
-    },
-    [Category.Sustainability]: {
-        mapStyle: 'sust_nabers_energy_rating',
+    }],
+    [Category.Sustainability]: [{
+        mapStyle: 'ext_nabers_energy_rating',
         legend: {
-            title: 'Sustainability',
+            title: 'NABERS Energy',
             description: 'NABERS Energy Rating',
             elements: [
                 { color: "#ff0000", text: '0 Star' },
@@ -152,8 +274,67 @@ export const categoryMapsConfig: {[key in Category]: CategoryMapDefinition} = {
                 { color: "#7aff00", text: '6 Star' },
             ]
         },
-    },
-    [Category.Type]: {
+    },{
+        mapStyle: 'ext_nabers_water_rating',
+        legend: {
+            title: 'NABERS Water',
+            description: 'NABERS Water Rating',
+            elements: [
+                { color: "#ff0000", text: '0 Star' },
+                { color: "#e92b00", text: '1 Star' },
+                { color: "#d35500", text: '2 Star' },
+                { color: "#bd8000", text: '3 Star' },
+                { color: "#a6aa00", text: '4 Star' },
+                { color: "#90d500", text: '5 Star' },
+                { color: "#7aff00", text: '6 Star' },
+            ]
+        },
+    },{
+        mapStyle: 'ext_nabers_indoor_rating',
+        legend: {
+            title: 'NABERS Indoors',
+            description: 'NABERS Indoor Environment Quality Rating',
+            elements: [
+                { color: "#ff0000", text: '0 Star' },
+                { color: "#e92b00", text: '1 Star' },
+                { color: "#d35500", text: '2 Star' },
+                { color: "#bd8000", text: '3 Star' },
+                { color: "#a6aa00", text: '4 Star' },
+                { color: "#90d500", text: '5 Star' },
+                { color: "#7aff00", text: '6 Star' },
+            ]
+        },
+    },{
+        mapStyle: 'ext_nabers_waste_rating',
+        legend: {
+            title: 'NABERS Waste',
+            description: 'NABERS Waste Rating',
+            elements: [
+                { color: "#ff0000", text: '0 Star' },
+                { color: "#e92b00", text: '1 Star' },
+                { color: "#d35500", text: '2 Star' },
+                { color: "#bd8000", text: '3 Star' },
+                { color: "#a6aa00", text: '4 Star' },
+                { color: "#90d500", text: '5 Star' },
+                { color: "#7aff00", text: '6 Star' },
+            ]
+        },
+    },{
+        mapStyle: 'ext_electricity',
+        legend: {
+            title: 'Electricity Usage',
+            elements: [
+                { color: '#e7e1ef', text: '<2x10^5'},
+                { color: '#d4b9da', text: '≥2x10^5'},
+                { color: '#c994c7', text: '≥2x10^6'},
+                { color: '#df65b0', text: '≥2x10^7'},
+                { color: '#e7298a', text: '≥2x10^8'},
+                { color: '#ce1256', text: '≥2x10^9'},
+                { color: '#980043', text: '≥2x10^10'}
+            ]
+        },
+    }],
+    [Category.Type]: [{
         mapStyle: 'building_attachment_form',
         legend: {
             title: 'Type',
@@ -164,15 +345,16 @@ export const categoryMapsConfig: {[key in Category]: CategoryMapDefinition} = {
                 { color: "#226291", text: "Mid-Terrace" }
             ]
         },
-    },
-    [Category.LandUse]: {
-        mapStyle: 'landuse',
+    }],
+    [Category.LandUse]: [{
+        mapStyle: 'ext_designated_land_use',
         legend: {
-            title: 'Land Use',
+            title: 'Designated Land Use',
             elements: [
                 { color: '#e5050d', text: 'Mixed Use' },
                 { subtitle: 'Single use:'},
-                { color: '#4a54a6', text: 'Residential' },
+                { color: '#252aa6', text: 'Residential (unverified)' },
+                { color: '#7025a6', text: 'Residential (verified)' },
                 { color: '#ff8c00', text: 'Retail' },
                 { color: '#f5f58f', text: 'Industry & Business' },
                 { color: '#73ccd1', text: 'Community Services' },
@@ -182,18 +364,180 @@ export const categoryMapsConfig: {[key in Category]: CategoryMapDefinition} = {
                 { color: '#898944', text: 'Defence' },
                 { color: '#fa667d', text: 'Agriculture' },
                 { color: '#53f5dd', text: 'Minerals' },
-                { color: '#ffffff', text: 'Vacant & Derelict' }
+                { color: '#ffffff', text: 'Vacant & Derelict' },
+                { color: '#6c6f8e', text: 'Unclassified, presumed non-residential' }
+            ]
+            },
+    },{
+        mapStyle: 'ext_predominant_land_use',
+        legend: {
+            title: 'Predominant Land Use',
+            elements: [
+                { color: '#e5050d', text: 'Mixed Use' },
+                { subtitle: 'Single use:'},
+                { color: '#252aa6', text: 'Residential (unverified)' },
+                { color: '#7025a6', text: 'Residential (verified)' },
+                { color: '#ff8c00', text: 'Retail' },
+                { color: '#f5f58f', text: 'Industry & Business' },
+                { color: '#73ccd1', text: 'Community Services' },
+                { color: '#ffbfbf', text: 'Recreation & Leisure' },
+                { color: '#b3de69', text: 'Transport' },
+                { color: '#cccccc', text: 'Utilities & Infrastructure' },
+                { color: '#898944', text: 'Defence' },
+                { color: '#fa667d', text: 'Agriculture' },
+                { color: '#53f5dd', text: 'Minerals' },
+                { color: '#ffffff', text: 'Vacant & Derelict' },
+                { color: '#6c6f8e', text: 'Unclassified, presumed non-residential' }
             ]
         },
-    },
-    [Category.Streetscape]: {
-        mapStyle: undefined,
+    }],
+    [Category.Streetscape]: [{
+        mapStyle: 'ext_walk_index',
         legend: {
-            title: 'Streetscape',
-            elements: []
+            title: 'Walk Index',
+            elements: [
+                { color: '#f0f921', text: '>95' },
+                { color: '#f7e225', text: '90-95' },
+                { color: '#fccb26', text: '85-90' },
+                { color: '#feb72d', text: '80-85' },
+                { color: '#fba338', text: '75-80' },
+                { color: '#f69044', text: '70-75' },
+                { color: '#f07e4f', text: '65-70' },
+                { color: '#e76d5b', text: '60-65' },
+                { color: '#dc5e66', text: '55-60' },
+                { color: '#d14e72', text: '50-55' },
+                { color: '#c53f7e', text: '45-50' },
+                { color: '#b7308b', text: '40-45' },
+                { color: '#a72197', text: '35-40' },
+                { color: '#9612a1', text: '30-35' },
+                { color: '#8305a7', text: '25-30' },
+                { color: '#6f00a8', text: '20-25' },
+                { color: '#5901a5', text: '15-20' },
+                { color: '#44049e', text: '10-15' },
+                { color: '#2c0594', text: '5-10' },
+                { color: '#0d0887', text: '<5' },
+            ]
+            }
+    },{
+        mapStyle: 'ext_walk_employment',
+        legend: {
+            title: 'Walk Index Employment Component',
+            elements: [
+                { color: '#f0f921', text: '>30' },
+                { color: '#f7e225', text: '27-30' },
+                { color: '#feb72d', text: '24-27' },
+                { color: '#f69044', text: '21-24' },
+                { color: '#e76d5b', text: '18-21' },
+                { color: '#d14e72', text: '15-18' },
+                { color: '#b7308b', text: '12-15' },
+                { color: '#9612a1', text: '9-12' },
+                { color: '#6f00a8', text: '6-9' },
+                { color: '#44049e', text: '3-6' },
+                { color: '#0d0887', text: '<3' },
+            ]
+            }
+    },{
+        mapStyle: 'ext_walk_education',
+        legend: {
+            title: 'Walk Index Education Component',
+            elements: [
+                { color: '#f0f921', text: '>14' },
+                { color: '#f7e225', text: '12-14' },
+                { color: '#feb72d', text: '10-12' },
+                { color: '#f69044', text: '8-10' },
+                { color: '#e76d5b', text: '6-8' },
+                { color: '#d14e72', text: '4-6' },
+                { color: '#b7308b', text: '2-4' },
+                { color: '#9612a1', text: '<2' }
+            ]
+            }
+    },{
+        mapStyle: 'ext_walk_shopping',
+        legend: {
+            title: 'Walk Index Shopping Component',
+            elements: [
+                { color: '#f0f921', text: '>20' },
+                { color: '#f7e225', text: '18-20' },
+                { color: '#feb72d', text: '16-18' },
+                { color: '#f69044', text: '14-16' },
+                { color: '#e76d5b', text: '12-14' },
+                { color: '#d14e72', text: '10-12' },
+                { color: '#b7308b', text: '8-10' },
+                { color: '#9612a1', text: '6-8' },
+                { color: '#6f00a8', text: '4-6' },
+                { color: '#44049e', text: '2-4' },
+                { color: '#0d0887', text: '<2' },
+            ]
+            }
+    },{
+        mapStyle: 'ext_walk_errands',
+        legend: {
+            title: 'Walk Index Errands Component',
+            elements: [
+                { color: '#feb72d', text: '>8' },
+                { color: '#f69044', text: '7-8' },
+                { color: '#e76d5b', text: '6-7' },
+                { color: '#d14e72', text: '5-6' },
+                { color: '#b7308b', text: '4-5' },
+                { color: '#9612a1', text: '3-4' },
+                { color: '#6f00a8', text: '2-3' },
+                { color: '#44049e', text: '1-2' },
+                { color: '#0d0887', text: '<1' },
+            ]
+            }
+    },{
+        mapStyle: 'ext_walk_recreation',
+        legend: {
+            title: 'Walk Index Recreation Component',
+            elements: [
+                { color: '#f0f921', text: '>21' },
+                { color: '#f7e225', text: '19-21' },
+                { color: '#feb72d', text: '17-19' },
+                { color: '#f69044', text: '15-17' },
+                { color: '#e76d5b', text: '13-15' },
+                { color: '#d14e72', text: '11-13' },
+                { color: '#b7308b', text: '9-11' },
+                { color: '#9612a1', text: '7-9' },
+                { color: '#6f00a8', text: '5-7' },
+                { color: '#44049e', text: '3-5' },
+                { color: '#0d0887', text: '<3' },
+            ]
+            }
+    },{
+        mapStyle: 'ext_num_trees_within_100',
+        legend: {
+            title: 'Number of Trees Within 100m',
+            elements: [
+            { color: '#95ded8', text: '>300' },
+                { color: '#7fd3b9', text: '250-300' },
+                { color: '#79c592', text: '200-250' },
+                { color: '#81b568', text: '160-200' },
+                { color: '#8fa33c', text: '120-160' },
+                { color: '#9f8d0b', text: '80-120' },
+                { color: '#b17300', text: '40-80' },
+                { color: '#c05100', text: '20-40' },
+                { color: '#cc1212', text: '0-20' },
+                { color: '#dd0606', text: '0' },
+            ]
         },
-    },
-    [Category.Dynamics]: {
+    },{
+        mapStyle: 'ext_greenspace_proximity',
+        legend: {
+            title: 'Distance to nearest park',
+            elements: [
+                { color: '#dd0606', text: '>1000' },
+                { color: '#c05100', text: '500-1000' },
+                { color: '#b17300', text: '400-500' },
+                { color: '#9f8d0b', text: '300-400' },
+                { color: '#8fa33c', text: '200-300' },
+                { color: '#81b568', text: '100-200' },
+                { color: '#79c592', text: '50-100' },
+                { color: '#7fd3b9', text: '0-50' },
+                { color: '#95ded8', text: '0' },
+            ]
+        },
+    }],
+    [Category.Dynamics]: [{
         mapStyle: 'dynamics_demolished_count',
         legend: {
             title: 'Dynamics',
@@ -226,28 +570,6 @@ export const categoryMapsConfig: {[key in Category]: CategoryMapDefinition} = {
                 }
             ],
         },
-    }
-   /* ,
-    [Category.Test]: {
-        mapStyle: 'landuse',
-        legend: {
-            title: 'Test',
-            elements: [
-                { color: '#e5050d', text: 'Mixed Use' },
-                { subtitle: 'Single use:'},
-                { color: '#4a54a6', text: 'Residential' },
-                { color: '#ff8c00', text: 'Retail' },
-                { color: '#f5f58f', text: 'Industry & Business' },
-                { color: '#73ccd1', text: 'Community Services' },
-                { color: '#ffbfbf', text: 'Recreation & Leisure' },
-                { color: '#b3de69', text: 'Transport' },
-                { color: '#cccccc', text: 'Utilities & Infrastructure' },
-                { color: '#898944', text: 'Defence' },
-                { color: '#fa667d', text: 'Agriculture' },
-                { color: '#53f5dd', text: 'Minerals' },
-                { color: '#ffffff', text: 'Vacant & Derelict' }
-            ]
-        },
-    }*/
+    }]
     
 };
