@@ -102,6 +102,24 @@ const LocationView: React.FunctionComponent<CategoryViewProps> = (props) => (
             valueTransform={x=>x.toUpperCase()}
             disabled={true}
             />
+        <NumericDataEntry
+            title={dataFields.location_latitude.title}
+            slug="location_latitude"
+            value={props.building.location_latitude}
+            mode={props.mode}
+            copy={props.copy}
+            onChange={props.onChange}
+            disabled={true}
+            />
+        <NumericDataEntry
+            title={dataFields.location_longitude.title}
+            slug="location_longitude"
+            value={props.building.location_longitude}
+            mode={props.mode}
+            copy={props.copy}
+            onChange={props.onChange}
+            disabled={true}
+            />
     </Fragment>
 );
 const LocationContainer = withCopyEdit(LocationView);

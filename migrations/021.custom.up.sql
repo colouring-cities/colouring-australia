@@ -1,6 +1,9 @@
 -- NABERS energy ratings
 
 ALTER TABLE buildings ADD COLUMN IF NOT EXISTS ext_nabers_energy_rating real;
+ALTER TABLE buildings ADD COLUMN IF NOT EXISTS ext_nabers_water_rating real;
+ALTER TABLE buildings ADD COLUMN IF NOT EXISTS ext_nabers_indoor_rating real;
+ALTER TABLE buildings ADD COLUMN IF NOT EXISTS ext_nabers_waste_rating real;
 
 -- Walkability data
 
@@ -22,6 +25,7 @@ ALTER TABLE buildings ADD CONSTRAINT ext_historical_notes_len CHECK (length(date
 
 ALTER TABLE buildings ADD COLUMN IF NOT EXISTS ext_footprintsize real;
 ALTER TABLE buildings ADD COLUMN IF NOT EXISTS ext_plotsize real;
+ALTER TABLE buildings ADD COLUMN IF NOT EXISTS ext_far_ratio real;
 
 ALTER TABLE buildings ADD COLUMN IF NOT EXISTS ext_building_quality text;
 ALTER TABLE buildings ADD COLUMN IF NOT EXISTS ext_gardens boolean;
@@ -30,6 +34,11 @@ ALTER TABLE buildings ADD COLUMN IF NOT EXISTS ext_pool boolean;
 ALTER TABLE buildings ADD COLUMN IF NOT EXISTS ext_solarpanels real;
 
 ALTER TABLE buildings ADD COLUMN IF NOT EXISTS ext_walk_index real;
+ALTER TABLE buildings ADD COLUMN IF NOT EXISTS ext_walk_employment real;
+ALTER TABLE buildings ADD COLUMN IF NOT EXISTS ext_walk_education real;
+ALTER TABLE buildings ADD COLUMN IF NOT EXISTS ext_walk_shopping real;
+ALTER TABLE buildings ADD COLUMN IF NOT EXISTS ext_walk_errands real;
+ALTER TABLE buildings ADD COLUMN IF NOT EXISTS ext_walk_recreation real;
 ALTER TABLE buildings ADD COLUMN IF NOT EXISTS ext_greenspace_proximity real;
 ALTER TABLE buildings ADD COLUMN IF NOT EXISTS ext_num_trees_within_100 real;
 

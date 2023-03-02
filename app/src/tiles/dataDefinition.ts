@@ -199,6 +199,30 @@ const LAYER_QUERIES = {
             buildings
         WHERE
             ext_nabers_energy_rating IS NOT NULL`,
+    ext_nabers_water_rating: `
+        SELECT
+            geometry_id,
+            ext_nabers_water_rating
+        FROM
+            buildings
+        WHERE
+            ext_nabers_water_rating IS NOT NULL`,
+    ext_nabers_indoor_rating: `
+        SELECT
+            geometry_id,
+            ext_nabers_indoor_rating
+        FROM
+            buildings
+        WHERE
+            ext_nabers_indoor_rating IS NOT NULL`,
+    ext_nabers_waste_rating: `
+        SELECT
+            geometry_id,
+            ext_nabers_waste_rating
+        FROM
+            buildings
+        WHERE
+            ext_nabers_waste_rating IS NOT NULL`,
     ext_electricity: `
         SELECT
             geometry_id,
@@ -257,6 +281,46 @@ const LAYER_QUERIES = {
             buildings
         WHERE
             ext_walk_index IS NOT NULL`,
+    ext_walk_employment: `
+        SELECT
+            geometry_id,
+            ext_walk_employment AS ext_walk_employment
+        FROM
+            buildings
+        WHERE
+            ext_walk_employment IS NOT NULL`,
+    ext_walk_education: `
+        SELECT
+            geometry_id,
+            ext_walk_education AS ext_walk_education
+        FROM
+            buildings
+        WHERE
+            ext_walk_education IS NOT NULL`,
+    ext_walk_shopping: `
+        SELECT
+            geometry_id,
+            ext_walk_shopping AS ext_walk_shopping
+        FROM
+            buildings
+        WHERE
+            ext_walk_shopping IS NOT NULL`,
+    ext_walk_errands: `
+        SELECT
+            geometry_id,
+            ext_walk_errands AS ext_walk_errands
+        FROM
+            buildings
+        WHERE
+            ext_walk_errands IS NOT NULL`,
+    ext_walk_recreation: `
+        SELECT
+            geometry_id,
+            ext_walk_recreation AS ext_walk_recreation
+        FROM
+            buildings
+        WHERE
+            ext_walk_recreation IS NOT NULL`,
     ext_greenspace_proximity: `
         SELECT
             geometry_id,
