@@ -14,11 +14,19 @@ export type BuildingMapTileset = 'date_year' |
     'ext_building_quality' |
     'location' |
     'ext_walk_index' |
+    'ext_walk_employment' |
+    'ext_walk_education' |
+    'ext_walk_shopping' |
+    'ext_walk_errands' |
+    'ext_walk_recreation' |
     'ext_num_trees_within_100' |
     'ext_greenspace_proximity' |
     'likes' |
     'planning_combined' |
     'ext_nabers_energy_rating' |
+    'ext_nabers_water_rating' |
+    'ext_nabers_indoor_rating' |
+    'ext_nabers_waste_rating' |
     'ext_electricity' |
     'building_attachment_form' |
     'ext_designated_land_use' |
