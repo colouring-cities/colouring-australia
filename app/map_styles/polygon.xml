@@ -1382,6 +1382,23 @@
             <LineSymbolizer stroke="#888" stroke-width="3.0"/>
         </Rule>
     </Style>
+    <Style name="ext_aboriginal_land_ownership">
+        <Rule>
+            <Filter>[ext_aboriginal_land_ownership] = "In Aboriginal Heritage Area"</Filter>
+            <PolygonSymbolizer fill="#e5050d" />
+        </Rule>
+
+        <Rule>
+            <MaxScaleDenominator>8530</MaxScaleDenominator>
+            <MinScaleDenominator>4264</MinScaleDenominator>
+            <LineSymbolizer stroke="#888" stroke-width="0.8"/>
+        </Rule>
+        <Rule>
+            <MaxScaleDenominator>4264</MaxScaleDenominator>
+            <MinScaleDenominator>0</MinScaleDenominator>
+            <LineSymbolizer stroke="#888" stroke-width="3.0"/>
+        </Rule>
+    </Style>
     <Style name="ext_heritage_zoning">
         <Rule>
             <Filter>[ext_heritage_zoning] = "In State and Local Heritage Area"</Filter>

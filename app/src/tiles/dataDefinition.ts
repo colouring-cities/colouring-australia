@@ -32,6 +32,13 @@ const LAYER_QUERIES = {
         FROM
             buildings
         WHERE date_year IS NOT NULL`,
+    ext_aboriginal_land_ownership: `
+        SELECT
+            geometry_id,
+            ext_aboriginal_land_ownership
+        FROM
+            buildings
+        WHERE ext_aboriginal_land_ownership IS NOT NULL`,
     ext_heritage_zoning: `
         SELECT
             geometry_id,

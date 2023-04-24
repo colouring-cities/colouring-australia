@@ -62,6 +62,16 @@ const AgeView: React.FunctionComponent<CategoryViewProps> = (props) => {
                 onChange={props.onChange}
                 options={dataFields.ext_heritage_zoning.items}
             />
+            <SelectDataEntry
+                title={dataFields.ext_aboriginal_land_ownership.title}
+                tooltip={dataFields.ext_aboriginal_land_ownership.tooltip}
+                slug="ext_aboriginal_land_ownership"
+                value={props.building.ext_aboriginal_land_ownership}
+                mode={props.mode}
+                copy={props.copy}
+                onChange={props.onChange}
+                options={dataFields.ext_aboriginal_land_ownership.items}
+            />
 
             <TextboxDataEntry
                 title={dataFields.ext_historical_notes.title}

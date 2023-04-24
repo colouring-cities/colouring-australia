@@ -55,6 +55,14 @@ export const categoryMapsConfig: {[key in Category]: CategoryMapDefinition[]} = 
                 { color: '#ff8c00', text: 'In Local Heritage Area' },
             ]
         },
+    },{
+        mapStyle: 'ext_aboriginal_land_ownership',
+        legend: {
+            title: 'Aboriginal Land Ownership Status',
+            elements: [
+                { color: '#e5050d', text: 'In Aboriginal Heritage Area' }
+            ]
+        },
     }],
     [Category.Size]: [{
         mapStyle: 'size_height',

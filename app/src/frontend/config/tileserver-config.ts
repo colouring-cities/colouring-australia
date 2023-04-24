@@ -5,6 +5,7 @@
 
 export type BuildingMapTileset = 'date_year' | 
     'ext_heritage_zoning' |
+    'ext_aboriginal_land_ownership' |
     'size_height' |
     'size_storeys' |
     'size_footprint' |

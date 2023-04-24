@@ -749,6 +749,15 @@ export const dataFields = { /* eslint-disable @typescript-eslint/camelcase */
         title: "Year renovated (best estimate)",
         example: 1924,
     },
+    ext_aboriginal_land_ownership: {
+        category: Category.Age,
+        title: "Aboriginal Land Ownership",
+        tooltip: "Aboriginal Land Ownership",
+        example: "",
+        items: [
+            "In Aboriginal Heritage Area"
+        ]
+    },
     ext_heritage_zoning: {
         category: Category.Age,
         title: "Heritage Zoning",
