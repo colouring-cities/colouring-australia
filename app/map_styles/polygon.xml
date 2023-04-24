@@ -1369,15 +1369,11 @@
     </Style>
     <Style name="ext_heritage_zoning">
         <Rule>
-            <Filter>[ext_heritage_zoning] = "In State and Local Heritage Area"</Filter>
+            <Filter>[ext_heritage_zoning] = "In Significant Heritage Area"</Filter>
             <PolygonSymbolizer fill="#e5050d" />
         </Rule>
         <Rule>
-            <Filter>[ext_heritage_zoning] = "In conservation area"</Filter>
-            <PolygonSymbolizer fill="#252aa6" />
-        </Rule>
-        <Rule>
-            <Filter>[ext_heritage_zoning] = "In State Heritage Area"</Filter>
+            <Filter>[ext_heritage_zoning] = "In Local Heritage Area"</Filter>
             <PolygonSymbolizer fill="#ff8c00" />
         </Rule>
 
