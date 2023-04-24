@@ -358,21 +358,14 @@ export const categoryMapsConfig: {[key in Category]: CategoryMapDefinition[]} = 
         legend: {
             title: 'Designated Land Use',
             elements: [
-                { color: '#e5050d', text: 'Mixed Use' },
-                { subtitle: 'Single use:'},
-                { color: '#252aa6', text: 'Residential (unverified)' },
-                { color: '#7025a6', text: 'Residential (verified)' },
-                { color: '#ff8c00', text: 'Retail' },
-                { color: '#f5f58f', text: 'Industry & Business' },
-                { color: '#73ccd1', text: 'Community Services' },
-                { color: '#ffbfbf', text: 'Recreation & Leisure' },
-                { color: '#b3de69', text: 'Transport' },
-                { color: '#cccccc', text: 'Utilities & Infrastructure' },
-                { color: '#898944', text: 'Defence' },
-                { color: '#fa667d', text: 'Agriculture' },
-                { color: '#53f5dd', text: 'Minerals' },
-                { color: '#ffffff', text: 'Vacant & Derelict' },
-                { color: '#6c6f8e', text: 'Unclassified, presumed non-residential' }
+                { color: '#fa667d', text: 'Commercial' },
+                { color: '#53f5dd', text: 'Education' },
+                { color: '#ffbfbf', text: 'Medical' },
+                { color: '#b3de69', text: 'Industrial' },
+                { color: '#cccccc', text: 'Parkland' },
+                { color: '#4a54a6', text: 'Residential' },
+                { color: '#73ccd1', text: 'Transport' },
+                { color: '#ff8c00', text: 'Water' }
             ]
             },
     },{
@@ -380,21 +373,14 @@ export const categoryMapsConfig: {[key in Category]: CategoryMapDefinition[]} = 
         legend: {
             title: 'Predominant Land Use',
             elements: [
-                { color: '#e5050d', text: 'Mixed Use' },
-                { subtitle: 'Single use:'},
-                { color: '#252aa6', text: 'Residential (unverified)' },
-                { color: '#7025a6', text: 'Residential (verified)' },
-                { color: '#ff8c00', text: 'Retail' },
-                { color: '#f5f58f', text: 'Industry & Business' },
-                { color: '#73ccd1', text: 'Community Services' },
-                { color: '#ffbfbf', text: 'Recreation & Leisure' },
-                { color: '#b3de69', text: 'Transport' },
-                { color: '#cccccc', text: 'Utilities & Infrastructure' },
-                { color: '#898944', text: 'Defence' },
-                { color: '#fa667d', text: 'Agriculture' },
-                { color: '#53f5dd', text: 'Minerals' },
-                { color: '#ffffff', text: 'Vacant & Derelict' },
-                { color: '#6c6f8e', text: 'Unclassified, presumed non-residential' }
+                { color: '#fa667d', text: 'Commercial' },
+                { color: '#53f5dd', text: 'Education' },
+                { color: '#ffbfbf', text: 'Medical' },
+                { color: '#b3de69', text: 'Industrial' },
+                { color: '#cccccc', text: 'Parkland' },
+                { color: '#4a54a6', text: 'Residential' },
+                { color: '#73ccd1', text: 'Transport' },
+                { color: '#ff8c00', text: 'Water' }
             ]
         },
     }],

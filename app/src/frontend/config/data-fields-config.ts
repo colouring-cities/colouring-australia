@@ -705,20 +705,14 @@ export const dataFields = { /* eslint-disable @typescript-eslint/camelcase */
         tooltip: "",
         example: "",
         items: [
-            "Mixed Use",
-            "Single use",
+            "Commercial",
+            "Education",
+            "Medical",
+            "Industrial",
+            "Parkland",
             "Residential",
-            "Retail",
-            "Industry & Business",
-            "Community Services",
-            "Recreation & Leisure",
             "Transport",
-            "Utilities & Infrastructure",
-            "Defence",
-            "Agriculture",
-            "Minerals",
-            "Vacant & Derelict",
-            "Unclassified, presumed non-residential"
+            "Water"
         ]
     },
     ext_designated_land_use: {
