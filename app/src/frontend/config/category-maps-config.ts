@@ -51,9 +51,8 @@ export const categoryMapsConfig: {[key in Category]: CategoryMapDefinition[]} = 
         legend: {
             title: 'Heritage Zoning Status',
             elements: [
-                { color: '#e5050d', text: 'In State and Local Heritage Area' },
-                { color: '#252aa6', text: 'In conservation area' },
-                { color: '#ff8c00', text: 'In State Heritage Area' },
+                { color: '#e5050d', text: 'In Significant Heritage Area' },
+                { color: '#ff8c00', text: 'In Local Heritage Area' },
             ]
         },
     }],

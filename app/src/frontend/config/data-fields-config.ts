@@ -755,9 +755,8 @@ export const dataFields = { /* eslint-disable @typescript-eslint/camelcase */
         tooltip: "Heritage Zoning",
         example: "",
         items: [
-            "In State and Local Heritage Area",
-            "In conservation area",
-            "In State Heritage Area"
+            "In Significant Heritage Area",
+            "In Local Heritage Area"
         ]
     },
     ext_historical_notes: {
