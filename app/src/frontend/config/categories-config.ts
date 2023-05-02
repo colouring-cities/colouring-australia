@@ -49,13 +49,13 @@ interface CategoryDefinition {
 export const categoriesConfig: {[key in Category]: CategoryDefinition} = {
     [Category.Age]: {
         slug: 'age',
-        name: 'Size & Form',
+        name: 'Heritage',
 	aboutUrl: 'https://www.ahdap.org/colouring-sydney#age',
         intro: 'Building age data can support energy analysis and help predict long-term change.',
     },
     [Category.Size]: {
         slug: 'size',
-        name: 'Construction',
+        name: 'Size',
         aboutUrl: 'https://www.ahdap.org/colouring-sydney#shapeandsize',
         intro: 'How big are buildings?',
     },
@@ -67,7 +67,7 @@ export const categoriesConfig: {[key in Category]: CategoryDefinition} = {
     },
     [Category.Construction]: {
         slug: 'construction',
-        name: 'Age & History',
+        name: 'Construction',
 	aboutUrl: 'https://www.ahdap.org/colouring-sydney#construction',
         intro: 'How are buildings built?',
     },
@@ -86,25 +86,25 @@ export const categoriesConfig: {[key in Category]: CategoryDefinition} = {
     [Category.Planning]: {
         inactive: true,
         slug: 'planning',
-        name: 'Planning Controls',
+        name: 'Planning',
 	aboutUrl: 'https://www.ahdap.org/colouring-sydney#planning',
         intro: 'Planning controls relating to protection and reuse.',
     },
     [Category.Sustainability]: {
         slug: 'sustainability',
-        name: 'Energy Performance',
+        name: 'Sustainability',
 	aboutUrl: 'https://www.ahdap.org/colouring-sydney#sustainability',
         intro: 'Are buildings energy efficient?',
     },
     [Category.Type]: {
         slug: 'type',
-        name: 'Typology',
+        name: 'Type',
 	aboutUrl: 'https://www.ahdap.org/colouring-sydney#buildingtypology',
         intro: 'How were buildings previously used?',
     },
     [Category.LandUse]: {
         slug: 'use',
-        name: 'Land Use',
+        name: 'Current Use',
 	aboutUrl: 'https://www.ahdap.org/colouring-sydney#use',
         intro: 'How are buildings used, and how does use change over time?',
     },
@@ -116,7 +116,7 @@ export const categoriesConfig: {[key in Category]: CategoryDefinition} = {
     },
     [Category.Dynamics]: {
         slug: 'dynamics',
-        name: 'Resilience',
+        name: 'Dynamics',
 	aboutUrl: 'https://www.ahdap.org/colouring-sydney#dynamics',
         intro: 'How has the site of this building changed over time?'
     }
