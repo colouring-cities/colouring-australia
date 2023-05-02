@@ -13,6 +13,9 @@ import { CategoryViewProps } from './category-view-props';
 */
 const StreetscapeView: React.FunctionComponent<CategoryViewProps> = (props) => (
     <Fragment>
+        <InfoBox>
+            For more information on the Walkability Index please see the project github <a href="https://github.com/JosephineRoper/THERE">here</a>.
+        </InfoBox>
         <NumericDataEntry
             title={dataFields.ext_walk_index.title}
             slug="ext_walk_index"
