@@ -27,10 +27,16 @@ New datasets and features are added all the time. Any help you can give, colouri
         </Link>
         <div className="image-row">
             <img className="cl-logo" src="images/logo-cc.jpg" alt="Colouring Cities Research Programme"></img>
-            <img className="turing-logo" src="images/logo-turing.jpg" alt="Alan Turing Institute"></img>
+            <img src="images/logo-turing.jpg" alt="City Futures Research Centre" />
         </div>
         <div className="image-row">
-            <img src="images/supporter-logos.png" alt="Colouring Sydney collaborating organisations" />
+            <img src="images/logo-ccrp.jpg" alt="Colouring Sydney collaborating organisations" />
+            <img src="images/logo-turing.png" alt="Colouring Sydney collaborating organisations" />
+            <img src="images/logo-ucl.png" alt="Colouring Sydney collaborating organisations" />
+            <img src="images/logo-uq.png" alt="Colouring Sydney collaborating organisations" />
+            <img src="images/logo-curtin.jpg" alt="Colouring Sydney collaborating organisations" />
+            <img src="images/logo-swinburne.png" alt="Colouring Sydney collaborating organisations" />
+            <img src="images/logo-unisa.png" alt="Colouring Sydney collaborating organisations" />
         </div>
     </div>
 );
